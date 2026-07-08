@@ -57,12 +57,19 @@ img, .frame-img { max-width: 100%; display: block; }
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  flex-wrap: wrap;
+  row-gap: 0.8rem;
 }
 .site-nav a { text-decoration: none; }
-.site-nav .crumbs { display: flex; gap: 1.6rem; }
-.site-nav .crumbs a { opacity: 0.65; transition: opacity 0.2s; }
+.site-nav .crumbs { display: flex; gap: 1.6rem; flex-wrap: wrap; row-gap: 0.5rem; }
+.site-nav .crumbs a { opacity: 0.65; transition: opacity 0.2s; white-space: nowrap; }
 .site-nav .crumbs a:hover, .site-nav .crumbs a.current { opacity: 1; }
 .site-nav .mark { font-family: var(--display); font-size: 1rem; letter-spacing: 0.02em; text-transform: none; }
+
+@media (max-width: 560px) {
+  .site-nav { padding: 1.1rem 1.2rem; }
+  .site-nav .crumbs { gap: 1rem 1.1rem; font-size: 0.72rem; width: 100%; }
+}
 
 /* ============================================
    LEDGER / LOG ENTRY PATTERN (shared)
