@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — The Schmidt Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--paper); color: var(--charcoal); }
+  .site-nav { border-bottom: 1px solid var(--paper-line); }
+
+  .hero {
+    padding: 5rem 2rem 4rem;
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+  .hero .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin: 0 0 1.2rem;
+    max-width: 16ch;
+  }
+  .hero p { max-width: 58ch; font-size: 1.08rem; }
+
+  section { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+  .section-title {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin: 4rem 0 0.5rem;
+  }
+
+  /* Tree placeholder */
+  .tree-wrap { margin: 1.5rem 0 3rem; }
+  .tree-frame {
+    border: 1px dashed var(--paper-line);
+    background: var(--paper-dim);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--verdigris);
+  }
+  .tree-frame strong { display: block; font-family: var(--display); font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0.5rem; }
+
+  /* Entries */
+  .entry { border-color: var(--paper-line); }
+  .entry .frame { border-color: var(--paper-line); }
+  .frame-inner { background: var(--paper-dim); color: var(--verdigris); }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid var(--brass);
+    color: var(--brass);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+  }
+
+  .site-footer { border-top: 1px solid var(--paper-line); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html" class="current">Genealogy</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="kittery.html">Kittery Trip</a>
+    <a href="outreach.html">Outreach Log</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Record One — Bloodline</div>
+  <h1>The Schmidt Line</h1>
+  <p>A working archive built ancestor by ancestor — tracing the Schmidt family across generations and across Europe, one translated record and one binder at a time. This page grows as the research does.</p>
+</header>
+
+<section>
+  <div class="section-title">Family Tree</div>
+  <div class="tree-wrap">
+    <div class="tree-frame">
+      <strong>Family tree visualization</strong>
+      Drop in a GEDCOM-rendering embed here (e.g. an exported SVG from your genealogy software,
+      or a JS tree library such as family-chart or Topola) once your GEDCOM file is ready to publish.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Ancestor Records</div>
+
+  <div class="entry">
+    <div class="no">001</div>
+    <div>
+      <span class="tag">Primary Subject</span>
+      <h3>Edward Alfred Henry Schmidt</h3>
+      <div class="meta">
+        <span>b. —</span>
+        <span>d. —</span>
+        <span>Origin: —</span>
+      </div>
+      <p>The anchor of the current research — the generation from which the multi-generational European
+      connections are being traced outward. Replace this paragraph with his biography, sources, and
+      any photographs or documents you've gathered.</p>
+      <div class="frame">
+        <div class="frame-inner">Photo / document placeholder — portrait, headstone, or record scan</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">002</div>
+    <div>
+      <h3>[Ancestor Name]</h3>
+      <div class="meta">
+        <span>b. —</span>
+        <span>d. —</span>
+        <span>Origin: —</span>
+      </div>
+      <p>Duplicate this record block for each ancestor. Keep the record number sequential to
+      mirror how your physical binders are organized, so the site and the shelf stay in sync.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">003</div>
+    <div>
+      <h3>[Ancestor Name]</h3>
+      <div class="meta">
+        <span>b. —</span>
+        <span>d. —</span>
+        <span>Origin: —</span>
+      </div>
+      <p>A short entry can work too — not every record needs a full write-up. Some can simply
+      note what's confirmed and what's still an open question.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Research Log</div>
+  <div class="entry">
+    <div class="no">—</div>
+    <div>
+      <h3>Notes from the trail</h3>
+      <div class="meta"><span>Ongoing</span></div>
+      <p>Use this space like a lab notebook: which record was translated this month, which
+      archive was queried, which branch is still a dead end. It turns the site into a living
+      research log rather than a static family tree.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+</body>
+</html>

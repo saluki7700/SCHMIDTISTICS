@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — Family &amp; Ships</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { margin: 0; overflow-x: hidden; }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 5.5rem 1fr;
+    min-height: 100vh;
+  }
+
+  .panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 3.5rem;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  .panel .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    opacity: 0.75;
+  }
+  .panel h1 {
+    font-family: var(--display);
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+    line-height: 1.05;
+    font-weight: 600;
+    margin: 0 0 1.2rem;
+    max-width: 11ch;
+  }
+  .panel p {
+    font-family: var(--body);
+    max-width: 34ch;
+    margin: 0 0 2rem;
+  }
+  .panel .enter {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: fit-content;
+    padding-bottom: 3px;
+    border-bottom: 1px solid currentColor;
+  }
+  .panel .enter::after { content: "→"; transition: transform 0.25s ease; }
+  .panel:hover .enter::after { transform: translateX(5px); }
+
+  /* Genealogy panel — paper world */
+  .panel--gen {
+    background: var(--paper);
+    color: var(--charcoal);
+  }
+  .panel--gen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(transparent, transparent 34px, var(--paper-line) 35px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  /* Shipbuilding panel — ink/blueprint world */
+  .panel--ship {
+    background: var(--ink);
+    color: var(--bone);
+  }
+  .panel--ship::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--ink-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--ink-line) 1px, transparent 1px);
+    background-size: 44px 44px;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  /* The brass spine */
+  .spine {
+    position: relative;
+    background: linear-gradient(180deg, var(--brass-bright), var(--brass) 55%, #8a5f2f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .spine .title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .spine .rivet {
+    position: absolute;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: #6f4a25;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.4);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .spine .rivet.top { top: 2.2rem; }
+  .spine .rivet.bottom { bottom: 2.2rem; }
+
+  @media (max-width: 860px) {
+    .split { grid-template-columns: 1fr; grid-template-rows: auto 3.4rem auto; }
+    .spine .title { writing-mode: horizontal-tb; transform: none; font-size: 1rem; }
+    .spine .rivet.top { top: 50%; left: 2.2rem; transform: translateY(-50%); }
+    .spine .rivet.bottom { top: 50%; left: auto; right: 2.2rem; bottom: auto; transform: translateY(-50%); }
+    .panel { padding: 3.2rem 1.8rem; min-height: 60vh; }
+  }
+</style>
+</head>
+<body>
+
+<div class="split">
+
+  <a href="genealogy.html" class="panel panel--gen">
+    <span class="eyebrow">Record One — Bloodline</span>
+    <h1>The Schmidt Line</h1>
+    <p>A working archive of ancestors, origins, and the paper trail that connects them — built one record at a time.</p>
+    <span class="enter">Open the archive</span>
+  </a>
+
+  <div class="spine">
+    <div class="rivet top"></div>
+    <span class="title">Schmidtistics</span>
+    <div class="rivet bottom"></div>
+  </div>
+
+  <a href="shipbuilding.html" class="panel panel--ship">
+    <span class="eyebrow">Record Two — Trade</span>
+    <h1>Built by Hand</h1>
+    <p>Stories and photographs from the yard — the vessels, the crews, and the work that shaped them.</p>
+    <span class="enter">Open the logbook</span>
+  </a>
+
+</div>
+
+</body>
+</html>

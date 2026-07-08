@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — Kittery Itinerary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--paper); color: var(--charcoal); }
+  .site-nav { border-bottom: 1px solid var(--paper-line); }
+
+  .hero { padding: 5rem 2rem 3rem; max-width: 68rem; margin: 0 auto; }
+  .hero .eyebrow {
+    font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--verdigris); margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem); margin: 0 0 1.2rem; max-width: 18ch;
+  }
+  .hero p { max-width: 58ch; font-size: 1.05rem; }
+
+  section { max-width: 68rem; margin: 0 auto; padding: 0 2rem 2rem; }
+
+  .day {
+    border-top: 1px solid var(--paper-line);
+    padding: 2.4rem 0;
+  }
+  .day-head {
+    display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+    margin-bottom: 1.4rem;
+  }
+  .day-head .dow {
+    font-family: var(--display); font-weight: 700; font-size: 1.7rem;
+  }
+  .day-head .date {
+    font-family: var(--mono); font-size: 0.8rem; color: var(--verdigris);
+    letter-spacing: 0.04em;
+  }
+  .day-head .tag {
+    font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 0.05em; border: 1px solid var(--brass); color: var(--brass);
+    padding: 0.15rem 0.5rem; border-radius: 2px; margin-left: auto;
+  }
+
+  .slot {
+    display: grid; grid-template-columns: 6.5rem 1fr; gap: 1.2rem;
+    padding: 0.9rem 0;
+    border-top: 1px dashed var(--paper-line);
+  }
+  .slot:first-of-type { border-top: none; }
+  .slot time { font-family: var(--mono); font-size: 0.78rem; color: var(--verdigris); padding-top: 0.15rem; }
+  .slot h4 { font-family: var(--display); font-size: 1.05rem; margin: 0 0 0.25rem; font-weight: 600; }
+  .slot p { margin: 0; font-size: 0.95rem; max-width: 56ch; }
+  .slot .note { font-family: var(--mono); font-size: 0.72rem; color: var(--brass); margin-top: 0.35rem; }
+
+  .site-footer { border-top: 1px solid var(--paper-line); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html">Genealogy</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="kittery.html" class="current">Kittery Trip</a>
+    <a href="outreach.html">Outreach Log</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Field Trip — Kittery, Maine</div>
+  <h1>Kittery Itinerary</h1>
+  <p>A working framework for the family visit — arrivals staggered through Thursday,
+  departures split across Sunday and Monday. Research-heavy days sit in the middle
+  where everyone's actually there.</p>
+</header>
+
+<section>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="dow">Thursday</span>
+      <span class="date">Arrivals</span>
+      <span class="tag">Travel Day</span>
+    </div>
+    <div class="slot">
+      <time>All Day</time>
+      <div>
+        <h4>Staggered arrivals</h4>
+        <p>No fixed plans — everyone lands, drives in, or checks in on their own schedule.
+        Keep it loose since arrival times will vary across the group.</p>
+      </div>
+    </div>
+    <div class="slot">
+      <time>Evening</time>
+      <div>
+        <h4>Welcome dinner, Kittery Point</h4>
+        <p>A relaxed first meal once most of the group has arrived — seafood is the
+        obvious move this close to the water. Worth booking ahead if the group is large.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="dow">Friday</span>
+      <span class="date">Full Day</span>
+      <span class="tag">Research</span>
+    </div>
+    <div class="slot">
+      <time>Morning</time>
+      <div>
+        <h4>Rice Public Library — Genealogy Room</h4>
+        <p>Kittery's public library keeps a dedicated genealogy collection: cemetery
+        directories, town vital records, and Everett Stackpole's 1903 town history.
+        No staff genealogist on hand, so come with specific names and dates in mind.</p>
+        <div class="note">Bring: Schmidt line research binder</div>
+      </div>
+    </div>
+    <div class="slot">
+      <time>Midday</time>
+      <div>
+        <h4>Kittery Historical &amp; Naval Museum</h4>
+        <p>Covers the town from colonial settlement through shipbuilding and the
+        lighthouses — including a searchable people/places database and an interactive
+        timeline. Worth submitting a research request in advance if you want their help
+        pulling records ahead of the visit.</p>
+      </div>
+    </div>
+    <div class="slot">
+      <time>Afternoon</time>
+      <div>
+        <h4>First Parish Church, Kittery Point</h4>
+        <p>One of the town's oldest congregations, with church records dating back to
+        the 1700s that turn up in genealogical indexes for the area — worth a look if
+        any Schmidt-line records touch Kittery Parish.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="dow">Saturday</span>
+      <span class="date">Full Day</span>
+      <span class="tag">History &amp; Shipyard</span>
+    </div>
+    <div class="slot">
+      <time>Morning</time>
+      <div>
+        <h4>Kittery Point walk</h4>
+        <p>A stroll through the historic homes and colonial-era architecture that give
+        the point its character — good light for photos for the shipbuilding/history
+        side of the site.</p>
+      </div>
+    </div>
+    <div class="slot">
+      <time>Midday</time>
+      <div>
+        <h4>Fort McClary State Historic Site</h4>
+        <p>A coastal fort with defenses dating back to the 1600s, overlooking the
+        Piscataqua River — an easy, scenic stop between the point and the shipyard view.</p>
+      </div>
+    </div>
+    <div class="slot">
+      <time>Afternoon</time>
+      <div>
+        <h4>Badger's Island &amp; Portsmouth Naval Shipyard viewpoint</h4>
+        <p>Badger's Island is where the USS Ranger — the first ship to carry a U.S. flag
+        into battle — was built. The Portsmouth Naval Shipyard across the water was the
+        first federal navy yard in the country. This is the natural photo stop for the
+        shipbuilding side of Schmidtistics.</p>
+      </div>
+    </div>
+    <div class="slot">
+      <time>Evening</time>
+      <div>
+        <h4>Family dinner</h4>
+        <p>The one night everyone's still around — good spot for a shared meal before
+        the group starts splitting off Sunday.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="dow">Sunday</span>
+      <span class="date">First Departures</span>
+      <span class="tag">Flexible</span>
+    </div>
+    <div class="slot">
+      <time>Morning</time>
+      <div>
+        <h4>Optional: Kittery outlets</h4>
+        <p>Light, low-effort morning for anyone not racing to an airport — the outlet
+        malls are right off I-95 and easy to fit in before a departure.</p>
+      </div>
+    </div>
+    <div class="slot">
+      <time>Afternoon</time>
+      <div>
+        <h4>First group departs</h4>
+        <p>Whoever's on the Sunday flights/drives peels off here.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="dow">Monday</span>
+      <span class="date">Final Departures</span>
+      <span class="tag">Travel Day</span>
+    </div>
+    <div class="slot">
+      <time>Morning</time>
+      <div>
+        <h4>Remaining family departs</h4>
+        <p>Buffer morning for last-minute packing, a final coffee, or one more pass
+        through the museum if anyone wants a second look at a record.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+</body>
+</html>

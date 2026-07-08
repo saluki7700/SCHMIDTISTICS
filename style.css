@@ -1,0 +1,136 @@
+/* ============================================
+   TOKENS
+   ============================================ */
+:root {
+  --paper: #EDE6D6;
+  --paper-dim: #E2D8C2;
+  --paper-line: #CFC3A6;
+  --ink: #182430;
+  --ink-dim: #223141;
+  --ink-line: #3A4C5E;
+  --brass: #A8763E;
+  --brass-bright: #C3924F;
+  --rust: #8C4A32;
+  --verdigris: #5C6B5D;
+  --charcoal: #2B2622;
+  --bone: #F1ECDF;
+
+  --display: "Fraunces", Georgia, serif;
+  --body: "Source Serif 4", Georgia, serif;
+  --mono: "IBM Plex Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--charcoal);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+a { color: inherit; }
+
+img, .frame-img { max-width: 100%; display: block; }
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ============================================
+   TOP NAV — shared across subpages
+   ============================================ */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 2rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.site-nav a { text-decoration: none; }
+.site-nav .crumbs { display: flex; gap: 1.6rem; }
+.site-nav .crumbs a { opacity: 0.65; transition: opacity 0.2s; }
+.site-nav .crumbs a:hover, .site-nav .crumbs a.current { opacity: 1; }
+.site-nav .mark { font-family: var(--display); font-size: 1rem; letter-spacing: 0.02em; text-transform: none; }
+
+/* ============================================
+   LEDGER / LOG ENTRY PATTERN (shared)
+   ============================================ */
+.entry {
+  border-top: 1px solid;
+  padding: 2.6rem 0;
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 2rem;
+}
+.entry .no {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  opacity: 0.6;
+  padding-top: 0.3rem;
+}
+.entry h3 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  margin: 0 0 0.4rem;
+  font-weight: 600;
+}
+.entry .meta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  opacity: 0.7;
+  margin-bottom: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.4rem;
+}
+.entry p { margin: 0 0 1rem; max-width: 62ch; }
+
+@media (max-width: 640px) {
+  .entry { grid-template-columns: 1fr; gap: 0.6rem; }
+  .entry .no { padding-top: 0; }
+}
+
+/* ============================================
+   PHOTO / IMAGE PLACEHOLDER
+   ============================================ */
+.frame {
+  border: 1px dashed;
+  padding: 2px;
+  margin: 1.2rem 0;
+}
+.frame-inner {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-align: center;
+  padding: 1rem;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================
+   FOOTER (shared)
+   ============================================ */
+.site-footer {
+  padding: 3rem 2rem 4rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+  text-align: center;
+}

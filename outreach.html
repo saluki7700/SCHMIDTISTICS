@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — Outreach Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--paper); color: var(--charcoal); }
+  .site-nav { border-bottom: 1px solid var(--paper-line); }
+
+  .hero { padding: 5rem 2rem 3rem; max-width: 68rem; margin: 0 auto; }
+  .hero .eyebrow {
+    font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--verdigris); margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem); margin: 0 0 1.2rem; max-width: 18ch;
+  }
+  .hero p { max-width: 58ch; font-size: 1.05rem; }
+
+  section { max-width: 68rem; margin: 0 auto; padding: 0 2rem 2rem; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  th, td {
+    text-align: left; padding: 0.9rem 0.8rem;
+    border-top: 1px solid var(--paper-line);
+    font-size: 0.92rem;
+  }
+  th {
+    font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--verdigris); border-top: none;
+  }
+  td.org { font-family: var(--display); font-weight: 600; }
+  .status {
+    font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.04em; padding: 0.15rem 0.5rem; border-radius: 2px;
+    border: 1px solid var(--brass); color: var(--brass); display: inline-block;
+  }
+  .placeholder-row td { color: var(--verdigris); font-style: italic; font-family: var(--mono); font-size: 0.8rem; }
+
+  .site-footer { border-top: 1px solid var(--paper-line); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html">Genealogy</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="kittery.html">Kittery Trip</a>
+    <a href="outreach.html" class="current">Outreach Log</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Research Correspondence</div>
+  <h1>Outreach Log</h1>
+  <p>A record of which organizations have been contacted during the research —
+  names and status only, no contact details kept here.</p>
+</header>
+
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Organization</th>
+        <th>Regarding</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="placeholder-row">
+        <td colspan="3">Waiting on the list of organizations to populate this table —
+        add rows below following the same pattern once you have it.</td>
+      </tr>
+      <!-- Example row structure:
+      <tr>
+        <td class="org">Kittery Historical &amp; Naval Society</td>
+        <td>Kittery-area records for the Schmidt line</td>
+        <td><span class="status">Contacted</span></td>
+      </tr>
+      -->
+    </tbody>
+  </table>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+</body>
+</html>
