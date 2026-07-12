@@ -74,6 +74,44 @@
     margin-right: 0.4rem;
   }
 
+  /* Naval service list */
+  .ships-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 1.2rem 0 0.6rem;
+  }
+  .entry ul.ships {
+    margin: 0 0 1rem;
+    padding-left: 1.1rem;
+    max-width: 62ch;
+  }
+  .entry ul.ships li {
+    margin-bottom: 0.45rem;
+    line-height: 1.55;
+  }
+  .entry ul.ships li strong { font-family: var(--display); font-weight: 600; }
+
+  /* Illustration / sketch figure */
+  .illustration {
+    margin: 1.4rem 0 1rem;
+    max-width: 62ch;
+    border: 1px solid var(--paper-line);
+    background: var(--paper-dim);
+    padding: 0.6rem 0.6rem 0.9rem;
+  }
+  .illustration img { width: 100%; height: auto; display: block; border: 1px solid var(--paper-line); }
+  .illustration figcaption {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--verdigris);
+    line-height: 1.55;
+    margin-top: 0.7rem;
+  }
+  .illustration figcaption strong { color: var(--charcoal); font-family: var(--display); font-size: 0.85rem; }
+
   .site-footer { border-top: 1px solid var(--paper-line); }
 </style>
 </head>
@@ -132,12 +170,28 @@
       Carolina's Dismal Swamp, scouting toward the Confederate ironclad CSS Albemarle. The
       mission broke him — severe sunstroke brought on a mental collapse so serious he was
       committed to Washington's Government Hospital for the Insane. He recovered enough to be
-      discharged, naturalized as a citizen, and granted a modest pension, but the years that
-      followed were restless ones, taking his family from Maine to Texas and Massachusetts before
-      he died in Kittery in 1881, at 47. He's buried at Orchard Grove Cemetery.</p>
-      <div class="frame">
-        <div class="frame-inner">Photo / document placeholder — portrait, headstone, or record scan</div>
-      </div>
+      discharged, naturalized as a citizen, and granted a modest pension. He died in Kittery in
+      1881, at 47, and is buried at Orchard Grove Cemetery.</p>
+
+      <div class="ships-label">Naval Service</div>
+      <ul class="ships">
+        <li><strong>USS North Carolina</strong> — enlisted Sept. 28, 1858, as Landsman (under the name Edward H. Smith)</li>
+        <li><strong>USS Southern Star</strong> — 1858–1859</li>
+        <li><strong>USS Sabine</strong> — 1858–1861; discharged July 12, 1861, following a hand injury off Pensacola, Florida (Feb. 26, 1861)</li>
+        <li><strong>USS Mahaska</strong> — April 5 – Dec. 6, 1862; 2nd Class Fireman, re-enlisted as Edward H. Schmidt</li>
+        <li><strong>USS William G. Putnam</strong> ("General Putnam") — from Jan. 24, 1863; Acting Master's Mate</li>
+        <li><strong>USS Commodore Hull</strong> — Albemarle Sound, N.C., 1864; hospital ticket issued Sept. 14, 1864 following his breakdown</li>
+      </ul>
+
+      <figure class="illustration">
+        <img src="images/nh42918-city-point.jpg" alt="Sketch of the scene off City Point, James River, Virginia, shortly after the action of 15 May 1862, showing USS Mahaska and other vessels">
+        <figcaption>
+          <strong>Scene off City Point, James River, Virginia</strong> — shortly after the action of 15 May 1862.
+          Sketch, possibly by Edward H. Schmidt, a crewman aboard USS Mahaska — attribution not conclusively
+          confirmed. Received from Mrs. W.L. Smith of Savannah, Georgia, with her letter dated August 26, 1933.
+          U.S. Naval Historical Center Photograph, NHHC Photo #NH 42918.
+        </figcaption>
+      </figure>
     </div>
   </div>
 
@@ -163,9 +217,6 @@
       and then vanishes from the record entirely. Decades later, his son Edward would tell a U.S.
       Navy surgeon that his father "died insane." Where, when, and how remain one of the great
       open questions of this family's history.</p>
-      <div class="frame">
-        <div class="frame-inner">Photo / document placeholder</div>
-      </div>
     </div>
   </div>
 
@@ -191,9 +242,6 @@
       <p>After Edward's death in 1881, Mary carried on, eventually remarrying as Mary C. Tucker.
       She died around 1920 and was laid to rest beside Edward at Orchard Grove Cemetery,
       Kittery.</p>
-      <div class="frame">
-        <div class="frame-inner">Photo / document placeholder</div>
-      </div>
     </div>
   </div>
 
@@ -223,9 +271,6 @@
       before relocating, sometime between 1925 and 1930, to San Diego County, California. William
       Edward spent his later years working in bridge construction, and he died in Encinitas in
       1959 at 87. He's buried at Fort Rosecrans National Cemetery, San Diego.</p>
-      <div class="frame">
-        <div class="frame-inner">Photo / document placeholder</div>
-      </div>
     </div>
   </div>
 
@@ -252,9 +297,6 @@
       where William Edward and Madge would spend the rest of their lives. Madge died in December
       1956; William Edward followed in March 1959. They're buried together at Fort Rosecrans
       National Cemetery, San Diego.</p>
-      <div class="frame">
-        <div class="frame-inner">Photo / document placeholder</div>
-      </div>
     </div>
   </div>
 </section>
