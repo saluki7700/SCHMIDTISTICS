@@ -23,6 +23,11 @@
   .hero p { max-width: 58ch; font-size: 1.05rem; }
 
   section { max-width: 68rem; margin: 0 auto; padding: 0 2rem 2rem; }
+  .section-title {
+    font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--verdigris); margin: 3.2rem 0 0.5rem;
+  }
+  .section-title:first-of-type { margin-top: 1rem; }
 
   .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 1rem; }
   table { width: 100%; min-width: 480px; border-collapse: collapse; }
@@ -66,6 +71,7 @@
 </header>
 
 <section>
+  <div class="section-title">United States</div>
   <div class="table-wrap">
   <table>
     <thead>
@@ -84,17 +90,17 @@
       <tr>
         <td class="org">Rice Public Library — Maine Room</td>
         <td>Newspapers, cemetery map, town records; September appointment requested</td>
-        <td><span class="status">Awaiting Reply</span></td>
+        <td><span class="status">Responded</span></td>
       </tr>
       <tr>
         <td class="org">York County Registrar of Deeds</td>
         <td>Land deeds &amp; probate records, 1852–1881</td>
-        <td><span class="status">Awaiting Reply</span></td>
+        <td><span class="status">Responded</span></td>
       </tr>
       <tr>
         <td class="org">New Hampshire Historical Society</td>
         <td>1881 death notice, Hackett records, Portsmouth directories</td>
-        <td><span class="status">Awaiting Reply</span></td>
+        <td><span class="status">Active — Invoice Pending</span></td>
       </tr>
       <tr>
         <td class="org">Maine State Archives</td>
@@ -107,21 +113,146 @@
         <td><span class="status">Awaiting Reply</span></td>
       </tr>
       <tr>
-        <td class="org">The Inns of Court (UK)</td>
-        <td>Barrister records inquiry — Charles Louis Schmidt</td>
-        <td><span class="status">In Progress</span></td>
+        <td class="org">NARA — Military Records</td>
+        <td>Muster rolls, hospital records &amp; USS William G. Putnam muster roll request</td>
+        <td><span class="status">Awaiting Reply</span></td>
       </tr>
       <tr>
-        <td class="org">National Archives (NARA)</td>
-        <td>Catalog API access for records research</td>
-        <td><span class="status">Active</span></td>
+        <td class="org">Naval History &amp; Heritage Command (NHHC)</td>
+        <td>Paraguay Expedition deck logs, 1933 donor letter, high-res City Point sketch</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">Kittery Town Clerk</td>
+        <td>Edward Schmidt's 1881 death record</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">Concordia Historical Institute</td>
+        <td>Julia Schmidt's 1864 New Orleans marriage record, St. Paul's Lutheran Church</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">Heritage Consulting</td>
+        <td>Maine vital records &amp; St. Pancras baptism microfilm, Family History Library</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">Kansas Dept. of Health &amp; Environment</td>
+        <td>Delayed birth certificate request for Margaret Oswald Schmidt</td>
+        <td><span class="status">Not Yet Sent</span></td>
+      </tr>
+      <tr>
+        <td class="org">San Diego County Recorder/Clerk</td>
+        <td>Death certificate for Margaret Oswald Schmidt</td>
+        <td><span class="status">Ordered — Awaiting Delivery</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="section-title">United Kingdom — Inns of Court</div>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Organization</th>
+        <th>Regarding</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="org">Gray's Inn</td>
+        <td>Barrister records inquiry — Charles Louis Schmidt</td>
+        <td><span class="status">Responded — Not Found</span></td>
+      </tr>
+      <tr>
+        <td class="org">Lincoln's Inn</td>
+        <td>Barrister records inquiry — Charles Louis Schmidt</td>
+        <td><span class="status">Responded — Not Found</span></td>
+      </tr>
+      <tr>
+        <td class="org">Inner Temple</td>
+        <td>Barrister records inquiry — Charles Louis Schmidt</td>
+        <td><span class="status">Responded — Not Found</span></td>
+      </tr>
+      <tr>
+        <td class="org">Middle Temple</td>
+        <td>Barrister records inquiry — Charles Louis Schmidt</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="section-title">United Kingdom — Otto Schmidt Research</div>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Organization</th>
+        <th>Regarding</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="org">The London Archives</td>
+        <td>Otto Schmidt residency &amp; occupation records</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">Bethlem Royal Hospital Archives</td>
+        <td>Possible institutionalization of Otto Schmidt</td>
+        <td><span class="status">Responded</span></td>
+      </tr>
+      <tr>
+        <td class="org">Camden Local Studies &amp; Archives</td>
+        <td>Otto &amp; family's London residence records</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">Bodleian Library — Macray Papers</td>
+        <td>Family correspondence in Rev. William Dunn Macray's papers</td>
+        <td><span class="status">Closed — No Result</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="section-title">Belgium &amp; Continental Europe</div>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Organization</th>
+        <th>Regarding</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="org">Liège State Archives</td>
+        <td>Dubarle &amp; Jourdan family records; Charles Louis Schmidt</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">Liège Bar Association</td>
+        <td>Charles Louis Schmidt, barrister/avocat inquiry</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">Karin Jauch (Baden-Württemberg genealogist)</td>
+        <td>Bräunlingen Schmidt/Jourdan birth records</td>
+        <td><span class="status">Responded</span></td>
       </tr>
     </tbody>
   </table>
   </div>
 
   <p style="font-family: var(--mono); font-size: 0.78rem; color: var(--verdigris); margin-top: 1.5rem;">
-    8 active outreach threads across the US and UK as of this update.
+    24 outreach threads across the US, UK, and Belgium as of this update.
   </p>
 </section>
 
