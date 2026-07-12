@@ -43,18 +43,9 @@
     margin: 4rem 0 0.5rem;
   }
 
-  /* Tree placeholder */
+  /* Family tree figure */
   .tree-wrap { margin: 1.5rem 0 3rem; }
-  .tree-frame {
-    border: 1px dashed var(--paper-line);
-    background: var(--paper-dim);
-    padding: 3rem 1.5rem;
-    text-align: center;
-    font-family: var(--mono);
-    font-size: 0.8rem;
-    color: var(--verdigris);
-  }
-  .tree-frame strong { display: block; font-family: var(--display); font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0.5rem; }
+  .tree-wrap svg { width: 100%; height: auto; display: block; }
 
   /* Entries */
   .entry { border-color: var(--paper-line); }
@@ -73,52 +64,6 @@
     border-radius: 2px;
     margin-right: 0.4rem;
   }
-
-  .subtitle {
-    font-family: var(--body);
-    font-style: italic;
-    font-size: 1rem;
-    color: var(--verdigris);
-    margin: -0.2rem 0 0.9rem;
-  }
-
-  /* Naval service list */
-  .ships-label {
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--brass);
-    margin: 1.2rem 0 0.6rem;
-  }
-  .entry ul.ships {
-    margin: 0 0 1rem;
-    padding-left: 1.1rem;
-    max-width: 62ch;
-  }
-  .entry ul.ships li {
-    margin-bottom: 0.45rem;
-    line-height: 1.55;
-  }
-  .entry ul.ships li strong { font-family: var(--display); font-weight: 600; }
-
-  /* Illustration / sketch figure */
-  .illustration {
-    margin: 1.4rem 0 1rem;
-    max-width: 62ch;
-    border: 1px solid var(--paper-line);
-    background: var(--paper-dim);
-    padding: 0.6rem 0.6rem 0.9rem;
-  }
-  .illustration img { width: 100%; height: auto; display: block; border: 1px solid var(--paper-line); }
-  .illustration figcaption {
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    color: var(--verdigris);
-    line-height: 1.55;
-    margin-top: 0.7rem;
-  }
-  .illustration figcaption strong { color: var(--charcoal); font-family: var(--display); font-size: 0.85rem; }
 
   .site-footer { border-top: 1px solid var(--paper-line); }
 </style>
@@ -144,11 +89,156 @@
 <section>
   <div class="section-title">Family Tree</div>
   <div class="tree-wrap">
-    <div class="tree-frame">
-      <strong>Family tree visualization</strong>
-      Drop in a GEDCOM-rendering embed here (e.g. an exported SVG from your genealogy software,
-      or a JS tree library such as family-chart or Topola) once your GEDCOM file is ready to publish.
-    </div>
+<svg viewBox="0 0 1100 676" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schmidt family line, London to Kittery, Maine">
+  <title>Schmidt Line — London to Kittery, Maine</title>
+  <defs>
+    <style>
+      .disp { font-family: "Fraunces", Georgia, serif; }
+      .body { font-family: "Source Serif 4", Georgia, serif; }
+      .mono { font-family: "IBM Plex Mono", "Courier New", monospace; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="676" fill="#EDE6D6"/>
+
+  <!-- faint ledger ruling -->
+  <g stroke="#CFC3A6" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="34" x2="1100" y2="34"/>
+    <line x1="0" y1="68" x2="1100" y2="68"/>
+    <line x1="0" y1="102" x2="1100" y2="102"/>
+    <line x1="0" y1="136" x2="1100" y2="136"/>
+    <line x1="0" y1="170" x2="1100" y2="170"/>
+    <line x1="0" y1="204" x2="1100" y2="204"/>
+    <line x1="0" y1="238" x2="1100" y2="238"/>
+    <line x1="0" y1="272" x2="1100" y2="272"/>
+    <line x1="0" y1="306" x2="1100" y2="306"/>
+    <line x1="0" y1="340" x2="1100" y2="340"/>
+    <line x1="0" y1="374" x2="1100" y2="374"/>
+    <line x1="0" y1="408" x2="1100" y2="408"/>
+    <line x1="0" y1="442" x2="1100" y2="442"/>
+    <line x1="0" y1="476" x2="1100" y2="476"/>
+    <line x1="0" y1="510" x2="1100" y2="510"/>
+    <line x1="0" y1="544" x2="1100" y2="544"/>
+    <line x1="0" y1="578" x2="1100" y2="578"/>
+    <line x1="0" y1="612" x2="1100" y2="612"/>
+    <line x1="0" y1="646" x2="1100" y2="646"/>
+  </g>
+
+  <!-- bookend rules -->
+  <line x1="20" y1="16" x2="1080" y2="16" stroke="#CFC3A6" stroke-width="1"/>
+  <line x1="20" y1="660" x2="1080" y2="660" stroke="#CFC3A6" stroke-width="1"/>
+
+  <!-- eyebrow -->
+  <text x="550" y="40" text-anchor="middle" class="mono" font-size="13" letter-spacing="2" fill="#5C6B5D">SCHMIDT LINE — LONDON TO KITTERY, MAINE</text>
+
+  <!-- ============ GENERATION I ============ -->
+  <rect x="290" y="64" width="520" height="140" rx="2" fill="#E2D8C2" stroke="#A8763E" stroke-width="1.3"/>
+  <text x="550" y="84" text-anchor="middle" class="mono" font-size="10" letter-spacing="1.5" fill="#5C6B5D">GENERATION I · LONDON</text>
+  <line x1="550" y1="94" x2="550" y2="188" stroke="#C3924F" stroke-width="1"/>
+  <circle cx="550" cy="141" r="11" fill="#E2D8C2" stroke="#C3924F" stroke-width="1"/>
+  <text x="550" y="146" text-anchor="middle" class="disp" font-size="13" fill="#C3924F">⚭</text>
+
+  <!-- Otto Schmidt -->
+  <text x="530" y="108" text-anchor="end" class="disp" font-weight="700" font-size="16" fill="#2B2622">Otto Schmidt</text>
+  <text x="530" y="126" text-anchor="end" class="body" font-style="italic" font-size="10.5" fill="#5C6B5D">Professor of Languages &amp; Writer</text>
+  <text x="530" y="144" text-anchor="end" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">b. c. 1806</text>
+  <text x="530" y="160" text-anchor="end" class="mono" font-size="10.5" fill="#8C4A32">d. — · unresolved</text>
+
+  <!-- Henrietta Adonis Jourdan (Dubarle) Schmidt -->
+  <text x="570" y="108" text-anchor="start" class="disp" font-weight="700" font-size="15" fill="#2B2622">Henrietta Adonis Jourdan</text>
+  <text x="570" y="126" text-anchor="start" class="disp" font-weight="700" font-size="15" fill="#2B2622">(Dubarle) Schmidt</text>
+  <text x="570" y="144" text-anchor="start" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">b. c. 1811</text>
+  <text x="570" y="160" text-anchor="start" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">d. 1842 · Parsons Green</text>
+
+  <text x="550" y="182" text-anchor="middle" class="mono" font-style="italic" font-size="9.5" fill="#5C6B5D">m. 8 Aug 1837, St Pancras</text>
+
+  <!-- trunk to bar -->
+  <line x1="550" y1="204" x2="550" y2="250" stroke="#A8763E" stroke-width="1.5"/>
+  <line x1="100" y1="250" x2="1000" y2="250" stroke="#A8763E" stroke-width="1.5"/>
+
+  <!-- drop lines to five children -->
+  <g stroke="#A8763E" stroke-width="1.2">
+    <line x1="100" y1="250" x2="100" y2="280"/>
+    <line x1="325" y1="250" x2="325" y2="280"/>
+    <line x1="550" y1="250" x2="550" y2="280"/>
+    <line x1="775" y1="250" x2="775" y2="280"/>
+    <line x1="1000" y1="250" x2="1000" y2="280"/>
+  </g>
+
+  <!-- ============ GENERATION II — five children ============ -->
+  <text x="550" y="266" text-anchor="middle" class="mono" font-size="9.5" letter-spacing="1.5" fill="#5C6B5D">GENERATION II · FIVE CHILDREN, 1830–1839</text>
+
+  <!-- Caroline -->
+  <rect x="20" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="100" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Caroline Henrietta</text>
+  <text x="100" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Jane Schmidt</text>
+  <text x="100" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1830 · London</text>
+  <text x="100" y="352" text-anchor="middle" class="mono" font-style="italic" font-size="9" fill="#5C6B5D">m. Thomas Turner, 1861</text>
+
+  <!-- Edward — primary subject -->
+  <rect x="245" y="280" width="160" height="124" rx="2" fill="#E2D8C2" stroke="#A8763E" stroke-width="1.8"/>
+  <text x="325" y="294" text-anchor="middle" class="mono" font-size="8.5" letter-spacing="1" fill="#A8763E">PRIMARY SUBJECT</text>
+  <text x="325" y="312" text-anchor="middle" class="disp" font-weight="700" font-size="14" fill="#2B2622">Edward Alfred</text>
+  <text x="325" y="328" text-anchor="middle" class="disp" font-weight="700" font-size="14" fill="#2B2622">Henry Schmidt</text>
+  <text x="325" y="348" text-anchor="middle" class="mono" font-size="10" fill="#2B2622">b. 1833 · Middlesex</text>
+  <text x="325" y="364" text-anchor="middle" class="mono" font-size="10" fill="#2B2622">d. 1881 · Kittery, ME</text>
+  <text x="325" y="380" text-anchor="middle" class="mono" font-style="italic" font-size="9" fill="#5C6B5D">U.S. Navy · USS Sabine</text>
+
+  <!-- Eleanor -->
+  <rect x="470" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="550" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Eleanor Aimée</text>
+  <text x="550" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Schmidt</text>
+  <text x="550" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1836 · London</text>
+  <text x="550" y="352" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">d. 1898 · Worcestershire</text>
+
+  <!-- Julia -->
+  <rect x="695" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="775" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Julia Sophia</text>
+  <text x="775" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Schmidt</text>
+  <text x="775" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1837 · Baden</text>
+  <text x="775" y="352" text-anchor="middle" class="mono" font-style="italic" font-size="9" fill="#5C6B5D">m. New Orleans, 1864</text>
+
+  <!-- Otto John Albert -->
+  <rect x="920" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="1000" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="12.5" fill="#2B2622">Otto John Albert</text>
+  <text x="1000" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Schmidt</text>
+  <text x="1000" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1839 · London</text>
+  <text x="1000" y="352" text-anchor="middle" class="mono" font-size="9.5" fill="#8C4A32">d. — · unresolved</text>
+
+  <!-- trunk from Edward down to Generation III -->
+  <line x1="325" y1="404" x2="325" y2="460" stroke="#A8763E" stroke-width="1.5"/>
+
+  <!-- ============ GENERATION III ============ -->
+  <rect x="140" y="460" width="520" height="150" rx="2" fill="#E2D8C2" stroke="#A8763E" stroke-width="1.6"/>
+  <text x="400" y="480" text-anchor="middle" class="mono" font-size="10" letter-spacing="1.5" fill="#5C6B5D">GENERATION III · KITTERY, MAINE</text>
+  <line x1="400" y1="494" x2="400" y2="596" stroke="#C3924F" stroke-width="1"/>
+  <circle cx="400" cy="545" r="11" fill="#E2D8C2" stroke="#C3924F" stroke-width="1"/>
+  <text x="400" y="550" text-anchor="middle" class="disp" font-size="13" fill="#C3924F">⚭</text>
+
+  <!-- Edward (again, as husband in Gen III) -->
+  <text x="380" y="508" text-anchor="end" class="disp" font-weight="700" font-size="16" fill="#2B2622">Edward Alfred Henry</text>
+  <text x="380" y="525" text-anchor="end" class="disp" font-weight="700" font-size="16" fill="#2B2622">Schmidt</text>
+  <text x="380" y="546" text-anchor="end" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">b. 1833 · London</text>
+  <text x="380" y="561" text-anchor="end" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">d. 1881 · Kittery, ME</text>
+  <text x="380" y="576" text-anchor="end" class="mono" font-style="italic" font-size="9.5" fill="#5C6B5D">U.S. Navy · USS Sabine</text>
+
+  <!-- Mary Catherine Dudley Schmidt -->
+  <text x="420" y="508" text-anchor="start" class="disp" font-weight="700" font-size="16" fill="#2B2622">Mary Catherine</text>
+  <text x="420" y="525" text-anchor="start" class="disp" font-weight="700" font-size="16" fill="#2B2622">Dudley Schmidt</text>
+  <text x="420" y="546" text-anchor="start" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">b. 1840 · Boston, MA</text>
+  <text x="420" y="561" text-anchor="start" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">d. 1920 · Kittery, ME</text>
+  <text x="420" y="576" text-anchor="start" class="mono" font-style="italic" font-size="9.5" fill="#5C6B5D">widow's declaration, 1912</text>
+
+  <!-- continuation cue -->
+  <text x="550" y="628" text-anchor="middle" class="mono" font-size="10" fill="#A8763E">↓ continued in Ancestor Records, below</text>
+
+  <!-- footnote -->
+  <text x="550" y="646" text-anchor="middle" class="mono" font-size="9" fill="#2B2622" opacity="0.55">Compiled from SCHMIDTISTICS.ged &amp; the Master Research Summary · rust-colored fields remain open questions</text>
+
+  <!-- corner marks -->
+  <text x="20" y="638" text-anchor="start" class="mono" font-size="9" letter-spacing="0.5" fill="#5C6B5D" opacity="0.65">FIG. 1 — SCHMIDT LINE, 1806–1920</text>
+  <text x="1080" y="638" text-anchor="end" class="mono" font-size="9" letter-spacing="1" fill="#5C6B5D" opacity="0.65">SCHMIDTISTICS.COM</text>
+</svg>
   </div>
 </section>
 
@@ -158,184 +248,47 @@
   <div class="entry">
     <div class="no">001</div>
     <div>
-      <span class="tag">Parents of 002</span>
-      <h3>Otto &amp; Henrietta Schmidt</h3>
-      <div class="subtitle">The Parents We're Still Searching For</div>
+      <span class="tag">Primary Subject</span>
+      <h3>Edward Alfred Henry Schmidt</h3>
       <div class="meta">
-        <span>Otto: Professor of Languages, London</span>
-        <span>Henrietta: d. 1842, Kensington</span>
+        <span>b. —</span>
+        <span>d. —</span>
+        <span>Origin: —</span>
       </div>
-      <p>Otto Schmidt was a professor of languages, working and writing in London in the 1830s.
-      In August 1837 he married Henrietta Adonis Jourdan, a woman who had already lived a life of
-      her own on the continent before coming to England. Together they raised a young family in
-      the city — six children in all, baptized together at St. Pancras on a single day in August
-      1837, their birth entries all marked "Foreign Parts," a small clue to a family with roots
-      beyond England's shore.</p>
-      <p>The marriage didn't last in any simple sense. By 1841 Otto and Henrietta were living
-      apart, and the following year Henrietta died of consumption in Parsons Green at just around
-      30. Otto's story trails off from there. He surfaces once more — in 1856, listed as
-      "Professor" and, it seems, still living, on his daughter Adelaide's marriage certificate —
-      and then vanishes from the record entirely. Decades later, his son Edward would tell a U.S.
-      Navy surgeon that his father "died insane." Where, when, and how remain one of the great
-      open questions of this family's history.</p>
-
-      <div class="ships-label">The Children</div>
-      <p>Of the six, two crossed the Atlantic and four stayed in England — three of whom ended up
-      bound together in Oxfordshire through a single family connection.</p>
-      <ul class="ships">
-        <li><strong>Caroline Henrietta Jane</strong> (b. 1830) — stayed in England. Married Thomas Turner, a widower from Paddington, in 1861 at Bletchingdon, Oxfordshire — the ceremony performed by her own brother-in-law, Rev. William Dunn Macray.</li>
-        <li><strong>Adelaide Ottilia Alberta</strong> (b. 1831) — stayed in England. Married Rev. William Dunn Macray, a Bodleian Library scholar, in 1856 at Iffley, Oxfordshire, tying the family to Oxford for the next generation.</li>
-        <li><strong>Edward Alfred Henry</strong> (b. 1833) — emigrated alone to the United States around 1851, settling in Kittery, Maine (see record 002).</li>
-        <li><strong>Eleanor Aimée</strong> (b. 1834) — stayed in England. Worked as a governess in Surrey before later living with her sister Adelaide and the Macrays at Ducklington, Oxfordshire. Died 1898 at Glebe House, North Piddle, Worcestershire.</li>
-        <li><strong>Julia Sophia</strong> (b. 1837) — emigrated to the United States, resurfacing in New Orleans, where she married John Henry Eggers, a fellow immigrant from Wustrow, Hanover, in June 1864. She died there in 1903.</li>
-        <li><strong>Otto John Albert</strong> (b. 1839) — the youngest, and the family's last true mystery. Baptized separately at St. Pancras in September 1839, he was never definitively traced again. His absence from the 1841 census is inconclusive rather than proof of death — Julia was also missing from that same household and later turned out to be alive and well — so his fate remains genuinely open.</li>
-      </ul>
+      <p>The anchor of the current research — the generation from which the multi-generational European
+      connections are being traced outward. Replace this paragraph with his biography, sources, and
+      any photographs or documents you've gathered.</p>
+      <div class="frame">
+        <div class="frame-inner">Photo / document placeholder — portrait, headstone, or record scan</div>
+      </div>
     </div>
   </div>
 
   <div class="entry">
     <div class="no">002</div>
     <div>
-      <span class="tag">Primary Subject — Military</span>
-      <h3>Edward Alfred Henry Schmidt</h3>
+      <h3>[Ancestor Name]</h3>
       <div class="meta">
-        <span>b. 1833, Middlesex, England</span>
-        <span>d. 1881, Kittery, Maine</span>
-        <span>U.S. Navy, 1858–1864</span>
+        <span>b. —</span>
+        <span>d. —</span>
+        <span>Origin: —</span>
       </div>
-      <p>Edward was eight years old when his mother died and his family began to scatter. By
-      sixteen he was lodging with a chemist in London; by the last days of November 1851, not yet
-      eighteen, he had crossed the Atlantic alone and made his way to New York. Within a year he
-      had settled in Kittery, Maine — the small shipbuilding town that would be his home for the
-      rest of his life.</p>
-      <p>In 1858 he enlisted in the U.S. Navy. His service took him aboard the USS Sabine, where
-      a ship's chain crushed his right hand off Pensacola and cost him a finger. He recovered,
-      came home, and married Mary Catherine Dudley in 1861. Within months he was back at sea
-      aboard the USS Mahaska, where an accidental discharge took a finger from his other hand.
-      His most striking documented mission came in 1864: a covert reconnaissance into North
-      Carolina's Dismal Swamp, scouting toward the Confederate ironclad CSS Albemarle. The
-      mission broke him — severe sunstroke brought on a mental collapse so serious he was
-      committed to Washington's Government Hospital for the Insane. He recovered enough to be
-      discharged, naturalized as a citizen, and granted a modest pension. He died in Kittery in
-      1881, at 47, and is buried at Orchard Grove Cemetery.</p>
-
-      <div class="ships-label">Naval Service</div>
-      <ul class="ships">
-        <li><strong>USS North Carolina</strong> — enlisted Sept. 28, 1858, as Landsman (under the name Edward H. Smith)</li>
-        <li><strong>USS Southern Star</strong> — 1858–1859</li>
-        <li><strong>USS Sabine</strong> — 1858–1861; discharged July 12, 1861, following a hand injury off Pensacola, Florida (Feb. 26, 1861)</li>
-        <li><strong>USS Mahaska</strong> — April 5 – Dec. 6, 1862; 2nd Class Fireman, re-enlisted as Edward H. Schmidt</li>
-        <li><strong>USS William G. Putnam</strong> ("General Putnam") — from Jan. 24, 1863; Acting Master's Mate</li>
-        <li><strong>USS Commodore Hull</strong> — Albemarle Sound, N.C., 1864; hospital ticket issued Sept. 14, 1864 following his breakdown</li>
-      </ul>
-
-      <figure class="illustration">
-        <img src="images/nh42918-city-point.jpg" alt="Sketch of the scene off City Point, James River, Virginia, shortly after the action of 15 May 1862, showing USS Mahaska and other vessels">
-        <figcaption>
-          <strong>Scene off City Point, James River, Virginia</strong> — shortly after the action of 15 May 1862.
-          Sketch, possibly by Edward H. Schmidt, a crewman aboard USS Mahaska — attribution not conclusively
-          confirmed. Received from Mrs. W.L. Smith of Savannah, Georgia, with her letter dated August 26, 1933.
-          U.S. Naval Historical Center Photograph, NHHC Photo #NH 42918.
-        </figcaption>
-      </figure>
-
-      <div class="ships-label">The Action of 15 May 1862 — Battle of Drewry's Bluff</div>
-      <p>After the Confederates scuttled the ironclad CSS Virginia and abandoned Norfolk in early
-      May 1862, the James River lay open toward Richmond. On May 15, Commander John Rodgers led a
-      small Union flotilla — the ironclads USS Monitor and USS Galena, the experimental ironclad
-      USS Naugatuck, and gunboats USS Port Royal and USS Aroostook — up the river to test the
-      Confederate defenses just seven miles from the capital. The Confederates had fortified a
-      90-foot bluff at a sharp bend in the river, known as Fort Darling, and sunk obstructions in
-      the channel below it. Unable to pass, the Union ships anchored below the bluff and exchanged
-      fire with the fort for roughly four hours. USS Galena took the worst of it, struck more than
-      40 times with 13–14 killed, while Monitor's turret guns couldn't elevate enough to hit the
-      fort at such close range. Running low on ammunition, Rodgers withdrew the flotilla back
-      downriver to City Point around 11 a.m. — a Confederate victory that kept Richmond out of
-      reach by water for the rest of the war's early years.</p>
-      <p>The flotilla's retreat to City Point is exactly where this sketch is set. While USS
-      Mahaska wasn't one of the five ships in the battle itself, records place her at City Point
-      in the weeks afterward as part of the reinforcements sent to support the army — consistent
-      with Edward being aboard to sketch the gathered fleet, including a battle-damaged Galena.</p>
+      <p>Duplicate this record block for each ancestor. Keep the record number sequential to
+      mirror how your physical binders are organized, so the site and the shelf stay in sync.</p>
     </div>
   </div>
 
   <div class="entry">
     <div class="no">003</div>
     <div>
-      <span class="tag">Marriage of 002</span>
-      <h3>Schmidt &amp; Dudley Family — Edward A.H. &amp; Mary Catherine</h3>
+      <h3>[Ancestor Name]</h3>
       <div class="meta">
-        <span>Married Aug. 28, 1861, York, Maine</span>
-        <span>Eight children</span>
+        <span>b. —</span>
+        <span>d. —</span>
+        <span>Origin: —</span>
       </div>
-      <p>Edward Schmidt married Mary Catherine Dudley, a York, Maine, native, in August 1861 —
-      just weeks after his discharge from his first term of naval service and mere months before
-      he re-enlisted for the war. Mary would spend the next two decades raising a family largely
-      on her own while Edward served, recovered, and searched for steady footing.</p>
-      <p>The couple had at least eight children together: Adelaide Eleanor, Hallie G., Otto D.
-      (who died in infancy, named for the grandfather he never knew), Esther H., Lottie, James
-      W., Mary, and William Edward. Their daughter Jennie H. later married in Lynn,
-      Massachusetts, and Adelaide's own daughter carried the family's Revolutionary War lineage —
-      through the Dudleys and Bookers of York County — into the Daughters of the American
-      Revolution.</p>
-      <p>After Edward's death in 1881, Mary carried on, eventually remarrying as Mary C. Tucker.
-      She died around 1920 and was laid to rest beside Edward at Orchard Grove Cemetery,
-      Kittery.</p>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div class="no">004</div>
-    <div>
-      <span class="tag">Son of 002 &amp; 003 — Military</span>
-      <h3>William Edward Schmidt</h3>
-      <div class="meta">
-        <span>b. 1871, Kittery, Maine</span>
-        <span>d. 1959, Encinitas, California</span>
-        <span>8th Mass. Vol. Infantry, 1898–99</span>
-      </div>
-      <p>Born in Kittery in 1871, William Edward was just ten years old when his father Edward
-      died. By 1898, in his late twenties, he had made his way to Massachusetts and enlisted —
-      three days after the U.S. declared war on Spain — as a private in Company D of the 8th
-      Massachusetts Volunteer Infantry, a regiment raised in Lynn, the same town where his sister
-      Jennie had settled.</p>
-      <p>His war was one of endurance rather than combat. The regiment trained through the misery
-      of Camp Thomas in Georgia — a sprawling, disease-ridden camp of 50,000 men — and then Camp
-      Lexington, Kentucky. The fighting ended before they ever saw action, but the regiment still
-      shipped out, landing in Cuba in January 1899 for roughly three months of occupation duty
-      before returning home to muster out in Boston that April — one year to the day after he'd
-      enlisted.</p>
-      <p>By 1900 he had moved on again, this time to Washington County, Kansas, where in 1903 he
-      married Margaret "Madge" Oswald. The couple raised their family there for over two decades
-      before relocating, sometime between 1925 and 1930, to San Diego County, California. William
-      Edward spent his later years working in bridge construction, and he died in Encinitas in
-      1959 at 87. He's buried at Fort Rosecrans National Cemetery, San Diego.</p>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div class="no">005</div>
-    <div>
-      <span class="tag">Marriage of 004</span>
-      <h3>Schmidt &amp; Oswald Family — William E. &amp; Margaret "Madge"</h3>
-      <div class="meta">
-        <span>Married Apr. 8, 1903, Washington, Kansas</span>
-        <span>Seven children</span>
-      </div>
-      <p>William Edward Schmidt and Margaret "Madge" Oswald married on April 8, 1903, in
-      Washington, Kansas. Madge was a local girl, born in 1883 in nearby Hanover to a father
-      named Oswald and a mother from the Lillibridge family — a line the family is still working
-      to trace further back.</p>
-      <p>Together they raised seven children on the Kansas plains: Lionel, Kenneth, Malcolm,
-      Rosella, Wilber, Mancil, and Donald. Tragedy touched the family more than once — their
-      eldest, Lionel, died in 1904 at not quite eleven years old, and decades later, after the
-      family had resettled in California, their son Mancil died in Encinitas in 1932 at just
-      eighteen.</p>
-      <p>The family's move west, sometime between 1925 and 1930, took them from the Kansas
-      prairie to the growing communities of Oceanside and then Encinitas on the California coast,
-      where William Edward and Madge would spend the rest of their lives. Madge died in December
-      1956; William Edward followed in March 1959. They're buried together at Fort Rosecrans
-      National Cemetery, San Diego.</p>
+      <p>A short entry can work too — not every record needs a full write-up. Some can simply
+      note what's confirmed and what's still an open question.</p>
     </div>
   </div>
 </section>
