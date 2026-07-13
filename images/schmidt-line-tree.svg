@@ -1,0 +1,161 @@
+<svg viewBox="0 0 1100 704" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schmidt family line, London to Kittery, Maine">
+  <title>Schmidt Line — London to Kittery, Maine</title>
+  <defs>
+    <style>
+      .disp { font-family: "Fraunces", Georgia, serif; }
+      .body { font-family: "Source Serif 4", Georgia, serif; }
+      .mono { font-family: "IBM Plex Mono", "Courier New", monospace; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="704" fill="#EDE6D6"/>
+
+  <!-- faint ledger ruling -->
+  <g stroke="#CFC3A6" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="34" x2="1100" y2="34"/>
+    <line x1="0" y1="68" x2="1100" y2="68"/>
+    <line x1="0" y1="102" x2="1100" y2="102"/>
+    <line x1="0" y1="136" x2="1100" y2="136"/>
+    <line x1="0" y1="170" x2="1100" y2="170"/>
+    <line x1="0" y1="204" x2="1100" y2="204"/>
+    <line x1="0" y1="238" x2="1100" y2="238"/>
+    <line x1="0" y1="272" x2="1100" y2="272"/>
+    <line x1="0" y1="306" x2="1100" y2="306"/>
+    <line x1="0" y1="340" x2="1100" y2="340"/>
+    <line x1="0" y1="374" x2="1100" y2="374"/>
+    <line x1="0" y1="408" x2="1100" y2="408"/>
+    <line x1="0" y1="442" x2="1100" y2="442"/>
+    <line x1="0" y1="476" x2="1100" y2="476"/>
+    <line x1="0" y1="510" x2="1100" y2="510"/>
+    <line x1="0" y1="544" x2="1100" y2="544"/>
+    <line x1="0" y1="578" x2="1100" y2="578"/>
+    <line x1="0" y1="612" x2="1100" y2="612"/>
+    <line x1="0" y1="646" x2="1100" y2="646"/>
+    <line x1="0" y1="680" x2="1100" y2="680"/>
+  </g>
+
+  <!-- bookend rules -->
+  <line x1="20" y1="16" x2="1080" y2="16" stroke="#CFC3A6" stroke-width="1"/>
+  <line x1="20" y1="688" x2="1080" y2="688" stroke="#CFC3A6" stroke-width="1"/>
+
+  <!-- eyebrow -->
+  <text x="550" y="40" text-anchor="middle" class="mono" font-size="13" letter-spacing="2" fill="#5C6B5D">SCHMIDT LINE — LONDON TO KITTERY, MAINE</text>
+
+  <!-- ============ GENERATION I ============ -->
+  <rect x="290" y="64" width="520" height="140" rx="2" fill="#E2D8C2" stroke="#A8763E" stroke-width="1.3"/>
+  <text x="550" y="84" text-anchor="middle" class="mono" font-size="10" letter-spacing="1.5" fill="#5C6B5D">GENERATION I · LONDON</text>
+  <line x1="550" y1="94" x2="550" y2="188" stroke="#C3924F" stroke-width="1"/>
+  <circle cx="550" cy="141" r="11" fill="#E2D8C2" stroke="#C3924F" stroke-width="1"/>
+  <text x="550" y="146" text-anchor="middle" class="disp" font-size="13" fill="#C3924F">⚭</text>
+
+  <!-- Otto Schmidt -->
+  <text x="530" y="108" text-anchor="end" class="disp" font-weight="700" font-size="16" fill="#2B2622">Otto Schmidt</text>
+  <text x="530" y="126" text-anchor="end" class="body" font-style="italic" font-size="10.5" fill="#5C6B5D">Professor of Languages &amp; Writer</text>
+  <text x="530" y="144" text-anchor="end" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">b. c. 1806</text>
+  <text x="530" y="160" text-anchor="end" class="mono" font-size="10.5" fill="#8C4A32">d. — · unresolved</text>
+
+  <!-- Henrietta Adonis Jourdan (Dubarle) Schmidt -->
+  <text x="570" y="108" text-anchor="start" class="disp" font-weight="700" font-size="15" fill="#2B2622">Henrietta Adonis Jourdan</text>
+  <text x="570" y="126" text-anchor="start" class="disp" font-weight="700" font-size="15" fill="#2B2622">(Dubarle) Schmidt</text>
+  <text x="570" y="144" text-anchor="start" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">b. c. 1811</text>
+  <text x="570" y="160" text-anchor="start" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">d. 1842 · Parsons Green</text>
+
+  <text x="550" y="182" text-anchor="middle" class="mono" font-style="italic" font-size="9.5" fill="#5C6B5D">m. 8 Aug 1837, St Pancras</text>
+
+  <!-- trunk to bar -->
+  <line x1="550" y1="204" x2="550" y2="250" stroke="#A8763E" stroke-width="1.5"/>
+  <line x1="100" y1="250" x2="1000" y2="250" stroke="#A8763E" stroke-width="1.5"/>
+
+  <!-- drop lines to six children -->
+  <g stroke="#A8763E" stroke-width="1.2">
+    <line x1="100" y1="250" x2="100" y2="280"/>
+    <line x1="280" y1="250" x2="280" y2="280"/>
+    <line x1="460" y1="250" x2="460" y2="280"/>
+    <line x1="640" y1="250" x2="640" y2="280"/>
+    <line x1="820" y1="250" x2="820" y2="280"/>
+    <line x1="1000" y1="250" x2="1000" y2="280"/>
+  </g>
+
+  <!-- ============ GENERATION II — six children ============ -->
+  <text x="550" y="266" text-anchor="middle" class="mono" font-size="9.5" letter-spacing="1.5" fill="#5C6B5D">GENERATION II · SIX CHILDREN, BAPTIZED TOGETHER, ST PANCRAS 1837</text>
+
+  <!-- Caroline -->
+  <rect x="20" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="100" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Caroline Henrietta</text>
+  <text x="100" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Jane Schmidt</text>
+  <text x="100" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1830 · London</text>
+  <text x="100" y="352" text-anchor="middle" class="mono" font-style="italic" font-size="9" fill="#5C6B5D">m. Thomas Turner, 1861</text>
+
+  <!-- Adelaide -->
+  <rect x="200" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="280" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Adelaide Ottilia</text>
+  <text x="280" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Alberta Schmidt</text>
+  <text x="280" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1831 · London</text>
+  <text x="280" y="352" text-anchor="middle" class="mono" font-style="italic" font-size="9" fill="#5C6B5D">m. Rev. W.D. Macray, 1856</text>
+
+  <!-- Edward — primary subject -->
+  <rect x="380" y="280" width="160" height="124" rx="2" fill="#E2D8C2" stroke="#A8763E" stroke-width="1.8"/>
+  <text x="460" y="294" text-anchor="middle" class="mono" font-size="8.5" letter-spacing="1" fill="#A8763E">PRIMARY SUBJECT</text>
+  <text x="460" y="312" text-anchor="middle" class="disp" font-weight="700" font-size="14" fill="#2B2622">Edward Alfred</text>
+  <text x="460" y="328" text-anchor="middle" class="disp" font-weight="700" font-size="14" fill="#2B2622">Henry Schmidt</text>
+  <text x="460" y="348" text-anchor="middle" class="mono" font-size="10" fill="#2B2622">b. 1833 · Middlesex</text>
+  <text x="460" y="364" text-anchor="middle" class="mono" font-size="10" fill="#2B2622">d. 1881 · Kittery, ME</text>
+  <text x="460" y="380" text-anchor="middle" class="mono" font-style="italic" font-size="9" fill="#5C6B5D">U.S. Navy · USS Sabine</text>
+
+  <!-- Eleanor -->
+  <rect x="560" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="640" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Eleanor Aimée</text>
+  <text x="640" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Schmidt</text>
+  <text x="640" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1834 · London</text>
+  <text x="640" y="352" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">d. 1898 · Worcestershire</text>
+
+  <!-- Julia -->
+  <rect x="740" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="820" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Julia Sophia</text>
+  <text x="820" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Schmidt</text>
+  <text x="820" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1837 · Baden</text>
+  <text x="820" y="352" text-anchor="middle" class="mono" font-style="italic" font-size="9" fill="#5C6B5D">m. New Orleans, 1864</text>
+
+  <!-- Otto John Albert -->
+  <rect x="920" y="280" width="160" height="104" rx="2" fill="#EDE6D6" stroke="#CFC3A6" stroke-width="1"/>
+  <text x="1000" y="300" text-anchor="middle" class="disp" font-weight="600" font-size="12.5" fill="#2B2622">Otto John Albert</text>
+  <text x="1000" y="316" text-anchor="middle" class="disp" font-weight="600" font-size="13.5" fill="#2B2622">Schmidt</text>
+  <text x="1000" y="336" text-anchor="middle" class="mono" font-size="9.5" fill="#2B2622" opacity="0.72">b. 1839 · London</text>
+  <text x="1000" y="352" text-anchor="middle" class="mono" font-size="9.5" fill="#8C4A32">d. — · unresolved</text>
+
+  <!-- trunk from Edward down to Generation III -->
+  <line x1="460" y1="404" x2="460" y2="460" stroke="#A8763E" stroke-width="1.5"/>
+
+  <!-- ============ GENERATION III ============ -->
+  <rect x="140" y="460" width="520" height="178" rx="2" fill="#E2D8C2" stroke="#A8763E" stroke-width="1.6"/>
+  <text x="400" y="480" text-anchor="middle" class="mono" font-size="10" letter-spacing="1.5" fill="#5C6B5D">GENERATION III · KITTERY, MAINE</text>
+  <line x1="400" y1="494" x2="400" y2="618" stroke="#C3924F" stroke-width="1"/>
+  <circle cx="400" cy="556" r="11" fill="#E2D8C2" stroke="#C3924F" stroke-width="1"/>
+  <text x="400" y="561" text-anchor="middle" class="disp" font-size="13" fill="#C3924F">⚭</text>
+
+  <!-- Edward (again, as husband in Gen III) -->
+  <text x="380" y="508" text-anchor="end" class="disp" font-weight="700" font-size="16" fill="#2B2622">Edward Alfred Henry</text>
+  <text x="380" y="525" text-anchor="end" class="disp" font-weight="700" font-size="16" fill="#2B2622">Schmidt</text>
+  <text x="380" y="546" text-anchor="end" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">b. 1833 · London</text>
+  <text x="380" y="561" text-anchor="end" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">d. 1881 · Kittery, ME</text>
+  <text x="380" y="576" text-anchor="end" class="mono" font-style="italic" font-size="9.5" fill="#5C6B5D">U.S. Navy · USS Sabine</text>
+
+  <!-- Mary Catherine Dudley Schmidt -->
+  <text x="420" y="508" text-anchor="start" class="disp" font-weight="700" font-size="16" fill="#2B2622">Mary Catherine</text>
+  <text x="420" y="525" text-anchor="start" class="disp" font-weight="700" font-size="16" fill="#2B2622">Dudley Schmidt</text>
+  <text x="420" y="546" text-anchor="start" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">b. 1840 · Boston, MA</text>
+  <text x="420" y="561" text-anchor="start" class="mono" font-size="10.5" fill="#2B2622" opacity="0.75">d. 1920 · Kittery, ME</text>
+  <text x="420" y="576" text-anchor="start" class="mono" font-style="italic" font-size="9.5" fill="#5C6B5D">m. John A. Tucker, 1882</text>
+
+  <text x="400" y="602" text-anchor="middle" class="mono" font-style="italic" font-size="9.5" fill="#5C6B5D">m. 28 Aug 1861, York, Maine · five children</text>
+
+  <!-- continuation cue -->
+  <text x="550" y="656" text-anchor="middle" class="mono" font-size="10" fill="#A8763E">↓ continued in Ancestor Records, below</text>
+
+  <!-- footnote -->
+  <text x="550" y="674" text-anchor="middle" class="mono" font-size="9" fill="#2B2622" opacity="0.55">Compiled from SCHMIDTISTICS.ged &amp; the Master Research Summary · rust-colored fields remain open questions</text>
+
+  <!-- corner marks -->
+  <text x="20" y="666" text-anchor="start" class="mono" font-size="9" letter-spacing="0.5" fill="#5C6B5D" opacity="0.65">FIG. 1 — SCHMIDT LINE, 1806–1920</text>
+  <text x="1080" y="666" text-anchor="end" class="mono" font-size="9" letter-spacing="1" fill="#5C6B5D" opacity="0.65">SCHMIDTISTICS.COM</text>
+</svg>
