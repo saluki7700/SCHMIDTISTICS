@@ -131,6 +131,79 @@ img, .frame-img { max-width: 100%; display: block; }
 }
 
 /* ============================================
+   LINE SWITCHER — Genealogy sub-pages
+   ============================================ */
+.line-switch {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 1.6rem 2rem 0;
+}
+.line-switch a {
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.2s;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.line-switch a:hover { opacity: 0.85; }
+.line-switch a.current { opacity: 1; border-bottom-color: currentColor; }
+.line-switch .sep { opacity: 0.35; }
+
+/* ============================================
+   LINE CARD — hub link-out pattern
+   ============================================ */
+.line-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin: 1.2rem 0 3rem;
+}
+.line-card {
+  border: 1px solid var(--paper-line);
+  background: var(--paper-dim);
+  padding: 1.6rem 1.6rem 1.8rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color 0.2s;
+}
+.line-card:hover { border-color: var(--brass); }
+.line-card .eyebrow {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verdigris);
+  margin-bottom: 0.6rem;
+}
+.line-card h3 {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  margin: 0 0 0.6rem;
+}
+.line-card p { margin: 0 0 1rem; font-size: 0.95rem; max-width: 40ch; }
+.line-card .enter {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brass);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.line-card .enter::after { content: "→"; transition: transform 0.2s; }
+.line-card:hover .enter::after { transform: translateX(4px); }
+
+/* ============================================
    FOOTER (shared)
    ============================================ */
 .site-footer {
