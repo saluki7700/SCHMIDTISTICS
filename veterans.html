@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — Those Who Served</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--paper); color: var(--charcoal); }
+  .site-nav { border-bottom: 1px solid var(--paper-line); }
+
+  .hero {
+    padding: 5rem 2rem 3rem;
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+  .hero .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin: 0 0 1.2rem;
+    max-width: 18ch;
+  }
+  .hero p { max-width: 60ch; font-size: 1.08rem; }
+  .hero p a { color: var(--brass); }
+
+  .status-banner {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--brass);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: -0.6rem 0 0;
+  }
+
+  section { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+  .section-title {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin: 4rem 0 0.5rem;
+  }
+  .section-title:first-of-type { margin-top: 1rem; }
+
+  /* Roster table */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 1rem; }
+  table { width: 100%; min-width: 560px; border-collapse: collapse; }
+  th, td {
+    text-align: left; padding: 0.9rem 0.8rem;
+    border-top: 1px solid var(--paper-line);
+    font-size: 0.92rem;
+  }
+  th {
+    font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--verdigris); border-top: none;
+  }
+  td.org { font-family: var(--display); font-weight: 600; }
+  .status {
+    font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.04em; padding: 0.15rem 0.5rem; border-radius: 2px;
+    border: 1px solid var(--brass); color: var(--brass); display: inline-block;
+  }
+
+  /* Entries */
+  .entry { border-color: var(--paper-line); }
+  .entry .frame { border-color: var(--paper-line); }
+  .frame-inner { background: var(--paper-dim); color: var(--verdigris); }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid var(--brass);
+    color: var(--brass);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+  }
+  .tag.open { border-color: var(--rust); color: var(--rust); }
+
+  .subtitle {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--verdigris);
+    margin: -0.2rem 0 0.9rem;
+  }
+
+  /* Discrepancy / open-question callout */
+  .discrepancy {
+    border-left: 3px solid var(--rust);
+    background: var(--paper-dim);
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+  }
+  .discrepancy .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  .discrepancy p { margin: 0; max-width: 62ch; }
+
+  .site-footer { border-top: 1px solid var(--paper-line); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html">Genealogy</a>
+    <a href="veterans.html" class="current">Those Who Served</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="kittery.html">Kittery Trip</a>
+    <a href="outreach.html">Outreach Log</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Cross-Line Record — Military Service</div>
+  <h1>Those Who Served</h1>
+  <p class="status-banner">First draft — compiled from the family GEDCOM's military source records; not yet independently verified</p>
+  <p>Six confirmed veterans, three wars, four generations — pulled together across the
+  <a href="schmidt-line.html">Schmidt</a>, <a href="bowland-line.html">Bowland</a>, and
+  <a href="seitzberg-line.html">Seitzberg</a> lines. Each entry below is backed by a named source
+  record (enlistment file, muster roll, or VA gravesite index) rather than a draft card alone — the
+  distinction matters, since registering for the draft isn't the same as serving.</p>
+</header>
+
+<section>
+  <div class="section-title">The Roster</div>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Conflict / Branch</th><th>Service Window</th><th>Line</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="org">Edward Alfred Henry Schmidt</td>
+        <td>Civil War — U.S. Navy</td>
+        <td>1858–1864</td>
+        <td>Schmidt (see full record)</td>
+      </tr>
+      <tr>
+        <td class="org">William Edward Schmidt</td>
+        <td>Spanish-American War — 8th Mass. Vol. Infantry</td>
+        <td>1898–1899</td>
+        <td>Schmidt (see full record)</td>
+      </tr>
+      <tr>
+        <td class="org">Malcolm Rene Schmidt</td>
+        <td>WWII — U.S. Army</td>
+        <td>Enlisted by early 1945</td>
+        <td>Schmidt (Kansas branch)</td>
+      </tr>
+      <tr>
+        <td class="org">Donald Dean Schmidt</td>
+        <td>WWII — U.S. Army, Private</td>
+        <td>Enlisted Jan 1943, Los Angeles</td>
+        <td>Schmidt (Kansas branch)</td>
+      </tr>
+      <tr>
+        <td class="org">Richard Dean Schmidt</td>
+        <td>WWII — U.S. Navy</td>
+        <td>Jul 1944 – Mar 1946</td>
+        <td>Schmidt / Bowland / Seitzberg</td>
+      </tr>
+      <tr>
+        <td class="org">Robert Thomas LaBarr</td>
+        <td>WWII (probable) — branch unconfirmed</td>
+        <td>Mar 1942</td>
+        <td>LaBarr — <span class="status">Connection Not Yet Mapped</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Full Records</div>
+
+  <div class="entry" id="rec-001">
+    <div class="no">001</div>
+    <div>
+      <span class="tag">Civil War — U.S. Navy</span>
+      <h3>Edward Alfred Henry Schmidt</h3>
+      <div class="subtitle">The Family's Primary Military Record</div>
+      <div class="meta">
+        <span>b. 1833, Middlesex, England</span>
+        <span>d. 1881, Kittery, Maine</span>
+        <span>USS North Carolina, Southern Star, Sabine, Mahaska, William G. Putnam, Commodore Hull</span>
+      </div>
+      <p>The most fully documented service record in the family, with a complete narrative — enlistment,
+      injuries aboard USS Sabine, a covert Dismal Swamp reconnaissance mission, and a wartime hospitalization
+      for a mental collapse — already written up on the
+      <a href="schmidt-line.html#rec-002">Schmidt Line</a>. Not duplicated here.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-002">
+    <div class="no">002</div>
+    <div>
+      <span class="tag">Spanish-American War — Army</span>
+      <h3>William Edward Schmidt</h3>
+      <div class="subtitle">Enlisted Three Days After War Was Declared</div>
+      <div class="meta">
+        <span>b. 1871, Kittery, Maine</span>
+        <span>d. 1959, Encinitas, California</span>
+        <span>Co. D, 8th Mass. Vol. Infantry — enlisted Apr 28, 1898</span>
+      </div>
+      <p>Edward's son. Full narrative — training at Camp Thomas and Camp Lexington, occupation duty in Cuba,
+      and his later life in Kansas and California — already written up on the
+      <a href="schmidt-line.html#rec-004">Schmidt Line</a>. Not duplicated here. His enlistment date is
+      independently confirmed by a U.S. Veterans' Gravesites index entry dated April 28, 1898 — three days
+      after the U.S. declared war on Spain (April 25).</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-003">
+    <div class="no">003</div>
+    <div>
+      <span class="tag">WWII — U.S. Army</span>
+      <h3>Malcolm Rene Schmidt</h3>
+      <div class="meta">
+        <span>b. Aug 17, 1909, Washington, Kansas</span>
+        <span>d. Sep 25, 2007, Chula Vista, California</span>
+        <span>Enlistment record dated Feb 1, 1945, Fort MacArthur, San Pedro, CA</span>
+      </div>
+      <p>One of William Edward and Madge Schmidt's seven children (see
+      <a href="schmidt-line.html#rec-005">Schmidt Line</a>), Malcolm's WWII Army service is confirmed via
+      a U.S. World War II Army Enlistment Records entry, processed through Fort MacArthur in San Pedro,
+      California — consistent with the family's move to San Diego County in the late 1920s. No unit or
+      theater of service recorded yet.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-004">
+    <div class="no">004</div>
+    <div>
+      <span class="tag">WWII — U.S. Army, Private</span>
+      <h3>Donald Dean Schmidt</h3>
+      <div class="meta">
+        <span>b. Jul 18, 1923, Washington, Kansas</span>
+        <span>d. Aug 15, 1984, Garden Grove, California</span>
+        <span>Enlisted Jan 1943, Los Angeles</span>
+      </div>
+      <p>The youngest of William Edward and Madge's seven children. A family note from the 1997 Schmidt
+      Reunion records that Don enlisted as a private on January 20, 1943, in Los Angeles, and died sometime
+      in the 1980s of lung cancer. His formal WWII Army Enlistment Records entry is dated January 27, 1943 —
+      a week later than the reunion note's recollection, likely reflecting a gap between enlistment and
+      processing rather than a real conflict.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-005">
+    <div class="no">005</div>
+    <div>
+      <span class="tag">WWII — U.S. Navy</span>
+      <h3>Richard Dean Schmidt</h3>
+      <div class="subtitle">The Bridge Between Three Lines</div>
+      <div class="meta">
+        <span>b. Dec 3, 1925, Washington, Kansas</span>
+        <span>d. Feb 8, 2005, Peoria, Illinois</span>
+        <span>Navy muster rolls, Jul 1944 – Mar 1946</span>
+      </div>
+      <p>Son of Kenneth Schmidt and Nellie Florence Bowland (see the
+      <a href="bowland-line.html">Bowland Line</a>), and later husband of Marylyn J. Seitzberg (see the
+      <a href="seitzberg-line.html">Seitzberg Line</a>). Richard's Navy service is the best-documented of
+      the WWII-era entries here — ten separate muster roll entries between July 1944 and March 1946 place
+      him consistently on active service through the end of the war and into 1946, though the specific
+      ship or station hasn't been identified yet.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-006">
+    <div class="no">006</div>
+    <div>
+      <span class="tag open">Connection Not Yet Mapped</span>
+      <h3>Robert Thomas LaBarr</h3>
+      <div class="meta">
+        <span>b. Feb 6, 1918, Peoria, Illinois</span>
+        <span>d. Aug 28, 2002, Peoria, Illinois</span>
+        <span>Service-adjacent record dated Mar 26, 1942</span>
+      </div>
+      <p>Confirmed as a veteran via a VA Death File record, with a March 1942 date suggestive of WWII-era
+      service — branch not yet identified from the sources on hand. Robert married Geraldine Anna Barth in
+      Peoria in 1946; his parents were William Eaton LaBarr and Mary A. Gardiner. He shares Peoria, Illinois
+      with the Seitzberg family, but no direct link between the LaBarr and Schmidt/Bowland/Seitzberg lines
+      has been established yet — included here because the service record surfaced in the same GEDCOM
+      search, not because the family connection is confirmed.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+</body>
+</html>

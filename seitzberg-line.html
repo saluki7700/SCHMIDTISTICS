@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — The Seitzberg Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--paper); color: var(--charcoal); }
+  .site-nav { border-bottom: 1px solid var(--paper-line); }
+
+  .hero {
+    padding: 3rem 2rem 4rem;
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+  .hero .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin: 0 0 1.2rem;
+    max-width: 18ch;
+  }
+  .hero p { max-width: 58ch; font-size: 1.08rem; }
+  .hero p a { color: var(--brass); }
+
+  .status-banner {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--brass);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: -0.6rem 0 0;
+  }
+
+  section { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+  .section-title {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin: 4rem 0 0.5rem;
+  }
+
+  .entry { border-color: var(--paper-line); }
+  .entry .frame { border-color: var(--paper-line); }
+  .frame-inner { background: var(--paper-dim); color: var(--verdigris); }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid var(--brass);
+    color: var(--brass);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+  }
+  .tag.open { border-color: var(--rust); color: var(--rust); }
+
+  .subtitle {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--verdigris);
+    margin: -0.2rem 0 0.9rem;
+  }
+
+  /* Discrepancy / open-question callout */
+  .discrepancy {
+    border-left: 3px solid var(--rust);
+    background: var(--paper-dim);
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+  }
+  .discrepancy .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  .discrepancy p { margin: 0; max-width: 62ch; }
+
+  .site-footer { border-top: 1px solid var(--paper-line); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html">Genealogy</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="kittery.html">Kittery Trip</a>
+    <a href="outreach.html">Outreach Log</a>
+  </div>
+</nav>
+
+<div class="line-switch">
+  <a href="genealogy.html">↑ All Genealogy</a>
+  <span class="sep">/</span>
+  <a href="schmidt-line.html">Schmidt Line</a>
+  <span class="sep">/</span>
+  <a href="dudley-line.html">Dudley Line</a>
+  <span class="sep">/</span>
+  <a href="oswald-line.html">Oswald Line</a>
+  <span class="sep">/</span>
+  <a href="bowland-line.html">Bowland Line</a>
+  <span class="sep">/</span>
+  <a href="seitzberg-line.html" class="current">Seitzberg Line</a>
+</div>
+
+<header class="hero">
+  <div class="eyebrow">Bloodline — Seitzberg</div>
+  <h1>The Seitzberg Line</h1>
+  <p class="status-banner">Placeholder — built from the family GEDCOM export, primary-source verification not yet started</p>
+  <p>Marylyn J. Seitzberg's family, traced back five recorded generations to Hamburg, Germany. Her
+  marriage into the Schmidt family came one generation after the <a href="bowland-line.html">Bowland
+  Line</a> — she married Richard Dean Schmidt, son of Kenneth and Nellie (Bowland) Schmidt. This page
+  will hold her own ancestry as that research develops.</p>
+</header>
+
+<section>
+  <div class="section-title">Ancestor Records</div>
+
+  <div class="entry" id="rec-001">
+    <div class="no">001</div>
+    <div>
+      <span class="tag">Married into Schmidt Line</span>
+      <h3>Marylyn J. Seitzberg Schmidt</h3>
+      <div class="subtitle">Savanna, Illinois, to Peoria</div>
+      <div class="meta">
+        <span>b. Feb 22, 1926, Savanna, Carroll Co., IL</span>
+        <span>d. Feb 26, 2011, Peoria, IL</span>
+        <span>m. Richard Dean Schmidt, Sep 17, 1950, Peoria, IL</span>
+      </div>
+      <p>Marylyn was born in 1926 in Savanna, Illinois, and married Richard Dean Schmidt — son of
+      Kenneth Schmidt and Nellie Florence Bowland (see the <a href="bowland-line.html">Bowland
+      Line</a>) — in Peoria in September 1950. She died in Peoria in 2011.</p>
+      <div class="frame">
+        <div class="frame-inner">Photo / document placeholder — Seitzberg family record</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-002">
+    <div class="no">002</div>
+    <div>
+      <span class="tag">Parents of 001</span>
+      <h3>Floyd Hinsey Seitzberg &amp; Elnora Maria Englemann</h3>
+      <div class="meta">
+        <span>Floyd: b. May 13, 1898, Savanna, IL — d. May 2, 1967, Peoria, IL</span>
+        <span>m. Oct 6, 1920, Cook Co., IL</span>
+      </div>
+      <p>Floyd Hinsey Seitzberg married Elnora Maria Englemann in Cook County, Illinois, in 1920. The
+      GEDCOM also lists at least one sibling of Marylyn's under variant spellings — "Robert C
+      Saitzbarg" and "Robert Seitzburg" — not yet resolved as one person or two.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-003">
+    <div class="no">003</div>
+    <div>
+      <span class="tag">Parents of 002</span>
+      <h3>Charles Henry Seitzberg &amp; Minnie King</h3>
+      <div class="meta"><span>Charles Henry: b. Apr 30, 1872, Sabula, Jackson Co., IA</span></div>
+      <p>Charles Henry Seitzberg, born in Sabula, Iowa, in 1872, married Minnie King. No further
+      detail recorded yet.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-004">
+    <div class="no">004</div>
+    <div>
+      <span class="tag">Parents of 003</span>
+      <h3>Charles H. Seitzberg &amp; Martha H. Simpson</h3>
+      <p>Parents of Charles Henry Seitzberg. No dates or places recorded yet.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-005">
+    <div class="no">005</div>
+    <div>
+      <span class="tag open">Immigrant Generation</span>
+      <h3>Charles Von Seitzberg &amp; Christina Louisa</h3>
+      <div class="meta">
+        <span>Charles Von: b. 1818, Hamburg, Germany — d. Apr 13, 1896</span>
+      </div>
+      <p>Charles Von Seitzberg was born in 1818 in Hamburg, Germany, and married a woman recorded only
+      as Christina Louisa — her maiden surname isn't in the GEDCOM. Given that his son Charles Henry
+      was born in Iowa in 1872, the family's emigration from Hamburg likely falls somewhere in that
+      54-year window — a strong candidate for a ship manifest or naturalization search.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-006">
+    <div class="no">006</div>
+    <div>
+      <span class="tag open">Earliest Recorded — Open</span>
+      <h3>Wilhelm Von Seitzberg</h3>
+      <div class="meta"><span>b. 1800, Hamburg, Germany</span></div>
+      <p>Father of Charles Von Seitzberg, and the earliest individual currently recorded on this line.
+      No death date or further detail on file. The earliest edge of the known Seitzberg line.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Open Questions &amp; Discrepancies</div>
+  <div class="discrepancy">
+    <span class="label">The "Von" Prefix</span>
+    <p>Both Charles Von Seitzberg and his father Wilhelm Von Seitzberg carry a "Von" in the GEDCOM.
+    Worth investigating rather than assuming — this could reflect genuine German nobility, or simply
+    be how the name was recorded before later generations dropped it.</p>
+  </div>
+  <div class="discrepancy">
+    <span class="label">Emigration Window</span>
+    <p>The family's move from Hamburg to Iowa is unconfirmed — somewhere between Charles Von
+    Seitzberg's 1818 birth and his son's 1872 Iowa birth. No ship manifest or naturalization record
+    located yet.</p>
+  </div>
+  <div class="discrepancy">
+    <span class="label">Christina Louisa's Surname</span>
+    <p>Wife of Charles Von Seitzberg — maiden name not recorded in the GEDCOM.</p>
+  </div>
+  <div class="discrepancy">
+    <span class="label">Robert C Saitzbarg / Robert Seitzburg</span>
+    <p>Two spelling variants appear as children of Floyd Hinsey Seitzberg and Elnora Englemann —
+    unclear whether this is one sibling recorded twice or two separate siblings.</p>
+  </div>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+</body>
+</html>
