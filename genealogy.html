@@ -118,17 +118,18 @@
   .site-footer { border-top: 1px solid var(--paper-line); }
 
   /* Family Archive badge */
-  .archive-badge-wrap { display: flex; justify-content: center; margin-top: 1rem; }
+  .archive-badge-wrap { display: flex; justify-content: center; margin: 2rem 0 1rem; }
   .archive-badge {
     display: flex; flex-direction: column; align-items: center; gap: 0.7rem;
     text-decoration: none; width: fit-content;
-    padding: 1.6rem 2.4rem; border: 1px solid var(--paper-line); background: var(--paper-dim);
-    transition: border-color 0.2s ease;
+    padding: 1rem 1.5rem;
+    opacity: 0.72;
+    transition: opacity 0.2s ease;
   }
-  .archive-badge:hover { border-color: var(--brass); }
-  .archive-badge .archive-badge-icon { width: 56px; height: 56px; display: block; }
+  .archive-badge:hover { opacity: 1; }
+  .archive-badge .archive-badge-icon { width: 48px; height: 48px; display: block; opacity: 0.85; }
   .archive-badge span {
-    font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--brass); transition: color 0.2s ease;
   }
   .archive-badge:hover span { color: var(--rust); }
@@ -380,26 +381,14 @@
       Oswald, or the wider family.</p>
     </div>
   </div>
+</section>
 
+<section>
   <div class="archive-badge-wrap">
     <a class="archive-badge" href="https://drive.google.com/drive/folders/13g1U-FJH1PCoXW_3tE6dOQHDRzRcA_cG?ths=true" target="_blank" rel="noopener">
       <img src="favicon.svg" alt="" class="archive-badge-icon">
       <span>Family Archive</span>
     </a>
-  </div>
-</section>
-
-<section>
-  <div class="section-title">Research Log</div>
-  <div class="entry">
-    <div class="no">—</div>
-    <div>
-      <h3>Notes from the trail</h3>
-      <div class="meta"><span>Ongoing</span></div>
-      <p>Use this space like a lab notebook: which record was translated this month, which
-      archive was queried, which branch is still a dead end. It turns the site into a living
-      research log rather than a static family tree.</p>
-    </div>
   </div>
 </section>
 
