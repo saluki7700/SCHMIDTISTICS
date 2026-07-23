@@ -92,8 +92,8 @@
 
   /* Map */
   .map-wrap {
-    background: var(--ink-dim);
-    border: 1px solid var(--ink-line);
+    background: #2A4A6B;
+    border: 1px solid var(--brass);
     padding: 1.4rem;
     margin: 1.5rem 0 1rem;
   }
@@ -195,8 +195,8 @@
     <svg id="sumter-map" viewBox="0 0 900 460"></svg>
   </div>
   <div class="map-legend">
-    <span><span class="dot" style="background:var(--brass-bright)"></span>Muster-confirmed stop (rank shown)</span>
-    <span><span class="dot" style="background:var(--verdigris)"></span>Documented ship movement</span>
+    <span><span class="dot" style="background:#E3A857"></span>Muster-confirmed stop (rank shown)</span>
+    <span><span class="dot" style="background:#8FB09E"></span>Documented ship movement</span>
   </div>
 </section>
 
@@ -439,13 +439,13 @@ function proj(d){return projection([d.lng,d.lat]);}
 
 fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(r){return r.json();}).then(function(topo){
   var land=topojson.feature(topo,topo.objects.countries);
-  svg.select('#land').append('path').datum(land).attr('d',geoPath).style('fill','#1b2733').style('stroke','#3A4C5E').style('stroke-width',0.6);
+  svg.select('#land').append('path').datum(land).attr('d',geoPath).style('fill','#E8DEC4').style('stroke','#182430').style('stroke-width',0.6);
 }).catch(function(){});
 
 stops.forEach(function(s){
   var xy=proj(s);
   var g=markers.append('g');
-  g.append('circle').attr('cx',xy[0]).attr('cy',xy[1]).attr('r',s.m?8:5.5).style('fill',s.m?'#C3924F':'#5C6B5D').style('stroke','#182430').style('stroke-width',1.2);
+  g.append('circle').attr('cx',xy[0]).attr('cy',xy[1]).attr('r',s.m?8:5.5).style('fill',s.m?'#E3A857':'#8FB09E').style('stroke','#182430').style('stroke-width',1.2);
   g.append('title').text(s.seq+'. '+s.date+' — '+s.place+(s.rank?' — '+s.rank:''));
   g.append('text').attr('x',xy[0]).attr('y',xy[1]).attr('text-anchor','middle').attr('dy','0.32em')
     .text(s.seq).style('fill','#182430').style('font-size','9.5px').style('font-weight','600').style('font-family','IBM Plex Mono, monospace').style('pointer-events','none');
