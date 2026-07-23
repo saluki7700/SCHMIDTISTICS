@@ -7,6 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
   body { background: var(--ink); color: var(--bone); }
   .site-nav { border-bottom: 1px solid var(--ink-line); }
@@ -68,6 +71,25 @@
     margin-right: 0.4rem;
   }
 
+  /* Vessel photo */
+  .ship-photo {
+    max-width: 68rem; margin: 0 auto; padding: 0 2rem;
+  }
+  .ship-photo .frame {
+    border: 1px solid var(--ink-line);
+    background: var(--ink-dim);
+    padding: 0.7rem 0.7rem 1rem;
+  }
+  .ship-photo img {
+    width: 100%; height: auto; display: block; max-height: 32rem; object-fit: cover;
+    border: 1px solid var(--ink-line);
+  }
+  .ship-photo figcaption {
+    font-family: var(--mono); font-size: 0.72rem; color: var(--bone); opacity: 0.7;
+    line-height: 1.5; margin-top: 0.7rem;
+  }
+  .ship-photo figcaption strong { color: var(--brass-bright); font-family: var(--display); font-size: 0.85rem; opacity: 1; }
+
   /* Map */
   .map-wrap {
     background: var(--ink-dim);
@@ -94,6 +116,43 @@
   .muster-log tr.confirmed td { color: var(--brass-bright); }
   .muster-log tr:not(.confirmed) td { color: var(--bone); opacity: 0.7; }
   .muster-log td.num { opacity: 0.6; width: 2rem; }
+
+  /* Spec table */
+  .spec-table td.label {
+    font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.04em; color: var(--brass-bright); opacity: 0.9; width: 12rem;
+    vertical-align: top;
+  }
+  .spec-table td.value { font-family: var(--body); font-size: 0.9rem; line-height: 1.5; }
+  .spec-table td.value span.item { display: block; }
+
+  /* History table */
+  .history-table td.date {
+    font-family: var(--mono); font-size: 0.75rem; color: var(--brass-bright);
+    white-space: nowrap; width: 9rem; vertical-align: top;
+  }
+  .history-table td.event { font-family: var(--body); font-size: 0.9rem; line-height: 1.5; }
+  .history-table tr.campaign td.event { color: var(--brass-bright); }
+  .history-table tr.before-richard td.event::after {
+    content: " — before Richard reported aboard"; font-family: var(--mono);
+    font-size: 0.72rem; color: var(--verdigris); text-transform: none; letter-spacing: 0;
+  }
+  .history-table tr.subhead td { padding-top: 1.3rem; font-family: var(--mono); font-size: 0.7rem;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--verdigris); border-bottom: none; }
+
+  .callout-note {
+    border-left: 3px solid var(--rust); background: var(--ink-dim);
+    padding: 0.9rem 1.2rem; margin: 1.2rem 0 2rem; max-width: 62ch;
+  }
+  .callout-note .label {
+    font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--rust); display: block; margin-bottom: 0.4rem;
+  }
+  .callout-note p { margin: 0; font-size: 0.9rem; color: var(--bone); opacity: 0.9; }
+
+  .source-list { list-style: none; margin: 1rem 0 3rem; padding: 0; font-family: var(--mono); font-size: 0.85rem; }
+  .source-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--ink-line); }
+  .source-list a { color: var(--brass-bright); }
 
   .site-footer { border-top: 1px solid var(--ink-line); color: var(--bone); }
 </style>
@@ -122,6 +181,13 @@
   enough to change his ship's place in formation, and the long, slow trip home.</p>
   <div class="sub">Sources: NARA muster rolls &amp; reports of changes (RG 24) · Naval History and Heritage Command, <em>Dictionary of American Naval Fighting Ships</em> · family ship's-log pages</div>
 </header>
+
+<figure class="ship-photo">
+  <div class="frame">
+    <img src="images/uss-sumter-apa52.jpg" alt="USS Sumter (APA-52), an attack transport, photographed at anchor, hull number PA 52 visible on the bow">
+  </div>
+  <figcaption><strong>U.S.S. Sumter, APA-52</strong> — official U.S. Navy photograph, at anchor. NavSource Naval History.</figcaption>
+</figure>
 
 <section>
   <div class="section-title">Voyage Map</div>
@@ -238,6 +304,87 @@
 <section>
   <div class="section-title">Muster Log — Full Voyage, 1944–46</div>
   <table class="muster-log" id="log"></table>
+</section>
+
+<section>
+  <div class="section-title">Vessel Specifications</div>
+  <table class="muster-log spec-table">
+    <tr><td class="label">Displacement</td><td class="value">13,910 t. (fl)</td></tr>
+    <tr><td class="label">Length</td><td class="value">468' 9"</td></tr>
+    <tr><td class="label">Beam</td><td class="value">63'</td></tr>
+    <tr><td class="label">Draft</td><td class="value">23' 3"</td></tr>
+    <tr><td class="label">Speed</td><td class="value">16.5 kts.</td></tr>
+    <tr><td class="label">Complement</td><td class="value"><span class="item">39 Officers</span><span class="item">410 Enlisted</span></td></tr>
+    <tr><td class="label">Troop Accommodations</td><td class="value"><span class="item">91 Officers</span><span class="item">1,472 Enlisted</span></td></tr>
+    <tr><td class="label">Cargo Capacity</td><td class="value"><span class="item">1,300 DWT</span><span class="item">170,000 cu. ft. non-refrigerated</span></td></tr>
+    <tr><td class="label">Armament</td><td class="value"><span class="item">Two single 5"/38 cal. dual-purpose gun mounts</span><span class="item">Four twin 40mm AA gun mounts</span><span class="item">Ten single 20mm AA gun mounts</span></td></tr>
+    <tr><td class="label">Fuel Capacities</td><td class="value"><span class="item">NSFO 8,575 Bbls</span><span class="item">Diesel 750 Bbls</span></td></tr>
+    <tr><td class="label">Propulsion</td><td class="value"><span class="item">One General Electric geared-drive turbine</span><span class="item">Two Babcock &amp; Wilcox header-type boilers, 450 psi / 750°</span><span class="item">Double General Electric main reduction gear</span><span class="item">Three 300kW 120V/240V D.C. ship's service generators</span><span class="item">Single propeller, 6,000 shp</span></td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-title">Vessel History — Keel to Scrapping</div>
+  <p style="max-width:62ch; font-size:0.95rem; opacity:0.85; margin-top:0.5rem;">Sumter's story runs well past Richard's two and a half years aboard her — she was under construction
+  before he enlisted, and spent twenty years as a working cargo ship after he mustered out for the last
+  time. The five official battle-star campaigns below include two, Marshall Islands and Marianas, that
+  predate his reporting aboard on 20 July 1944.</p>
+  <table class="muster-log history-table">
+    <tr class="subhead"><td colspan="2">Construction &amp; Commissioning</td></tr>
+    <tr><td class="date">3 Apr 1942</td><td class="event">Laid down as a Maritime Commission type (C2-S-E1) hull, MC hull No. 474, for the Waterman Steamship Co., as SS Iberville, at Gulf Shipbuilding Co., Chickasaw, AL.</td></tr>
+    <tr><td class="date">4 Oct 1942</td><td class="event">Launched.</td></tr>
+    <tr><td class="date">1 Feb 1943</td><td class="event">Reclassified Attack Transport, APA-52 (fleet-wide classification, ahead of physical conversion).</td></tr>
+    <tr><td class="date">30 Apr 1943</td><td class="event">Acquired by the U.S. Navy as AP-97; placed in reduced commission, CDR William A. McHale, USNR (APA Ferry Crew #5), in command; renamed Sumter.</td></tr>
+    <tr><td class="date">13 May 1943</td><td class="event">Decommissioned at Maryland Drydock Co., Baltimore, MD, for fitting out as an attack transport.</td></tr>
+    <tr><td class="date">1 Sep 1943</td><td class="event">Re-commissioned in full as USS Sumter (APA-52), CAPT Allan D. Blackledge in command.</td></tr>
+
+    <tr class="subhead"><td colspan="2">Wartime Assignment &amp; Campaigns — Asiatic-Pacific Theater</td></tr>
+    <tr><td class="date">—</td><td class="event">Assigned to TransRon Twelve, COMO H.B. Knowles, USN; TransDiv Thirty-Six, CAPT G.W. Johnson, USN.</td></tr>
+    <tr class="campaign before-richard"><td class="date">31 Jan – 8 Feb 1944</td><td class="event">Marshall Islands operation — occupation of Kwajalein and Majuro Atolls</td></tr>
+    <tr class="campaign before-richard"><td class="date">15–24 Jun 1944</td><td class="event">Marianas operation — capture and occupation of Saipan</td></tr>
+    <tr class="campaign"><td class="date">6 Sep – 14 Oct 1944</td><td class="event">Western Caroline Islands operation — capture and occupation of the southern Palau Islands</td></tr>
+    <tr class="campaign"><td class="date">16–21 Oct &amp; 19–29 Nov 1944</td><td class="event">Leyte operation — Leyte landings, San Pedro Bay</td></tr>
+    <tr class="campaign"><td class="date">1–5 Apr 1945</td><td class="event">Okinawa Gunto operation — assault and capture of Okinawa Gunto</td></tr>
+    <tr><td class="date">13–27 Oct 1945</td><td class="event">Occupation service.</td></tr>
+
+    <tr class="subhead"><td colspan="2">Decommissioning &amp; Disposal</td></tr>
+    <tr><td class="date">19 Mar 1946</td><td class="event">Decommissioned at Gulf Shipbuilding Co., Chickasaw, AL.</td></tr>
+    <tr><td class="date">17 Apr 1946</td><td class="event">Struck from the Naval Register.</td></tr>
+    <tr><td class="date">1 Aug 1946</td><td class="event">Returned to the Maritime Commission for disposal.</td></tr>
+
+    <tr class="subhead"><td colspan="2">Merchant Service — SS Gateway City</td></tr>
+    <tr><td class="date">8 Apr 1947</td><td class="event">Title passed to Waterman Steamship Co.</td></tr>
+    <tr><td class="date">7 Feb 1956</td><td class="event">Sold to Pan-Atlantic Steamship Co.</td></tr>
+    <tr><td class="date">Sep 1957</td><td class="event">Converted to a cargo trailership / containership at Mobile SR Inc., Chickasaw, AL; renamed SS Gateway City.</td></tr>
+    <tr><td class="date">Dec 1957</td><td class="event">Resold to Coastal Ship Corp.</td></tr>
+    <tr><td class="date">15 May 1968</td><td class="event">Resold to Donmac Corp.</td></tr>
+    <tr><td class="date">12 Dec 1970</td><td class="event">Resold to R.J. Reynolds Industries Inc.</td></tr>
+    <tr><td class="date">31 Aug 1978</td><td class="event">Sold for scrapping to Four Seas Enterprises Ltd.; scrapped at Hong Kong, October 1978.</td></tr>
+  </table>
+
+  <div class="callout-note">
+    <span class="label">Battle Stars — Source Discrepancy</span>
+    <p>The family/NARA-derived record used to build this page credits Sumter with five battle stars for
+    World War II service. Wikipedia and the Naval History and Heritage Command's DANFS entry both credit
+    six. Not yet resolved — flagged here rather than silently picking one.</p>
+  </div>
+
+  <div class="callout-note">
+    <span class="label">Worth Noting</span>
+    <p>As SS Gateway City, this same hull is credited by NavSource and Wikipedia as the first true container
+    ship — converted in September 1957 for Pan-Atlantic Steamship Co. (the forerunner of Sea-Land), roughly
+    a decade after Richard's Navy discharge. The ship he served on for the end of the war spent its second
+    life helping invent an entirely different kind of shipping.</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Sources</div>
+  <ul class="source-list">
+    <li><a href="https://en.wikipedia.org/wiki/USS_Sumter_(APA-52)" target="_blank" rel="noopener">USS Sumter (APA-52) — Wikipedia</a></li>
+    <li><a href="https://www.history.navy.mil/research/histories/ship-histories/danfs/s/sumter-ii.html" target="_blank" rel="noopener">Sumter II (APA-52) — Dictionary of American Naval Fighting Ships, Naval History and Heritage Command</a></li>
+    <li><a href="https://www.navsource.net/archives/10/03/03052.htm" target="_blank" rel="noopener">USS Sumter (APA-52) — NavSource Naval History</a></li>
+  </ul>
 </section>
 
 <footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
