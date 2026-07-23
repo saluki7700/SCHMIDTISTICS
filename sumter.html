@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — The Sumter Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--ink); color: var(--bone); }
+  .site-nav { border-bottom: 1px solid var(--ink-line); }
+
+  .hero {
+    padding: 5rem 2rem 4rem;
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+  .hero .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brass-bright);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin: 0 0 1.2rem;
+    max-width: 18ch;
+  }
+  .hero p { max-width: 58ch; font-size: 1.08rem; color: var(--bone); opacity: 0.9; }
+  .hero .sub { font-family: var(--mono); font-size: 0.8rem; opacity: 0.6; margin-top: 1rem; }
+
+  section { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+  .section-title {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brass-bright);
+    margin: 4rem 0 0.5rem;
+  }
+
+  .entry { border-color: var(--ink-line); }
+  .entry h3 { color: var(--bone); }
+  .entry .no { color: var(--brass-bright); opacity: 0.85; }
+  .entry .meta { opacity: 0.65; }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid var(--brass-bright);
+    color: var(--brass-bright);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+  }
+
+  /* Map */
+  .map-wrap {
+    background: var(--ink-dim);
+    border: 1px solid var(--ink-line);
+    padding: 1.4rem;
+    margin: 1.5rem 0 1rem;
+  }
+  #sumter-map { width: 100%; height: auto; display: block; }
+  .map-legend {
+    display: flex; gap: 20px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.02em;
+    color: var(--bone); opacity: 0.75; margin: 0.9rem 0 3rem;
+  }
+  .map-legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; }
+
+  /* Muster log table */
+  .muster-log { width: 100%; border-collapse: collapse; margin: 1.5rem 0 4rem; font-family: var(--mono); font-size: 0.78rem; }
+  .muster-log th {
+    text-align: left; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;
+    font-size: 0.68rem; color: var(--brass-bright); opacity: 0.85;
+    border-bottom: 1px solid var(--ink-line); padding: 0.5rem 0.8rem;
+  }
+  .muster-log td { padding: 0.45rem 0.8rem; border-bottom: 1px solid var(--ink-line); vertical-align: top; }
+  .muster-log tr.confirmed td { color: var(--brass-bright); }
+  .muster-log tr:not(.confirmed) td { color: var(--bone); opacity: 0.7; }
+  .muster-log td.num { opacity: 0.6; width: 2rem; }
+
+  .site-footer { border-top: 1px solid var(--ink-line); color: var(--bone); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html">Genealogy</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="kittery.html">Kittery Trip</a>
+    <a href="outreach.html">Outreach Log</a>
+    <a href="sumter.html" class="current">Sumter Voyage</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Record Three — Service</div>
+  <h1>The Sumter Log</h1>
+  <p>Richard Dean "Dick" Schmidt (1925–2005) went aboard the attack transport USS Sumter (APA-52)
+  as a Fireman First Class in July 1944 and left her, an Electrician's Mate Second Class, the week
+  she was decommissioned in March 1946. In between: five invasion beaches, a kamikaze strike close
+  enough to change his ship's place in formation, and the long, slow trip home.</p>
+  <div class="sub">Sources: NARA muster rolls &amp; reports of changes (RG 24) · Naval History and Heritage Command, <em>Dictionary of American Naval Fighting Ships</em> · family ship's-log pages</div>
+</header>
+
+<section>
+  <div class="section-title">Voyage Map</div>
+  <div class="map-wrap">
+    <svg id="sumter-map" viewBox="0 0 900 460"></svg>
+  </div>
+  <div class="map-legend">
+    <span><span class="dot" style="background:var(--brass-bright)"></span>Muster-confirmed stop (rank shown)</span>
+    <span><span class="dot" style="background:var(--verdigris)"></span>Documented ship movement</span>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Service Record</div>
+
+  <div class="entry">
+    <div class="no">01</div>
+    <div>
+      <span class="tag">Chicago, Illinois</span>
+      <h3>Enlistment</h3>
+      <div class="meta">
+        <span>13 Oct 1943</span>
+        <span>Service No. 726 95 54</span>
+        <span>USNR, V6</span>
+      </div>
+      <p>Richard enlisted in the Navy at Chicago, where he and his mother Nellie were living at the
+      time. He reported aboard USS Sumter on 20 July 1944 as a Fireman First Class — engine-room
+      work, the standard entry rate for a young reservist headed into the fleet.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">02</div>
+    <div>
+      <span class="tag">Palau Islands</span>
+      <h3>Angaur &amp; Peleliu</h3>
+      <div class="meta">
+        <span>15–17 Sep 1944</span>
+        <span>Rate: F1c</span>
+        <span>Muster: 30 Sep 1944, Manus</span>
+      </div>
+      <p>Sumter landed advance troops at Angaur, then stood offshore as floating reserve for the
+      1st Marine Division's assault on Peleliu — among the costliest fighting of the Pacific war —
+      before serving as a casualty-evacuation ship and sailing on to Manus.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">03</div>
+    <div>
+      <span class="tag">Lingayen Gulf, Luzon</span>
+      <h3>The Callaway kamikaze</h3>
+      <div class="meta">
+        <span>8–27 Jan 1945</span>
+        <span>Rate: F1c → EM3c(T), effective 1 Jan 1945</span>
+        <span>Muster: 31 Dec 1944 &amp; 24 Jan 1945</span>
+      </div>
+      <p>On 8 January a kamikaze struck the transport USS Callaway roughly 600 yards ahead of
+      Sumter in the formation. Sumter took over as formation guide, and the next morning landed
+      her assault troops — including Callaway's — on the Lingayen beaches. Richard was promoted to
+      Electrician's Mate Third Class right around this operation.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">04</div>
+    <div>
+      <span class="tag">Okinawa</span>
+      <h3>Yontan Airfield</h3>
+      <div class="meta">
+        <span>1 Apr 1945</span>
+        <span>Rate: EM3c(T)</span>
+        <span>Muster: 31 Mar 1945, Ulithi</span>
+      </div>
+      <p>After staging at Ulithi, Sumter landed 1,352 Marines of the assault waves near Yontan
+      Airfield on the first day of the Okinawa invasion — the last and largest amphibious operation
+      of the war Richard's ship took part in.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">05</div>
+    <div>
+      <span class="tag">Japan &amp; the Philippines</span>
+      <h3>Occupation duty</h3>
+      <div class="meta">
+        <span>Sep–Nov 1945</span>
+        <span>Rate: EM3c(T)</span>
+        <span>Muster: 1 Oct 1945, Matsuyama</span>
+      </div>
+      <p>After V-J Day, Sumter carried occupation troops to Wakayama and Matsuyama, Japan, then
+      returned to Subic Bay to embark homebound Navy veterans for the trip back across the Pacific.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">06</div>
+    <div>
+      <span class="tag">Mobile, Alabama</span>
+      <h3>Decommissioning</h3>
+      <div class="meta">
+        <span>19 Mar 1946</span>
+        <span>Rate: EM2c(T), effective 1 Jan 1946</span>
+        <span>Muster: 9 Mar 1946</span>
+      </div>
+      <p>Sumter arrived in Seattle in November 1945, where Richard was promoted to Electrician's
+      Mate Second Class on New Year's Day, 1946. He mustered aboard for the last time on 9 March,
+      ten days before the ship was decommissioned and he was transferred to the Receiving Barracks
+      at Mobile for separation.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Muster Log — Full Voyage, 1944–46</div>
+  <table class="muster-log" id="log"></table>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script>
+var stops = [
+  {seq:1,date:'13 Jan 1944',place:'San Diego, CA',lat:32.7157,lng:-117.1611,m:0,rank:''},
+  {seq:2,date:'21 Jan 1944',place:'Lahaina Roads, HI',lat:20.87,lng:-156.68,m:0,rank:''},
+  {seq:3,date:'31 Jan–3 Feb 1944',place:'Kwajalein / Roi-Namur',lat:9.40,lng:167.47,m:0,rank:''},
+  {seq:4,date:'Feb–Mar 1944',place:'New Caledonia',lat:-22.2758,lng:166.458,m:0,rank:''},
+  {seq:5,date:'Mar–Apr 1944',place:'Solomon Islands',lat:-9.4438,lng:160.1562,m:0,rank:''},
+  {seq:6,date:'8 Apr–29 May 1944',place:'Pearl Harbor, HI',lat:21.3469,lng:-157.9799,m:0,rank:''},
+  {seq:7,date:'15–24 Jun 1944',place:'Saipan, Marianas',lat:15.1778,lng:145.7506,m:0,rank:''},
+  {seq:8,date:'late Jun 1944',place:'Eniwetok Atoll',lat:11.35,lng:162.35,m:0,rank:''},
+  {seq:9,date:'30 Jul 1944',place:'Pearl Harbor, HI',lat:21.3469,lng:-157.9799,m:1,rank:'F1c'},
+  {seq:10,date:'12 Aug–8 Sep 1944',place:'Guadalcanal',lat:-9.426,lng:160.0547,m:0,rank:''},
+  {seq:11,date:'15–17 Sep 1944',place:'Angaur / Peleliu, Palau',lat:6.90,lng:134.1333,m:0,rank:''},
+  {seq:12,date:'30 Sep 1944',place:'Manus, Admiralty Is.',lat:-2.0396,lng:147.4287,m:1,rank:'F1c'},
+  {seq:13,date:'late Sep 1944',place:'Finschhafen, New Guinea',lat:-6.60,lng:147.85,m:0,rank:''},
+  {seq:14,date:'2 Oct 1944',place:'San Pedro Bay, Leyte',lat:11.13,lng:125.02,m:0,rank:''},
+  {seq:15,date:'Oct–Nov 1944',place:'Guam',lat:13.4443,lng:144.7937,m:0,rank:''},
+  {seq:16,date:'23 Nov 1944',place:'Leyte',lat:10.80,lng:124.80,m:0,rank:''},
+  {seq:17,date:'Dec 1944',place:'Sansapor, New Guinea',lat:-0.85,lng:132.15,m:0,rank:''},
+  {seq:18,date:'31 Dec 1944 & 24 Jan 1945',place:'Lingayen Gulf, Luzon',lat:16.20,lng:120.28,m:1,rank:'F1c → EM3c(T)'},
+  {seq:19,date:'Feb 1945',place:'Seeadler Harbor, Manus',lat:-2.0396,lng:147.4287,m:0,rank:''},
+  {seq:20,date:'19 Feb–14 Mar 1945',place:'Guadalcanal',lat:-9.426,lng:160.0547,m:0,rank:''},
+  {seq:21,date:'31 Mar 1945',place:'Ulithi Atoll',lat:10.00,lng:139.67,m:1,rank:'EM3c(T)'},
+  {seq:22,date:'1–5 Apr 1945',place:'Okinawa (Yontan)',lat:26.35,lng:127.75,m:0,rank:''},
+  {seq:23,date:'30 Apr 1945',place:'San Pedro, CA',lat:33.7361,lng:-118.2922,m:0,rank:''},
+  {seq:24,date:'1 Jul 1945',place:'San Diego, CA',lat:32.7157,lng:-117.1611,m:1,rank:'EM3c(T)'},
+  {seq:25,date:'15 Aug 1945',place:'San Pedro Bay, Philippines',lat:11.13,lng:125.02,m:0,rank:''},
+  {seq:26,date:'25 Sep 1945',place:'Wakayama, Japan',lat:34.2306,lng:135.1708,m:0,rank:''},
+  {seq:27,date:'1 Oct 1945',place:'Matsuyama, Japan',lat:33.8392,lng:132.7657,m:1,rank:'EM3c(T)'},
+  {seq:28,date:'1 Nov 1945',place:'Subic Bay, Philippines',lat:14.82,lng:120.28,m:0,rank:''},
+  {seq:29,date:'31 Dec 1945 & 4 Jan 1946',place:'Seattle, WA',lat:47.6062,lng:-122.3321,m:1,rank:'EM3c(T) → EM2c(T)'},
+  {seq:30,date:'30 Jan 1946',place:'San Pedro, CA',lat:33.7361,lng:-118.2922,m:0,rank:''},
+  {seq:31,date:'15 Feb 1946',place:'New Orleans, LA',lat:29.9511,lng:-90.0715,m:0,rank:''},
+  {seq:32,date:'9–19 Mar 1946',place:'Mobile, AL',lat:30.6944,lng:-88.0431,m:1,rank:'EM2c(T)'}
+];
+
+var width=900,height=460;
+var svg=d3.select('#sumter-map');
+svg.append('g').attr('id','land');
+var markers=svg.append('g');
+
+var fc={type:'FeatureCollection',features:stops.map(function(s){return {type:'Feature',geometry:{type:'Point',coordinates:[s.lng,s.lat]}};})};
+var projection=d3.geoEquirectangular().rotate([160,0]).fitExtent([[30,24],[width-30,height-24]],fc);
+var geoPath=d3.geoPath(projection);
+function proj(d){return projection([d.lng,d.lat]);}
+
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(r){return r.json();}).then(function(topo){
+  var land=topojson.feature(topo,topo.objects.countries);
+  svg.select('#land').append('path').datum(land).attr('d',geoPath).style('fill','#1b2733').style('stroke','#3A4C5E').style('stroke-width',0.6);
+}).catch(function(){});
+
+stops.forEach(function(s){
+  var xy=proj(s);
+  var g=markers.append('g');
+  g.append('circle').attr('cx',xy[0]).attr('cy',xy[1]).attr('r',s.m?8:5.5).style('fill',s.m?'#C3924F':'#5C6B5D').style('stroke','#182430').style('stroke-width',1.2);
+  g.append('title').text(s.seq+'. '+s.date+' — '+s.place+(s.rank?' — '+s.rank:''));
+  g.append('text').attr('x',xy[0]).attr('y',xy[1]).attr('text-anchor','middle').attr('dy','0.32em')
+    .text(s.seq).style('fill','#182430').style('font-size','9.5px').style('font-weight','600').style('font-family','IBM Plex Mono, monospace').style('pointer-events','none');
+});
+
+var thead='<tr><th>#</th><th>Date</th><th>Place</th><th>Rank</th></tr>';
+var rows=stops.map(function(s){
+  return '<tr class="'+(s.m?'confirmed':'')+'"><td class="num">'+s.seq+'</td><td>'+s.date+'</td><td>'+s.place+'</td><td>'+(s.rank||'—')+'</td></tr>';
+}).join('');
+document.getElementById('log').innerHTML = thead+rows;
+</script>
+
+</body>
+</html>
