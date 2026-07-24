@@ -41,16 +41,7 @@
     letter-spacing: 0.04em; padding: 0.15rem 0.5rem; border-radius: 2px;
     border: 1px solid var(--brass); color: var(--brass); display: inline-block;
   }
-  .status.done { border-color: var(--verdigris); color: var(--verdigris); }
-  .status.active { border-color: var(--brass); color: var(--brass); }
-  .status.waiting { border-color: #999; color: #777; }
   .placeholder-row td { color: var(--verdigris); font-style: italic; font-family: var(--mono); font-size: 0.8rem; }
-
-  .group-row td {
-    font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase;
-    letter-spacing: 0.08em; color: var(--verdigris); background: transparent;
-    border-top: 2px solid var(--brass); padding-top: 1.4rem;
-  }
 
   .site-footer { border-top: 1px solid var(--paper-line); }
 </style>
@@ -86,175 +77,67 @@
       </tr>
     </thead>
     <tbody>
-
-      <tr class="group-row"><td colspan="3">Maine</td></tr>
       <tr>
         <td class="org">Kittery Historical &amp; Naval Museum</td>
-        <td>Edward H. Schmidt background ahead of September visit</td>
-        <td><span class="status waiting">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">Kittery Town Clerk</td>
-        <td>Edward's 1881 death record; Dudley/Voudy children's birth records</td>
-        <td><span class="status waiting">Awaiting Reply</span></td>
+        <td>Cemetery plot &amp; local records ahead of September visit</td>
+        <td><span class="status">Awaiting Reply</span></td>
       </tr>
       <tr>
         <td class="org">Rice Public Library — Maine Room</td>
-        <td>Newspapers, Orchard Grove cemetery plot map, town records</td>
-        <td><span class="status done">Responded — Plot Map Received</span></td>
+        <td>Newspapers, cemetery map, town records; September appointment requested</td>
+        <td><span class="status">Awaiting Reply</span></td>
       </tr>
       <tr>
         <td class="org">York County Registrar of Deeds</td>
         <td>Land deeds &amp; probate records, 1852–1881</td>
-        <td><span class="status done">Responded — Access Provided</span></td>
+        <td><span class="status">Awaiting Reply</span></td>
       </tr>
       <tr>
-        <td class="org">York Town Clerk</td>
-        <td>1839 Dudley/Voudy marriage; children's births; John H. Dudley's own birth record</td>
-        <td><span class="status active">Active — New Ask Sent</span></td>
+        <td class="org">New Hampshire Historical Society</td>
+        <td>1881 death notice, Hackett records, Portsmouth directories</td>
+        <td><span class="status">Awaiting Reply</span></td>
       </tr>
       <tr>
         <td class="org">Maine State Archives</td>
         <td>Naturalization court petition</td>
-        <td><span class="status waiting">Auto-Reply — Backlog</span></td>
-      </tr>
-      <tr>
-        <td class="org">Scarborough Town Clerk</td>
-        <td>Annie S. (Dudley) Burnham 1924 death record (mailed request)</td>
-        <td><span class="status waiting">Awaiting Reply</span></td>
-      </tr>
-
-      <tr class="group-row"><td colspan="3">New Hampshire</td></tr>
-      <tr>
-        <td class="org">NH Historical Society</td>
-        <td>Death notice, Hackett records, Portsmouth directories (paid research)</td>
-        <td><span class="status done">Complete — Report Delivered</span></td>
-      </tr>
-      <tr>
-        <td class="org">NH Division of Vital Records Administration</td>
-        <td>Burnham/Dudley 1863 marriage certificate</td>
-        <td><span class="status waiting">Drafted — Held</span></td>
+        <td><span class="status">Auto-Reply Received</span></td>
       </tr>
       <tr>
         <td class="org">Portsmouth Naval Shipyard Heritage Center</td>
-        <td>Heritage Center visit &amp; Civil War Navy records access, September</td>
-        <td><span class="status active">Active — Referred to Navy Contact</span></td>
+        <td>Heritage Center visit &amp; Civil War Navy records; September access requested</td>
+        <td><span class="status">Awaiting Reply</span></td>
       </tr>
-
-      <tr class="group-row"><td colspan="3">Massachusetts</td></tr>
+      <tr>
+        <td class="org">The Inns of Court (UK)</td>
+        <td>Barrister records inquiry — Charles Louis Schmidt</td>
+        <td><span class="status">In Progress</span></td>
+      </tr>
+      <tr>
+        <td class="org">National Archives (NARA)</td>
+        <td>Catalog API access for records research</td>
+        <td><span class="status">Active</span></td>
+      </tr>
+      <tr>
+        <td class="org">York County Probate Court (Maine)</td>
+        <td>Aaron Booker's estate/probate file, d. circa 1845</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
+      <tr>
+        <td class="org">NARA — Military Records (Aaron Booker)</td>
+        <td>Revolutionary War pension file search assistance</td>
+        <td><span class="status">Awaiting Reply</span></td>
+      </tr>
       <tr>
         <td class="org">Massachusetts State Archives</td>
-        <td>William E. Schmidt military record; George W. Dudley death &amp; marriage records</td>
-        <td><span class="status done">Complete — Records Received</span></td>
+        <td>Aaron Booker's original Revolutionary War muster/pay-roll records</td>
+        <td><span class="status">Awaiting Reply</span></td>
       </tr>
-      <tr>
-        <td class="org">Massachusetts RVRS (Registry of Vital Records)</td>
-        <td>Jennie (Schmidt) Schloesser 1937 death record</td>
-        <td><span class="status active">Active — Mail Order Pending</span></td>
-      </tr>
-      <tr>
-        <td class="org">City of Boston — Registry Division</td>
-        <td>Mary Catherine Dudley birth record (pre-1870 search)</td>
-        <td><span class="status done">Complete — Redirected to Archives</span></td>
-      </tr>
-      <tr>
-        <td class="org">City of Boston Archives</td>
-        <td>Mary Catherine Dudley birth record; baptismal/church records lead</td>
-        <td><span class="status active">Active — No Match; Lead Open</span></td>
-      </tr>
-
-      <tr class="group-row"><td colspan="3">National / Other US</td></tr>
-      <tr>
-        <td class="org">NARA — Military Records (Archives 1 Reference)</td>
-        <td>USS North Carolina &amp; Sabine muster rolls; USS William G. Putnam deck log</td>
-        <td><span class="status waiting">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">NARA Catalog API</td>
-        <td>Programmatic record search access</td>
-        <td><span class="status done">Active</span></td>
-      </tr>
-      <tr>
-        <td class="org">Heritage Consulting (Salt Lake City microfilm)</td>
-        <td>Kittery/York County, Maine vital records microfilm lookup</td>
-        <td><span class="status waiting">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">Concordia Historical Institute</td>
-        <td>Julia Sophia Schmidt/John Eggers 1864 marriage, St. Paul's New Orleans</td>
-        <td><span class="status active">Active — June Ruled Out, July Pending</span></td>
-      </tr>
-      <tr>
-        <td class="org">San Diego County Recorder (via VitalChek)</td>
-        <td>Margaret Oswald Schmidt death certificate</td>
-        <td><span class="status active">Shipped — Awaiting Delivery</span></td>
-      </tr>
-      <tr>
-        <td class="org">Kansas Dept. of Health &amp; Environment</td>
-        <td>William Edward Schmidt Kittery birth record verification</td>
-        <td><span class="status waiting">Not Yet Sent</span></td>
-      </tr>
-
-      <tr class="group-row"><td colspan="3">United Kingdom</td></tr>
-      <tr>
-        <td class="org">The London Archives</td>
-        <td>Otto Schmidt, Buckingham St., Westminster c.1837–1841; Wyke House Asylum</td>
-        <td><span class="status done">Complete — Referred to AGRA</span></td>
-      </tr>
-      <tr>
-        <td class="org">Museum of the Mind (Bethlem)</td>
-        <td>Otto Schmidt, possible asylum patient c.1841–1860</td>
-        <td><span class="status done">Complete — No Match</span></td>
-      </tr>
-      <tr>
-        <td class="org">Middle Temple</td>
-        <td>Charles Louis Schmidt, barrister admission registers</td>
-        <td><span class="status done">Complete — No Match</span></td>
-      </tr>
-      <tr>
-        <td class="org">Wellcome Collection Archives</td>
-        <td>Wyke House Asylum records (Otto Schmidt &amp; Caroline H. Turner)</td>
-        <td><span class="status done">Complete — No Match</span></td>
-      </tr>
-      <tr>
-        <td class="org">Camden Local Studies &amp; Archives Centre</td>
-        <td>Otto Schmidt, St. Pancras ratebooks c.1835–1850</td>
-        <td><span class="status done">Complete — Ratebook Detail Received</span></td>
-      </tr>
-      <tr>
-        <td class="org">Hounslow Local Studies</td>
-        <td>Wyke House Asylum, Isleworth (Otto Schmidt &amp; Caroline Turner)</td>
-        <td><span class="status waiting">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">General Register Office (GRO)</td>
-        <td>Caroline Henrietta (Schmidt) Turner 1909 death certificate</td>
-        <td><span class="status done">Complete — Delivered</span></td>
-      </tr>
-
-      <tr class="group-row"><td colspan="3">Belgium / Germany</td></tr>
-      <tr>
-        <td class="org">Liège State Archives</td>
-        <td>Schmidt &amp; Dubarle families, Liège, early 19th century</td>
-        <td><span class="status active">Active — Case AEL2026_1627</span></td>
-      </tr>
-      <tr>
-        <td class="org">Ordre des Avocats du Barreau de Liège</td>
-        <td>Charles Louis Schmidt, avocat, early 19th century</td>
-        <td><span class="status active">Active — Reply Expected ~Aug 17</span></td>
-      </tr>
-      <tr>
-        <td class="org">Baden genealogist (Ms. Jauch, ahnenforschung-bw.de)</td>
-        <td>Schmidt/Jourdan family, Bräunlingen, Baden, 1830s</td>
-        <td><span class="status active">Active — Ongoing Correspondence</span></td>
-      </tr>
-
     </tbody>
   </table>
   </div>
 
   <p style="font-family: var(--mono); font-size: 0.78rem; color: var(--verdigris); margin-top: 1.5rem;">
-    28 outreach threads across the US, UK, and Belgium/Germany as of July 23, 2026.
+    11 active outreach threads across the US and UK as of this update.
   </p>
 </section>
 
