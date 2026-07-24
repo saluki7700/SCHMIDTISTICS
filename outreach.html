@@ -7,6 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
   body { background: var(--paper); color: var(--charcoal); }
   .site-nav { border-bottom: 1px solid var(--paper-line); }
@@ -23,6 +26,12 @@
   .hero p { max-width: 58ch; font-size: 1.05rem; }
 
   section { max-width: 68rem; margin: 0 auto; padding: 0 2rem 2rem; }
+
+  .group-heading {
+    font-family: var(--display); font-weight: 600; font-size: 1.3rem;
+    margin: 2.4rem 0 0.4rem; color: var(--charcoal);
+  }
+  .group-heading:first-of-type { margin-top: 0.5rem; }
 
   .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 1rem; }
   table { width: 100%; min-width: 480px; border-collapse: collapse; }
@@ -41,6 +50,8 @@
     letter-spacing: 0.04em; padding: 0.15rem 0.5rem; border-radius: 2px;
     border: 1px solid var(--brass); color: var(--brass); display: inline-block;
   }
+  .status.closed { border-color: var(--verdigris); color: var(--verdigris); }
+  .status.updated { border-color: #b3541e; color: #b3541e; font-weight: 600; }
   .placeholder-row td { color: var(--verdigris); font-style: italic; font-family: var(--mono); font-size: 0.8rem; }
 
   .site-footer { border-top: 1px solid var(--paper-line); }
@@ -67,77 +78,89 @@
 </header>
 
 <section>
+
+  <h2 class="group-heading">United States — Genealogy &amp; Historical Research</h2>
   <div class="table-wrap">
   <table>
     <thead>
-      <tr>
-        <th>Organization</th>
-        <th>Regarding</th>
-        <th>Status</th>
-      </tr>
+      <tr><th>Organization</th><th>Regarding</th><th>Status</th></tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="org">Kittery Historical &amp; Naval Museum</td>
-        <td>Cemetery plot &amp; local records ahead of September visit</td>
-        <td><span class="status">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">Rice Public Library — Maine Room</td>
-        <td>Newspapers, cemetery map, town records; September appointment requested</td>
-        <td><span class="status">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">York County Registrar of Deeds</td>
-        <td>Land deeds &amp; probate records, 1852–1881</td>
-        <td><span class="status">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">New Hampshire Historical Society</td>
-        <td>1881 death notice, Hackett records, Portsmouth directories</td>
-        <td><span class="status">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">Maine State Archives</td>
-        <td>Naturalization court petition</td>
-        <td><span class="status">Auto-Reply Received</span></td>
-      </tr>
-      <tr>
-        <td class="org">Portsmouth Naval Shipyard Heritage Center</td>
-        <td>Heritage Center visit &amp; Civil War Navy records; September access requested</td>
-        <td><span class="status">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">The Inns of Court (UK)</td>
-        <td>Barrister records inquiry — Charles Louis Schmidt</td>
-        <td><span class="status">In Progress</span></td>
-      </tr>
-      <tr>
-        <td class="org">National Archives (NARA)</td>
-        <td>Catalog API access for records research</td>
-        <td><span class="status">Active</span></td>
-      </tr>
-      <tr>
-        <td class="org">York County Probate Court (Maine)</td>
-        <td>Aaron Booker's estate/probate file, d. circa 1845</td>
-        <td><span class="status">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">NARA — Military Records (Aaron Booker)</td>
-        <td>Revolutionary War pension file search assistance</td>
-        <td><span class="status">Awaiting Reply</span></td>
-      </tr>
-      <tr>
-        <td class="org">Massachusetts State Archives</td>
-        <td>Aaron Booker's original Revolutionary War muster/pay-roll records</td>
-        <td><span class="status">Awaiting Reply</span></td>
-      </tr>
+      <tr><td class="org">Kittery Historical &amp; Naval Museum</td><td>Edward H. Schmidt research; September visit</td><td><span class="status">Awaiting Reply</span></td></tr>
+      <tr><td class="org">Kittery Town Clerk</td><td>Edward's 1881 death record; Dudley births; John H./William Dudley's own 1881 death record</td><td><span class="status">Awaiting Reply</span></td></tr>
+      <tr><td class="org">Rice Public Library — Maine Room</td><td>Cemetery plot, Civil War veterans binder; September appointment</td><td><span class="status closed">Responded</span></td></tr>
+      <tr><td class="org">York County Registrar of Deeds</td><td>Land deeds &amp; probate records, 1852–1881</td><td><span class="status closed">Responded</span></td></tr>
+      <tr><td class="org">York Town Clerk</td><td>1839 Dudley/Voudy marriage; John H. Dudley's own birth record</td><td><span class="status closed">Responded — New Ask Pending</span></td></tr>
+      <tr><td class="org">York County Probate Court</td><td>Aaron Booker's estate/probate file, d. circa 1845</td><td><span class="status">Awaiting Reply</span></td></tr>
+      <tr><td class="org">New Hampshire Historical Society</td><td>1881 death notice, Hackett records, Portsmouth directories</td><td><span class="status closed">Closed — Negative Result</span></td></tr>
+      <tr><td class="org">NH Division of Vital Records Administration</td><td>Burnham/Dudley 1863 marriage certificate</td><td><span class="status">On Hold</span></td></tr>
+      <tr><td class="org">Maine State Archives</td><td>Naturalization court petition</td><td><span class="status">Auto-Reply Received</span></td></tr>
+      <tr><td class="org">Portsmouth Naval Shipyard Heritage Center</td><td>Heritage Center visit &amp; Civil War Navy records; September access</td><td><span class="status">Awaiting Reply</span></td></tr>
+      <tr><td class="org">NARA — Military Records</td><td>USS William G. Putnam muster/deck log; Aaron Booker Revolutionary War pension file</td><td><span class="status">Active</span></td></tr>
+      <tr><td class="org">NHHC Archives</td><td>Naval history sketch research (NH 42918)</td><td><span class="status">Awaiting Reply</span></td></tr>
+      <tr><td class="org">Heritage Consulting (Salt Lake City)</td><td>FamilySearch Library microfilm lookup</td><td><span class="status">Awaiting Reply</span></td></tr>
+      <tr><td class="org">Massachusetts State Archives</td><td>George W. Dudley death record; William Edward Schmidt Spanish-American War service</td><td><span class="status closed">Closed — Complete</span></td></tr>
+      <tr><td class="org">Massachusetts RVRS</td><td>Jennie Schmidt/Schloesser 1937 death record</td><td><span class="status">Responded — Phone Request Needed</span></td></tr>
+      <tr><td class="org">City of Boston Registry Division &amp; Archives</td><td>Mary Catherine Dudley pre-1870 birth record</td><td><span class="status">Awaiting Reply</span></td></tr>
+      <tr><td class="org">San Diego County Recorder</td><td>Margaret "Madge" Oswald Schmidt death certificate</td><td><span class="status">Shipped</span></td></tr>
+      <tr><td class="org">Kansas Dept. of Health &amp; Environment</td><td>Margaret Oswald Schmidt delayed birth certificate</td><td><span class="status">Not Yet Sent</span></td></tr>
+      <tr><td class="org">Notarial Archives Research Center (New Orleans)</td><td>Julia Sophia Schmidt — benevolent society records</td><td><span class="status">Awaiting Reply</span></td></tr>
+      <tr><td class="org">Archdiocese of New Orleans — Archives &amp; Records</td><td>Julia Sophia Schmidt — cemetery/interment record</td><td><span class="status">In Progress</span></td></tr>
+      <tr><td class="org">Concordia Historical Institute</td><td>Julia Sophia Schmidt's 1864 New Orleans marriage record</td><td><span class="status closed">Closed — Complete</span></td></tr>
     </tbody>
   </table>
   </div>
 
-  <p style="font-family: var(--mono); font-size: 0.78rem; color: var(--verdigris); margin-top: 1.5rem;">
-    11 active outreach threads across the US and UK as of this update.
+  <h2 class="group-heading">United Kingdom — Charles Louis Schmidt (Inns of Court)</h2>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Organization</th><th>Regarding</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="org">Gray's Inn</td><td>Barrister records inquiry</td><td><span class="status closed">Closed — Not Found</span></td></tr>
+      <tr><td class="org">Lincoln's Inn</td><td>Barrister records inquiry</td><td><span class="status closed">Closed — Not Found</span></td></tr>
+      <tr><td class="org">Inner Temple</td><td>Barrister records inquiry</td><td><span class="status closed">Closed — Not Found</span></td></tr>
+      <tr><td class="org">Middle Temple</td><td>Barrister records inquiry</td><td><span class="status closed">Closed — Not Found</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="group-heading">United Kingdom — Otto Schmidt &amp; Caroline (Schmidt) Turner</h2>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Organization</th><th>Regarding</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="org">The London Archives</td><td>Otto Schmidt records; Wyke House Asylum</td><td><span class="status closed">Closed — Referred to AGRA</span></td></tr>
+      <tr><td class="org">Bethlem Royal Hospital / Museum of the Mind</td><td>Otto Schmidt — asylum admission check</td><td><span class="status closed">Closed — No Match</span></td></tr>
+      <tr><td class="org">Camden Local Studies &amp; Archives</td><td>St Pancras ratebooks; Otto's residence history</td><td><span class="status closed">Responded — Follow-up Pending</span></td></tr>
+      <tr><td class="org">Wellcome Collection</td><td>Wyke House Asylum records (Otto &amp; Caroline)</td><td><span class="status closed">Closed — No Records Held</span></td></tr>
+      <tr><td class="org">Hounslow Local Studies</td><td>Wyke House Asylum records (Otto &amp; Caroline)</td><td><span class="status updated">Responded 7/24 — No Records Held</span></td></tr>
+      <tr><td class="org">GRO (General Register Office)</td><td>Caroline (Schmidt) Turner's 1909 death certificate</td><td><span class="status closed">Closed — Received</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="group-heading">Belgium &amp; Germany</h2>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Organization</th><th>Regarding</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="org">Liège State Archives</td><td>Schmidt / Dubarle / Jourdan family records (case AEL2026_1627)</td><td><span class="status">Responded — Awaiting Quote</span></td></tr>
+      <tr><td class="org">Liège Bar Association</td><td>Charles Louis Schmidt, avocat</td><td><span class="status">Responded — On Hold Until Aug 17</span></td></tr>
+      <tr><td class="org">Karin Jauch (Baden-Württemberg genealogist)</td><td>Bräunlingen Schmidt/Jourdan research</td><td><span class="status closed">Responded</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p style="font-family: var(--mono); font-size: 0.78rem; color: var(--verdigris); margin-top: 2rem;">
+    31 active outreach threads across the US, UK, and Continental Europe as of July 24, 2026.
+    Most recent update: Hounslow Local Studies (Wyke House Asylum inquiry) responded July 24 — no
+    surviving patient records held; secondary sources only; in-person Feltham Library visit offered.
   </p>
 </section>
 
