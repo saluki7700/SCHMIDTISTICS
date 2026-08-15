@@ -82,6 +82,59 @@
     margin: -0.2rem 0 0.9rem;
   }
 
+  /* Lineage tree figure */
+  .tree-figure {
+    margin: 2.5rem auto 0;
+    max-width: 60rem;
+    background: var(--bone);
+    border: 1px solid var(--paper-line);
+    border-radius: 6px;
+    padding: 1.4rem 1.4rem 1rem;
+  }
+  .tree-figure svg { display: block; width: 100%; height: auto; }
+  .tree-cap {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--verdigris);
+    text-align: center;
+    margin-top: 0.8rem;
+  }
+
+  /* Sibling grid */
+  .sibling-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 0.8rem;
+    margin: 0.8rem 0 0;
+  }
+  .sibling-card {
+    border: 1px solid var(--paper-line);
+    background: var(--paper-dim);
+    border-radius: 4px;
+    padding: 0.7rem 0.9rem;
+  }
+  .sibling-card .name { font-family: var(--display); font-weight: 600; font-size: 1.02rem; margin-bottom: 0.3rem; }
+  .sibling-card .meta { font-family: var(--mono); font-size: 0.72rem; color: var(--verdigris); line-height: 1.5; }
+  .sibling-card.placeholder { opacity: 0.6; font-style: italic; }
+  .ships-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin: 1.2rem 0 0;
+  }
+
+  .caveat {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--rust);
+    margin: 1rem 0 0;
+    max-width: 62ch;
+  }
+
   /* Discrepancy / open-question callout */
   .discrepancy {
     border-left: 3px solid var(--rust);
@@ -134,11 +187,67 @@
 <header class="hero">
   <div class="eyebrow">Bloodline — Oswald</div>
   <h1>The Oswald Line</h1>
-  <p class="status-banner">Placeholder — dedicated research not yet started</p>
-  <p>Margaret "Madge" Oswald's family, rooted in Hanover, Kansas. Her marriage into the Schmidt
-  family is covered on the <a href="schmidt-line.html#rec-005">Schmidt Line</a>; this page will hold
-  her own ancestry once that research begins.</p>
+  <p class="status-banner">Family-records draft — awaiting dedicated research</p>
+  <p>Margaret "Madge" Oswald's family, a large German-heritage household rooted in Hanover,
+  Washington County, Kansas. Her marriage into the Schmidt family is covered on the
+  <a href="schmidt-line.html">Schmidt Line</a>; this page follows her own branch — the line that
+  <em>married in</em> at Kenneth Oswald Schmidt's parents.</p>
 </header>
+
+<section>
+  <div class="tree-figure">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 430" font-family="Fraunces, Georgia, serif">
+      <defs><style>
+        .nm{font-size:19px;fill:#182430}
+        .nmk{font-size:19px;fill:#F1ECDF}
+        .nmi{font-size:19px;fill:#2B3A2E}
+        .amp{font-size:15px;fill:#A8763E;font-style:italic}
+        .mt{font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#5C6B5D;letter-spacing:.3px}
+        .mtk{font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#C3924F;letter-spacing:.3px}
+        .sp{stroke:#A8763E;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+        .mr{stroke:#5C6B5D;stroke-width:2;fill:none;stroke-dasharray:5 4;stroke-linecap:round}
+        .cin{fill:#E7E9E2;stroke:#5C6B5D;stroke-width:1.5}
+        .cc{fill:#F1ECDF;stroke:#CFC3A6;stroke-width:1.5}
+        .ck{fill:#182430;stroke:#A8763E;stroke-width:2}
+        .lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#5C6B5D;letter-spacing:1.5px}
+        .fnt{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#A8763E;letter-spacing:1px;opacity:.7}
+        .ml{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#8C7A5C}
+      </style></defs>
+
+      <!-- connectors -->
+      <path class="sp" d="M210 178 L210 142" opacity="0.4"/>
+      <path class="sp" d="M360 210 L440 210"/>
+      <path class="mr" d="M440 210 L520 210"/>
+      <path class="sp" d="M440 210 L440 330"/>
+      <path class="mr" d="M700 178 L700 92"/>
+
+      <!-- Oswald parents (married-in) -->
+      <rect class="cin" x="520" y="28" width="360" height="64" rx="6"/>
+      <text class="nmi" x="538" y="56">Mathias Oswald <tspan class="amp">&#38;</tspan> Elmira C. Lillibridge</text>
+      <text class="mt" x="538" y="78">1836&#8211;1905 &#160;·&#160; 1846&#8211;1928 &#160;·&#160; HANOVER, KS</text>
+
+      <!-- William Edward (Schmidt spine) -->
+      <rect class="cc" x="60" y="178" width="300" height="64" rx="6"/>
+      <text class="nm" x="78" y="206">William Edward Schmidt</text>
+      <text class="mt" x="78" y="228">1871&#8211;1959 &#160;·&#160; SCHMIDT LINE</text>
+      <text class="fnt" x="210" y="134" text-anchor="middle">&#8593; Schmidt line</text>
+
+      <!-- Margaret (married-in) -->
+      <text class="lbl" x="700" y="170" text-anchor="middle">MARRIED IN</text>
+      <rect class="cin" x="520" y="178" width="360" height="64" rx="6"/>
+      <text class="nmi" x="538" y="206">Margaret &#8220;Madge&#8221; Oswald</text>
+      <text class="mt" x="538" y="228">b. 28 OCT 1883, HANOVER, KS</text>
+
+      <text class="ml" x="440" y="203" text-anchor="middle">m.</text>
+
+      <!-- Kenneth (key) -->
+      <rect class="ck" x="260" y="330" width="360" height="72" rx="6"/>
+      <text class="nmk" x="280" y="362">Kenneth Oswald Schmidt</text>
+      <text class="mtk" x="280" y="385">b. 4 OCT 1905, WASHINGTON CO., KANSAS</text>
+    </svg>
+    <div class="tree-cap">From Kenneth Oswald Schmidt, the Oswald line married in at his parents' generation.</div>
+  </div>
+</section>
 
 <section>
   <div class="section-title">Ancestor Records</div>
@@ -150,35 +259,70 @@
       <h3>Margaret "Madge" Oswald Schmidt</h3>
       <div class="subtitle">A Hanover, Kansas, Native</div>
       <div class="meta">
-        <span>b. 1883, Hanover, KS</span>
-        <span>d. 1956</span>
+        <span>b. 28 Oct 1883, Hanover, KS</span>
+        <span>d. 1956, Encinitas, CA</span>
         <span>m. William Edward Schmidt, 1903</span>
       </div>
-      <p>Madge was born in 1883 in Hanover, Kansas, to a father surnamed Oswald and a mother from
-      the Lillibridge family. She married William Edward Schmidt in 1903 in Washington, Kansas, and
-      the couple raised seven children before relocating to San Diego County, California, sometime
-      between 1925 and 1930. She died in December 1956 and is buried with William Edward at Fort
-      Rosecrans National Cemetery, San Diego.</p>
+      <p>Madge was born in 1883 in Hanover, Kansas, the thirteenth of Mathias Oswald and Elmira
+      Lillibridge's large family. She married William Edward Schmidt in 1903 in Washington, Kansas,
+      and the couple raised their children — among them Kenneth Oswald Schmidt — before relocating
+      to San Diego County, California, in the late 1920s. She died in December 1956 and is buried
+      with William Edward at Fort Rosecrans National Cemetery, San Diego.</p>
     </div>
   </div>
 
-  <div class="entry">
+  <div class="entry" id="rec-002">
     <div class="no">002</div>
     <div>
-      <h3>[Father] Oswald</h3>
-      <div class="meta"><span>Hanover, Kansas</span></div>
-      <p>Madge's father — surname confirmed, given name not yet identified. Dedicated research into
-      the Hanover, Kansas, Oswald family is flagged for a future session.</p>
+      <h3>Mathias Oswald</h3>
+      <div class="subtitle">Madge's Father</div>
+      <div class="meta">
+        <span>b. 1836</span>
+        <span>d. 1905, Hanover, KS</span>
+      </div>
+      <p>Madge's father, a farmer at Hanover in Washington County, Kansas. Family records give his
+      name as Mathias Oswald; the given name has not yet been independently confirmed against
+      primary records.</p>
     </div>
   </div>
 
-  <div class="entry">
+  <div class="entry" id="rec-003">
     <div class="no">003</div>
     <div>
-      <h3>[Mother] Lillibridge</h3>
-      <div class="meta"><span>Hanover, Kansas</span></div>
+      <h3>Elmira Carolina Lillibridge</h3>
+      <div class="subtitle">Madge's Mother</div>
+      <div class="meta">
+        <span>b. 1846</span>
+        <span>d. 1928, Hanover, KS</span>
+      </div>
       <p>Madge's mother, from the Lillibridge family — a line the family is still working to trace
-      further back.</p>
+      further back. Her given name likewise comes from family records and is not yet independently
+      confirmed.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-004">
+    <div class="no">004</div>
+    <div>
+      <h3>The Oswald Siblings</h3>
+      <div class="subtitle">Madge's Brothers &amp; Sisters — Hanover, Kansas</div>
+      <p>Mathias and Elmira raised a large family at Hanover between 1862 and 1891. These are Madge's
+      siblings who lived beyond infancy; several more died as infants or young children in Hanover.</p>
+      <div class="ships-label">From family records</div>
+      <div class="sibling-grid">
+        <div class="sibling-card"><div class="name">William Oswald</div><div class="meta">1862–1944 · Hanover, KS</div></div>
+        <div class="sibling-card"><div class="name">Andrew Oswald</div><div class="meta">1865–1891</div></div>
+        <div class="sibling-card"><div class="name">Henry Oswald</div><div class="meta">b. 1870, Hanover, KS</div></div>
+        <div class="sibling-card"><div class="name">August Oswald</div><div class="meta">1873–1922 · Hanover, KS</div></div>
+        <div class="sibling-card"><div class="name">Christine Oswald</div><div class="meta">b. 1877</div></div>
+        <div class="sibling-card"><div class="name">Kate Oswald</div><div class="meta">b. 1878, Hanover, KS</div></div>
+        <div class="sibling-card"><div class="name">Frederick Oswald</div><div class="meta">1884–1907</div></div>
+        <div class="sibling-card"><div class="name">Charles Oswald</div><div class="meta">b. 1887</div></div>
+        <div class="sibling-card"><div class="name">Ila Oswald</div><div class="meta">1891–1915 · Hanover, KS</div></div>
+        <div class="sibling-card placeholder"><div class="name">Six others</div><div class="meta">died in infancy or early childhood, Hanover</div></div>
+      </div>
+      <p class="caveat">Sibling names and dates are drawn from the family's records and have not yet
+      been independently verified against primary sources.</p>
     </div>
   </div>
 </section>
