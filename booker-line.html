@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — The Booker Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+body { background: var(--paper); color: var(--charcoal); }
+.site-nav { border-bottom: 1px solid var(--paper-line); }
+
+.hero {
+padding: 3rem 2rem 4rem;
+max-width: 68rem;
+margin: 0 auto;
+}
+.hero .eyebrow {
+font-family: var(--mono);
+font-size: 0.78rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--verdigris);
+margin-bottom: 1rem;
+}
+.hero h1 {
+font-family: var(--display);
+font-weight: 700;
+font-size: clamp(2.4rem, 5vw, 4rem);
+margin: 0 0 1.2rem;
+max-width: 18ch;
+}
+.hero p { max-width: 58ch; font-size: 1.08rem; }
+
+section { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+.section-title {
+font-family: var(--mono);
+font-size: 0.78rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(--verdigris);
+margin: 4rem 0 0.5rem;
+}
+
+.entry { border-color: var(--paper-line); }
+.entry .frame { border-color: var(--paper-line); }
+.frame-inner { background: var(--paper-dim); color: var(--verdigris); }
+
+.tag {
+display: inline-block;
+font-family: var(--mono);
+font-size: 0.7rem;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+border: 1px solid var(--brass);
+color: var(--brass);
+padding: 0.15rem 0.5rem;
+border-radius: 2px;
+margin-right: 0.4rem;
+}
+.tag.patriot { border-color: var(--rust); color: var(--rust); }
+
+.subtitle {
+font-family: var(--body);
+font-style: italic;
+font-size: 1rem;
+color: var(--verdigris);
+margin: -0.2rem 0 0.9rem;
+}
+
+.ships-label {
+font-family: var(--mono);
+font-size: 0.72rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--brass);
+margin: 1.2rem 0 0.6rem;
+}
+.entry ul.ships {
+margin: 0 0 1rem;
+padding-left: 1.1rem;
+max-width: 62ch;
+}
+.entry ul.ships li { margin-bottom: 0.45rem; line-height: 1.55; }
+.entry ul.ships li strong { font-family: var(--display); font-weight: 600; }
+
+/* Sibling grid */
+.sibling-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+gap: 1rem;
+margin: 1.2rem 0 1rem;
+}
+.sibling-card {
+border: 1px solid var(--paper-line);
+background: var(--paper-dim);
+padding: 1rem 1.1rem;
+}
+.sibling-card .name { font-family: var(--display); font-weight: 600; font-size: 1.02rem; margin-bottom: 0.3rem; }
+.sibling-card .meta { font-family: var(--mono); font-size: 0.72rem; color: var(--verdigris); line-height: 1.5; }
+.sibling-card.placeholder { opacity: 0.55; font-style: italic; }
+
+/* Discrepancy callout */
+.discrepancy {
+border-left: 3px solid var(--rust);
+background: var(--paper-dim);
+padding: 1rem 1.2rem;
+margin: 1rem 0;
+}
+.discrepancy .label {
+font-family: var(--mono);
+font-size: 0.72rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--rust);
+margin-bottom: 0.4rem;
+display: block;
+}
+.discrepancy p { margin: 0; max-width: 62ch; }
+
+.site-footer { border-top: 1px solid var(--paper-line); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+<a href="index.html" class="mark">Schmidtistics</a>
+<div class="crumbs">
+<a href="genealogy.html" class="current">Genealogy</a>
+<a href="veterans.html">Those Who Served</a>
+<a href="shipbuilding.html">Shipbuilding</a>
+<a href="kittery.html">Kittery Trip</a>
+<a href="outreach.html">Outreach Log</a>
+<a href="https://archive.schmidtistics.com">The Archive</a>
+</div>
+</nav>
+
+<div class="line-switch">
+<a href="genealogy.html">↑ All Genealogy</a>
+<span class="sep">/</span>
+<a href="schmidt-line.html">Schmidt Line</a>
+<span class="sep">/</span>
+<a href="dudley-line.html">Dudley Line</a>
+<span class="sep">/</span>
+<a href="booker-line.html" class="current">Booker Line</a>
+<span class="sep">/</span>
+<a href="oswald-line.html">Oswald Line</a>
+</div>
+
+<header class="hero">
+<div class="eyebrow">Bloodline — Booker</div>
+<h1>The Booker Line</h1>
+<p>The Booker family of York County, Maine — Aaron Booker, a Revolutionary War patriot, and his descendant Dorcas Booker. Through Dorcas, the Booker line runs forward into the Voudy family and on into the Dudley line and Mary Catherine Dudley, whose own ancestry is on the <a href="dudley-line.html" style="color:var(--brass);">Dudley Line</a>. This page follows the Bookers' own branch.</p>
+</header>
+
+<section>
+<div class="section-title">Ancestor Records</div>
+
+<div class="entry" id="rec-001">
+<div class="no">001</div>
+<div>
+<span class="tag patriot">Revolutionary War Patriot</span>
+<h3>Aaron Booker</h3>
+<div class="subtitle">The Earliest Confirmed Ancestor on Mary's Side</div>
+<div class="meta">
+<span>b. Aug. 29, 1758, York, ME</span>
+</div>
+<p>Confirmed through the 1850 census and a DAR application (Beatrice Wayland Smith/English,
+National No. 150069), which traces the Booker line back to Aaron Booker's Revolutionary War
+service. This is the earliest confirmed ancestor on Mary's side of the family.</p>
+<div class="frame">
+<div class="frame-inner">Document placeholder — DAR application No. 150069</div>
+</div>
+</div>
+</div>
+
+<div class="entry" id="rec-002">
+<div class="no">002</div>
+<div>
+<h3>Dorcas Booker</h3>
+<div class="meta"><span>b. c. 1780 (DAR) — see Open Questions</span></div>
+<p>Daughter in the Booker line connecting Aaron Booker forward to the Dudley family. Full
+biography pending further primary-source confirmation.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="section-title">Open Questions &amp; Discrepancies</div>
+<div class="discrepancy">
+<span class="label">Dorcas Booker's Birth Year</span>
+<p>The candidates are c. 1780 (DAR application) and c. 1786 (census/FamilySearch); the c. 1796 figure has been ruled out — it would make her about seven at her 1803 marriage. The c. 1780 date is currently treated as most likely.</p>
+</div>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+</body>
+</html>
