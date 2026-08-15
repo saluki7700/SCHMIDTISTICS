@@ -214,3 +214,20 @@ img, .frame-img { max-width: 100%; display: block; }
   opacity: 0.6;
   text-align: center;
 }
+
+/* ── Archive nav link: set apart from the public crumbs (gated area) ── */
+.site-nav .crumbs a[href*="archive.schmidtistics.com"] {
+  margin-left: 0.3rem;
+  padding-left: 1.15rem;
+  border-left: 1px solid var(--paper-line);
+  color: var(--brass);
+  opacity: 0.9;
+}
+.site-nav .crumbs a[href*="archive.schmidtistics.com"]::before {
+  content: "\1F512";
+  font-size: 0.72em;
+  margin-right: 0.3rem;
+  vertical-align: 0.06em;
+  opacity: 0.85;
+}
+.site-nav .crumbs a[href*="archive.schmidtistics.com"]:hover { opacity: 1; }
