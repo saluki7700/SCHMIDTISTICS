@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — The Booker Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+body { background: var(--paper); color: var(--charcoal); }
+.site-nav { border-bottom: 1px solid var(--paper-line); }
+
+.hero {
+padding: 3rem 2rem 4rem;
+max-width: 68rem;
+margin: 0 auto;
+}
+.hero .eyebrow {
+font-family: var(--mono);
+font-size: 0.78rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--verdigris);
+margin-bottom: 1rem;
+}
+.hero h1 {
+font-family: var(--display);
+font-weight: 700;
+font-size: clamp(2.4rem, 5vw, 4rem);
+margin: 0 0 1.2rem;
+max-width: 18ch;
+}
+.hero p { max-width: 58ch; font-size: 1.08rem; }
+
+section { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+.section-title {
+font-family: var(--mono);
+font-size: 0.78rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(--verdigris);
+margin: 4rem 0 0.5rem;
+}
+
+.entry { border-color: var(--paper-line); }
+.entry .frame { border-color: var(--paper-line); }
+.frame-inner { background: var(--paper-dim); color: var(--verdigris); }
+
+.tag {
+display: inline-block;
+font-family: var(--mono);
+font-size: 0.7rem;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+border: 1px solid var(--brass);
+color: var(--brass);
+padding: 0.15rem 0.5rem;
+border-radius: 2px;
+margin-right: 0.4rem;
+}
+.tag.patriot { border-color: var(--rust); color: var(--rust); }
+
+.subtitle {
+font-family: var(--body);
+font-style: italic;
+font-size: 1rem;
+color: var(--verdigris);
+margin: -0.2rem 0 0.9rem;
+}
+
+.ships-label {
+font-family: var(--mono);
+font-size: 0.72rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--brass);
+margin: 1.2rem 0 0.6rem;
+}
+.entry ul.ships {
+margin: 0 0 1rem;
+padding-left: 1.1rem;
+max-width: 62ch;
+}
+.entry ul.ships li { margin-bottom: 0.45rem; line-height: 1.55; }
+.entry ul.ships li strong { font-family: var(--display); font-weight: 600; }
+
+/* Sibling grid */
+.sibling-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+gap: 1rem;
+margin: 1.2rem 0 1rem;
+}
+.sibling-card {
+border: 1px solid var(--paper-line);
+background: var(--paper-dim);
+padding: 1rem 1.1rem;
+}
+.sibling-card .name { font-family: var(--display); font-weight: 600; font-size: 1.02rem; margin-bottom: 0.3rem; }
+.sibling-card .meta { font-family: var(--mono); font-size: 0.72rem; color: var(--verdigris); line-height: 1.5; }
+.sibling-card.placeholder { opacity: 0.55; font-style: italic; }
+
+/* Discrepancy callout */
+.discrepancy {
+border-left: 3px solid var(--rust);
+background: var(--paper-dim);
+padding: 1rem 1.2rem;
+margin: 1rem 0;
+}
+.discrepancy .label {
+font-family: var(--mono);
+font-size: 0.72rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--rust);
+margin-bottom: 0.4rem;
+display: block;
+}
+.discrepancy p { margin: 0; max-width: 62ch; }
+
+.site-footer { border-top: 1px solid var(--paper-line); }
+
+  .tree-figure{margin:2.5rem auto 0;max-width:60rem;background:var(--bone);border:1px solid var(--paper-line);border-radius:6px;padding:1.4rem 1.4rem 1rem;}
+  .tree-figure svg{display:block;width:100%;height:auto;}
+  .tree-cap{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.05em;color:var(--verdigris);text-align:center;margin-top:0.8rem;}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+<a href="index.html" class="mark">Schmidtistics</a>
+<div class="crumbs">
+<a href="genealogy.html" class="current">Genealogy</a>
+<a href="veterans.html">Those Who Served</a>
+<a href="shipbuilding.html">Shipbuilding</a>
+<a href="kittery.html">Kittery Trip</a>
+<a href="https://archive.schmidtistics.com">The Archive</a>
+</div>
+</nav>
+
+<div class="line-switch">
+<a href="genealogy.html">↑ All Genealogy</a>
+<span class="sep">/</span>
+<a href="schmidt-line.html">Schmidt Line</a>
+<span class="sep">/</span>
+<a href="dudley-line.html">Dudley Line</a>
+<span class="sep">/</span>
+<a href="booker-line.html" class="current">Booker Line</a>
+<span class="sep">/</span>
+<a href="oswald-line.html">Oswald Line</a>
+</div>
+
+<header class="hero">
+<div class="eyebrow">Bloodline — Booker</div>
+<h1>The Booker Line</h1>
+<p>The Booker family of York County, Maine — Aaron Booker, a Revolutionary War patriot, and his descendant Dorcas Booker. Through Dorcas, the Booker line runs forward into the Voudy family and on into the Dudley line and Mary Catherine Dudley, whose own ancestry is on the <a href="dudley-line.html" style="color:var(--brass);">Dudley Line</a>. This page follows the Bookers' own branch.</p>
+</header>
+<section>
+  <div class="tree-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" font-family="Fraunces, Georgia, serif"><defs><style>
+.nm{font-size:17px;fill:#182430}.nmk{font-size:17px;fill:#F1ECDF}.nmi{font-size:17px;fill:#2B3A2E}
+.amp{font-size:13px;fill:#A8763E;font-style:italic}
+.mt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:#5C6B5D;letter-spacing:.2px}
+.mtk{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:#C3924F;letter-spacing:.2px}
+.sp{stroke:#A8763E;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mr{stroke:#5C6B5D;stroke-width:2;fill:none;stroke-dasharray:5 4;stroke-linecap:round}
+.un{stroke:#8C4A32;stroke-width:1.8;fill:none;stroke-dasharray:2 5;stroke-linecap:round}
+.cin{fill:#E7E9E2;stroke:#5C6B5D;stroke-width:1.5}.cc{fill:#F1ECDF;stroke:#CFC3A6;stroke-width:1.5}
+.ck{fill:#182430;stroke:#A8763E;stroke-width:2}
+.lbl{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:#5C6B5D;letter-spacing:1.2px}
+.ml{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:#8C7A5C}
+.fnt{font-family:"IBM Plex Mono",monospace;font-size:9.5px;fill:#A8763E;letter-spacing:1px;opacity:.75}
+.unl{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:#8C4A32;letter-spacing:1px}
+</style></defs><rect class="cin" x="140" y="30" width="460" height="64" rx="6"/><text class="nmi" x="158" y="57">Aaron Booker</text><text class="mt" x="158" y="79">1758&#8211;1845 &#183; REVOLUTIONARY WAR PATRIOT</text><rect class="cin" x="140" y="180" width="460" height="64" rx="6"/><text class="nmi" x="158" y="207">Dorcas Booker</text><text class="mt" x="158" y="229">m. William Voudy, 1803 &#183; YORK, ME</text><rect class="cin" x="140" y="360" width="460" height="64" rx="6"/><text class="nmi" x="158" y="387">Lydia Jane Voudy</text><text class="mt" x="158" y="409">m. John H. Dudley &#183; YORK CO., ME</text><rect class="ck" x="140" y="510" width="460" height="64" rx="6"/><text class="nmk" x="158" y="537">Kenneth Oswald Schmidt</text><text class="mtk" x="158" y="559">b. 1905 &#183; ANCHOR</text><path class="un" d="M370.0 94 L370.0 180"/><text class="unl" x="382.0" y="140">UNPROVEN LINK</text><path class="mr" d="M370.0 244 L370.0 360"/><text class="lbl" x="382.0" y="306">VOUDY LINE</text><path class="sp" d="M370.0 424 L370.0 510" opacity="0.5"/><text class="fnt" x="382.0" y="470">SCHMIDT &#38; DUDLEY LINES</text><text class="fnt" x="370.0" y="604" text-anchor="middle">Aaron Booker is the earliest confirmed ancestor on Mary&#8217;s side.</text></svg>
+    <div class="tree-cap">From Kenneth Oswald Schmidt up to Aaron Booker.</div>
+  </div>
+</section>
+
+
+<section>
+<div class="section-title">Ancestor Records</div>
+
+<div class="entry" id="rec-001">
+<div class="no">001</div>
+<div>
+<span class="tag patriot">Revolutionary War Patriot</span>
+<h3>Aaron Booker</h3>
+<div class="subtitle">The Earliest Confirmed Ancestor on Mary's Side</div>
+<div class="meta">
+<span>b. Aug. 29, 1758, York, ME</span>
+</div>
+<p>Confirmed through the 1850 census and a DAR application (Beatrice Wayland Smith/English,
+National No. 150069), which traces the Booker line back to Aaron Booker's Revolutionary War
+service. This is the earliest confirmed ancestor on Mary's side of the family.</p>
+<div class="frame">
+<div class="frame-inner">Document placeholder — DAR application No. 150069</div>
+</div>
+</div>
+</div>
+
+<div class="entry" id="rec-002">
+<div class="no">002</div>
+<div>
+<h3>Dorcas Booker</h3>
+<div class="meta"><span>b. c. 1780 (DAR) — see Open Questions</span></div>
+<p>Daughter in the Booker line connecting Aaron Booker forward to the Dudley family. Full
+biography pending further primary-source confirmation.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="section-title">Open Questions &amp; Discrepancies</div>
+<div class="discrepancy">
+<span class="label">Dorcas Booker's Birth Year</span>
+<p>The candidates are c. 1780 (DAR application) and c. 1786 (census/FamilySearch); the c. 1796 figure has been ruled out — it would make her about seven at her 1803 marriage. The c. 1780 date is currently treated as most likely.</p>
+</div>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+</body>
+</html>
