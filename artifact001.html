@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schmidtistics — The York Erasures</title>
-<meta name="description" content="A 1934 transcription convention has been read as knife damage for ninety years. The evidence that York's &quot;erasures&quot; are a clerk's completion mark.">
+<meta name="description" content="A 1934 transcription convention has been read as knife damage for ninety years. The evidence that York's &quot;erasures&quot; are a clerk's completion mark — and the minister's book that proves it eight times over.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -127,6 +127,9 @@
     display: flex; flex-wrap: wrap; gap: 0.4rem 1.8rem;
   }
   .tally b { color: var(--brass); font-weight: 500; }
+  td.dt { font-family: var(--mono); font-size: 0.78rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.dt.found { color: var(--brass); font-weight: 500; }
+  td.gap { font-family: var(--mono); font-size: 0.72rem; color: var(--verdigris); white-space: nowrap; }
 
   /* ── callouts ──────────────────────────────── */
   .finding {
@@ -145,6 +148,7 @@
     text-transform: uppercase; color: var(--rust); margin: 0 0 0.45rem;
   }
   .caveat p { margin: 0; font-size: 0.95rem; color: var(--ink-dim); }
+  .caveat p + p { margin-top: 0.6rem; }
   .caveat.rule { border-left-color: var(--brass); }
   .caveat.rule .lbl { color: var(--brass); }
 
@@ -158,8 +162,12 @@
     border: 1px solid var(--paper-line); border-radius: 50%;
     width: 1.7rem; height: 1.7rem; display: grid; place-items: center;
   }
+  ol.open li.done::before { color: var(--verdigris); content: "✓"; }
+  ol.open li.done h3 { color: var(--verdigris); text-decoration: line-through; text-decoration-thickness: 1px; }
   ol.open h3 { margin: 0 0 0.3rem; }
-  ol.open p { margin: 0; font-size: 0.98rem; color: var(--ink-dim); }
+  ol.open p { margin: 0 0 0.6rem; font-size: 0.98rem; color: var(--ink-dim); }
+  ol.open p:last-child { margin-bottom: 0; }
+  .answered { color: var(--brass); font-weight: 500; }
 
   /* ── sources ───────────────────────────────── */
   .srcgrid { display: grid; gap: 1.8rem; margin-top: 1.6rem; }
@@ -175,6 +183,7 @@
   ul.src b { color: var(--charcoal); font-weight: 500; }
   .state-out { color: var(--rust); font-weight: 500; }
   .state-ok  { color: var(--verdigris); font-weight: 500; }
+  .state-new { color: var(--brass); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -206,13 +215,14 @@
     <p class="glyph-cap">The mark, in position — the blank band beneath an entry</p>
   </div>
   <div>
-    <p class="eyebrow">Research brief · 20 August 2026 · revised 21 August</p>
+    <p class="eyebrow">Research brief · 20 August 2026 · revised 22 August</p>
     <h1>The York <em>Erasures</em></h1>
-    <p class="standfirst">For ninety years the standard finding aid for York, Maine has told researchers that marriage records were <strong>scraped out of the town book with a knife</strong>. They were not. The bracketed word <span class="ts">[ . . erasure . . ]</span> marks a place where the original carries a small pen mark — and that mark is the clerk's shorthand for <strong>a marriage that took place</strong>.</p>
+    <p class="standfirst">For ninety years the standard finding aid for York, Maine has told researchers that marriage records were <strong>scraped out of the town book with a knife</strong>. They were not. The bracketed word <span class="ts">[ . . erasure . . ]</span> marks a place where the original carries a small pen mark — and that mark is the clerk's shorthand for <strong>a marriage that took place</strong>. The minister's own book has since been found, and it supplies the eight missing dates.</p>
     <p class="filed">
       <b>Original manuscript</b> &nbsp;FamilySearch film 007596957<br>
       <b>DAR typescript, 1934</b> &nbsp;FamilySearch film 008218634<br>
-      <b>Method</b> &nbsp;two openings, thirty-nine years apart, compared entry by entry
+      <b>The minister's register</b> &nbsp;Congregational Library, Boston — item 38935<br>
+      <b>Method</b> &nbsp;three books, read against each other entry by entry
     </p>
   </div>
 </header>
@@ -224,8 +234,8 @@
     <blockquote><p class="q-ts">so far as can be determined, the erasures were made only in cases where the marriage was performed by Rev. Isaac Lyman</p><span class="q-src">DAR York Committee, preface · film 008218634 img 686</span></blockquote>
     <p>This research file read that as physical destruction, and said so without qualification:</p>
     <blockquote><p class="q-ts">That bracketed phrase is the typescript's notation for a place where the original book has been physically scraped with a knife. The marriage date was not omitted. It was deliberately destroyed.</p><span class="q-src">source row B-27</span></blockquote>
-    <p>Five entries touching this family were affected — including <strong>Aaron Booker × Anne Ellingwood, 9 October 1778</strong>, the Revolutionary ancestor and the line's anchor. A second row was written up as <em>“the proof case for the whole erasure story.”</em> A third put a Voudy woman on a chase list on the strength of it.</p>
-    <p>The story shaped five source rows, a research list, and a request to be made in person at the archive. It was also the tidiest available explanation for an awkward absence — which, in hindsight, was the problem.</p>
+    <p>Eight entries touching this family were affected — including <strong>Aaron Booker × Anne Ellingwood, 9 October 1778</strong>, the Revolutionary ancestor and the line's anchor. A second row was written up as <em>“the proof case for the whole erasure story.”</em> A third put a Voudy woman on a chase list on the strength of it.</p>
+    <p>The story shaped eight source rows, a research list, and a request to be made in person at the archive. It was also the tidiest available explanation for an awkward absence — which, in hindsight, was the problem.</p>
   </div>
 </section>
 
@@ -368,35 +378,93 @@
 
 <section>
   <div class="col">
-    <div class="sec-head"><span class="sec-num">§6</span><h2>What follows</h2></div>
-    <h3>For the direct line</h3>
-    <p>Aaron Booker and Anne Ellingwood's entry carries the hatch. It is not a destroyed record and never was — on this evidence the clerk recorded that they married. <strong>What is missing is the date, not the fact.</strong></p>
-    <h3>For the book as a whole</h3>
-    <p>The York <em>Book of Intentions</em> has been read as a list of intentions, with eleven catalogued “failure formulas” invented to explain its silences. If the hatch holds, <strong>a large number of those silences are not silences. They are marriages.</strong></p>
-    <h3>For anyone else using the DAR typescripts</h3>
-    <p>They are the standard finding aid for York. The bracketed notation should be read as <em>“the original carries the clerk's completion mark here”</em> — not as <em>“a record was destroyed here.”</em></p>
+    <div class="sec-head"><span class="sec-num">§6</span><h2>Test four — the minister's own book</h2></div>
+    <p>Everything above is an argument about one book, made from that book and its transcript. It needed a witness from outside.</p>
+    <p>There is one, and it has been sitting in Boston. The <strong>Congregational Library &amp; Archives</strong> holds the First Parish of York's church records, 1749–1829. Behind the baptisms, past fifty leaves of blank paper and parish business, are thirteen pages headed in the minister's own hand:</p>
+    <blockquote><p class="q-ms">Marriages consummated by Isaac Lyman</p><span class="q-src">Congregational Library item 38935, image 213 · book page 249 · first entry 11 June 1765</span></blockquote>
+    <p>It is his personal list of the marriages <em>he performed</em> — not a parish register of all York marriages. That distinction matters for every argument built on an absence in it, and it is why an absence before June 1765 means nothing: the book does not begin until then, sixteen years into his ministry.</p>
+    <p>The eight erased entries touching this family were looked up in it, one at a time.</p>
+  </div>
+
+  <div class="ledger">
+    <table>
+      <caption>Erased in the town book · found in the minister's register</caption>
+      <thead><tr><th></th><th>Couple</th><th>Town intention</th><th>Register marriage</th><th>Interval</th></tr></thead>
+      <tbody>
+        <tr class="subject"><td class="n">1</td><td class="entry-cell"><strong>Aaron Booker × Anne Ellingwood</strong></td><td class="dt">9 Oct 1778</td><td class="dt found">16 Feb 1779</td><td class="gap">18 wks</td></tr>
+        <tr><td class="n">2</td><td class="entry-cell">Richard Varell × Mercy Farnam</td><td class="dt">31 Mar 1779</td><td class="dt found">10 May 1779</td><td class="gap">6 wks</td></tr>
+        <tr><td class="n">3</td><td class="entry-cell">John <span class="out">[register: Henery]</span> Mutchemore × Abigail Horne</td><td class="dt">31 Mar 1779</td><td class="dt found">16 May 1779</td><td class="gap">6 wks</td></tr>
+        <tr><td class="n">4</td><td class="entry-cell">Solomon Varrell × Mary Moore</td><td class="dt">3 Jun 1780</td><td class="dt found">27 Jun 1780</td><td class="gap">3 wks</td></tr>
+        <tr><td class="n">5</td><td class="entry-cell">Joseph Tucker × Polly Stone</td><td class="dt">11 Nov 1784</td><td class="dt found">23 Nov 1784</td><td class="gap">12 days</td></tr>
+        <tr><td class="n">6</td><td class="entry-cell">John Farr × Mary Vowdy</td><td class="dt">10 Jan 1786</td><td class="dt found">16 Feb 1786</td><td class="gap">5 wks</td></tr>
+        <tr><td class="n">7</td><td class="entry-cell">David Moore × Dorcas Moore</td><td class="dt">29 Jan 1791</td><td class="dt found">13 Mar 1791</td><td class="gap">6 wks</td></tr>
+        <tr><td class="n">8</td><td class="entry-cell">Nehemiah Booker × Lucy Tinnum</td><td class="dt">5 Dec 1801</td><td class="dt found">14 Dec 1801</td><td class="gap">9 days</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tally"><span><b>8</b> erased entries</span><span><b>8</b> found in Lyman's register</span><span>no exceptions</span></p>
+
+  <div class="col">
+    <p>And the converse, from §5: <strong>Thomas Abbot — the tick-only man from the same 1778 opening — was searched for across the register and is not in it.</strong></p>
+
+    <div class="finding">
+      <p class="lbl">The finding</p>
+      <p>The 1934 compilers wrote that the erasures fall <em>only</em> where Lyman performed the marriage. That sentence sat in this file for weeks as an unverified assertion by people who had the book in their hands and never said how they knew.</p>
+      <p><strong>It is true, eight times out of eight</strong> — proved from a book they appear never to have used, because it is in Boston and they cite only the town book.</p>
+    </div>
+
+    <p>Which completes the reading. The mark is not damage and not suppression. <strong>It is the town clerk's note that Mr Lyman had married the couple and sent in the return.</strong> The compilers, working from type and not from the hand, met a manuscript mark they could not set, printed <span class="ts">[ . . erasure . . ]</span> for it, noticed correctly that it only ever appeared on Lyman's marriages — and said so in their preface without realising they had just explained it.</p>
+
+    <div class="caveat">
+      <p class="lbl">What this does not do</p>
+      <p>The eight were chosen because they touch this family. That is a <strong>selected sample</strong>, and the 1778 opening alone carries six erasure notations of which only one is ours. Twenty unrelated erasures tested the same way would settle it on an unselected sample; that work is outstanding.</p>
+      <p>Two rows in the research file still describe the town book as physically knife-scraped, which contradicts the clean-paper reading at §2. Those two leaves have not yet been pulled at full resolution. Until they are, the physical question is open on those entries even though the correlation is not.</p>
+      <p>The converse test rests on one man. It should rest on five.</p>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="col">
-    <div class="sec-head"><span class="sec-num">§7</span><h2>What is still open</h2></div>
+    <div class="sec-head"><span class="sec-num">§7</span><h2>What follows</h2></div>
+    <h3>For the direct line</h3>
+    <p>Aaron Booker and Anne Ellingwood's entry carries the hatch. It is not a destroyed record and never was — the clerk recorded that they married, and the minister who married them wrote down the day:</p>
+    <blockquote><p class="q-ms">Feb.<sup>y</sup> 16 1779 — Aaron Booker &amp; Anna Elenwood ✓</p><span class="q-src">Congregational Library item 38935, image 217 · book page 253 · read at native resolution</span></blockquote>
+    <p><strong>The date was never missing from the world. It was missing from this side of it.</strong></p>
+    <h3>For the book as a whole</h3>
+    <p>The York <em>Book of Intentions</em> has been read as a list of intentions, with eleven catalogued “failure formulas” invented to explain its silences. <strong>A large number of those silences are not silences. They are marriages</strong> — and for the years 1765 to 1802 the dates are recoverable, one by one, from a book in Boston.</p>
+    <h3>For anyone else using the DAR typescripts</h3>
+    <p>They are the standard finding aid for York. The bracketed notation should be read as <em>“the original carries the clerk's completion mark here”</em> — not as <em>“a record was destroyed here.”</em> And it is a positive signal, not a negative one: it tells you the marriage happened, and it tells you which minister to go looking for.</p>
+    <h3>What was traded</h3>
+    <p>A dramatic story that could not be proved, for eight marriage dates that could — and a key that makes the rest of the book readable. That is a good trade and it should be said plainly.</p>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§8</span><h2>What is still open</h2></div>
     <ol class="open">
-      <li>
+      <li class="done">
         <h3>The converse test has not been run</h3>
-        <p>Take a hatched couple <em>other than</em> the Bookers and show independently that they married. A candidate sits on the same typescript page: <em>“Richard Keating son of Keating died July 10, 1783”</em> — and Richard Keating × Sally Sayward Barrell is hatched, intention 5 Nov 1778. A son dead in 1783 fits a 1778–9 marriage. Not yet read at the image.</p>
+        <p><span class="answered">Answered, 21 August.</span> It has now been run eight times — see §6. Every erased entry touching this family is a marriage in Lyman's register, and the one tick-only couple is not.</p>
+        <p>The candidate this row proposed — Richard Keating × Sally Sayward Barrell — is in the register too, on the leaf above Aaron Booker.</p>
+      </li>
+      <li class="done">
+        <h3>The later hand</h3>
+        <p><span class="answered">Answered, 21 August.</span> One row showed somebody went through the town book afterwards writing dates in — <em>“Dec 14 by Rev Isaac Lyman.”</em> This asked: <strong>whose hand, and what was he copying from?</strong></p>
+        <p><strong>He was copying from this register.</strong> Where he restored a date it agrees with Lyman's book to the day, twice out of two — Nehemiah Booker 14 Dec 1801 and David Moore 13 Mar 1791. And where no later hand ever restored an entry, the register supplies the date anyway.</p>
       </li>
       <li>
-        <h3>The Abbot negative is an argument from silence</h3>
-        <p>This volume's machine transcript is demonstrably poor — it has already turned <em>“Aug.<sup>t</sup> 19”</em> into <em>“Augt 27”</em> and <em>“1742”</em> into <em>“1842”</em>. Repeat with Abbott, Abbet, and Alice Baker before leaning on it.</p>
+        <h3>Twenty erasures that are nothing to do with us</h3>
+        <p>The eight are a selected sample. Take twenty erased entries at random from the typescript, across several decades, with no connection to this family, and look for each in the register; then twenty <em>un</em>-erased intentions from the same pages. <strong>This is now the sharpest open question here</strong>, because it is the one a sceptical reader would raise first — and it needs no login and no travel.</p>
+      </li>
+      <li>
+        <h3>The knife-scrape descriptions</h3>
+        <p>Two rows in the file describe the town book as physically scraped, which the clean-paper reading at §2 contradicts. Those two leaves — film 007596957 images 787 and 807 — have not been pulled at full resolution. Until they are, the physical question is open on those entries.</p>
       </li>
       <li>
         <h3>Who was town clerk at York, 1747–1795?</h3>
-        <p>The written-out practice turns twice while the ministry does not, so the habit is very likely the clerk's. York's town officers should exist as a printed list. <strong>This is now the sharpest open question here</strong>, because it would explain the curve. <em>(The boundary years themselves are answered — see §4 — though both turns are bracketed rather than pinned.)</em></p>
-      </li>
-      <li>
-        <h3>The later hand</h3>
-        <p>One row shows somebody went through this book afterwards writing dates in — <em>“Dec 14 by Rev Isaac Lyman.”</em> <strong>They had a source.</strong> If it survives, it would supply a date for every hatched marriage in the book, Aaron Booker's included. A question for the Old York Historical Society and the First Parish: whose hand, and what was he copying from?</p>
+        <p>The written-out practice turns twice while the ministry does not, so the habit is very likely the clerk's. York's town officers should exist as a printed list. It would explain the curve at §4.</p>
       </li>
       <li>
         <h3>Raking light on the object</h3>
@@ -408,7 +476,7 @@
 
 <section>
   <div class="col">
-    <div class="sec-head"><span class="sec-num">§8</span><h2>Sources</h2></div>
+    <div class="sec-head"><span class="sec-num">§9</span><h2>Sources</h2></div>
   </div>
   <div class="srcgrid">
     <div>
@@ -419,14 +487,25 @@
         <li><b>img 147</b> — 1739 opening, William Booker &amp; Amos Gowdy · ark 3QS7-99N8-9CXF</li>
         <li><b>img 189</b> — 1786, John Farr × Mary Vowdy · ark 3QS7-89N8-9C21</li>
       </ul>
-    </div>
-    <div>
-      <h3>DAR typescript, 1934</h3>
+      <h3 style="margin-top:1.6rem">DAR typescript, 1934</h3>
       <p class="lede">York Committee on Genealogical Research<br>FamilySearch film <strong>008218634</strong></p>
       <ul class="src">
         <li><b>img 766</b> — page [91], the 1778 opening · ark 3Q9M-CSG6-D937-3</li>
         <li><b>img 707</b> — the 1739 opening · ark 3Q9M-CSG6-D99P-7</li>
       </ul>
+    </div>
+    <div>
+      <h3>The minister's register</h3>
+      <p class="lede">Church records, 1749–1829, First Parish Church in York, Me.<br><strong>Congregational Library &amp; Archives</strong>, Boston — item <strong>38935</strong>, 228 images</p>
+      <ul class="src">
+        <li><b>img 213</b> — the heading and first entry, 11 June 1765 · book p.249</li>
+        <li><b>img 217</b> — Aaron Booker 1779; Richard Varell and Henery Muchemore 1779; Solomon Varrell 1780 · book p.253</li>
+        <li><b>img 218</b> — Joseph Tucker 1784 · book p.254</li>
+        <li><b>img 219</b> — John Farr 1786 · book p.255</li>
+        <li><b>img 221</b> — David Moore 1791 · book p.257</li>
+        <li><b>img 223</b> — Nehemiah Booker 1801 · book p.259</li>
+      </ul>
+      <p class="lede" style="margin-top:0.9rem; font-size:0.86rem">Read through the library's public IIIF image service at native resolution. <strong>No images have been taken from this collection</strong> — the repository has its download disabled, and permission has not been asked. Every reading above cites the item and image number instead.</p>
     </div>
   </div>
 
@@ -434,17 +513,19 @@
     <table class="narrow">
       <caption>Rows in the research file</caption>
       <tbody>
+        <tr><td class="key">X-ERASURE-EIGHT</td><td>The eight-for-eight table and the finding it completes <span class="state-new">· new, 21 Aug</span></td></tr>
         <tr><td class="key">V-284</td><td>The master read of image 180 — the physical examination <span class="state-ok">· holds</span></td></tr>
         <tr><td class="key">V-285</td><td>The eleven-entry correlation, 1778 <span class="state-ok">· holds</span></td></tr>
         <tr><td class="key">V-286</td><td>The 1739 control opening, and the falsification test — <span class="state-out">one clause withdrawn</span>, see V-287</td></tr>
         <tr><td class="key">V-287</td><td>The boundary years measured across six openings; withdraws the minister-as-cause claim <span class="state-ok">· holds</span></td></tr>
         <tr><td class="key">V-215</td><td>Read the marks correctly on sight, 19 Aug <span class="state-ok">· vindicated</span></td></tr>
-        <tr><td class="key">V-212</td><td>Found the same thing independently in another book — <em>“the missing solemnisation note turns out to be the book's normal practice”</em></td></tr>
+        <tr><td class="key">V-291, V-306</td><td>The register found, and its heading, extent and page numbering fixed at the leaf</td></tr>
+        <tr><td class="key">V-292 … V-299<br>V-314</td><td>The eight marriages, one row each <span class="state-new">· image-verified</span></td></tr>
+        <tr><td class="key">V-300</td><td>The Abbot negative — the converse test <span class="state-out">· single-instance, to be widened</span></td></tr>
+        <tr><td class="key">V-301</td><td>The later hand identified — he was copying the register</td></tr>
         <tr><td class="key">B-27, V-240</td><td>The erasure claim <span class="state-out">· withdrawn</span></td></tr>
-        <tr><td class="key">V-137, V-146</td><td>Premises superseded; V-137 now carries the “later hand” question</td></tr>
-        <tr><td class="key">V-218, V-219<br>B-26, V-272</td><td>The 1739 control marriages and the children who prove them</td></tr>
-        <tr><td class="key">conflict 144</td><td>Opened, ruled provisionally, then <span class="state-ok">closed</span></td></tr>
-        <tr><td class="key">lead 377</td><td>The remaining tests</td></tr>
+        <tr><td class="key">conflict 144</td><td>Opened, ruled provisionally, <span class="state-ok">closed</span>, and now answered from outside</td></tr>
+        <tr><td class="key">lead 394</td><td>The twenty unrelated erasures</td></tr>
       </tbody>
     </table>
   </div>
@@ -459,13 +540,21 @@
       <p class="lbl">Rule 115</p>
       <p><strong>“Every”, “all”, “none”, “always” are claims about a whole page — crop the whole page before you write one.</strong> Written after a generalisation from three entries to twenty-three had to be corrected within the hour. A mark that varies is a mark that means something; a claim of uniformity throws the signal away.</p>
     </div>
+    <div class="caveat rule">
+      <p class="lbl">Rule 121</p>
+      <p><strong>Read from the repository's image service, not from its page viewer.</strong> A viewer shows you whatever magnification it feels like and will not tell you when you are below the resolution at which a digit can be decided. Reading this register through one produced six misreadings in a single day, every one corrected at full scale — including a target surname silently misfiled as a different one.</p>
+    </div>
+    <div class="caveat rule">
+      <p class="lbl">Rule 125</p>
+      <p><strong>Establish what a document's ordinary furniture is before deciding that a particular mark is extraordinary.</strong> The question to ask of any striking mark is not “what could this say” but “what does this scribe habitually write in this position.” And when the answer you want and the answer you have coincide, slow down — that coincidence is the least reliable moment in the whole process.</p>
+    </div>
   </div>
 </section>
 
 </div>
 
 <footer class="site-footer">
-  Schmidtistics · Research brief · 20 August 2026 — all readings taken from the images cited
+  Schmidtistics · Research brief · 20 August 2026, revised 22 August — all readings taken from the images cited
 </footer>
 
 </body>
