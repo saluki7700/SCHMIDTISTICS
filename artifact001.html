@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — The York Erasures</title>
+<meta name="description" content="A 1934 transcription convention has been read as knife damage for ninety years. The evidence that York's &quot;erasures&quot; are a clerk's completion mark.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  body { background: var(--paper); color: var(--charcoal); }
+  .site-nav { border-bottom: 1px solid var(--paper-line); }
+  .site-footer { border-top: 1px solid var(--paper-line); }
+
+  .shell { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+  .col { max-width: 62ch; }
+
+  /* ── masthead ─────────────────────────────── */
+  .hero {
+    display: grid; gap: 2.4rem;
+    padding: 4.5rem 0 2.6rem;
+    border-bottom: 1px solid var(--paper-line);
+  }
+  @media (min-width: 820px) {
+    .hero { grid-template-columns: 9rem 1fr; gap: 3rem; align-items: start; }
+  }
+  .hero .eyebrow {
+    font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--verdigris); margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.04;
+    margin: 0 0 1.3rem; max-width: 16ch;
+  }
+  .hero h1 em { font-style: italic; font-weight: 400; color: var(--brass); }
+  .standfirst { font-size: 1.12rem; max-width: 58ch; margin: 0 0 1.6rem; }
+  .standfirst .ts { font-family: var(--mono); font-size: 0.88em; }
+  .filed {
+    font-family: var(--mono); font-size: 0.75rem; line-height: 2;
+    letter-spacing: 0.03em; color: var(--ink-dim); opacity: 0.85;
+  }
+  .filed b { font-weight: 500; opacity: 0.6; }
+
+  /* ── the clerk's mark, drawn ───────────────── */
+  .glyph { width: 100%; max-width: 9rem; height: auto; display: block; }
+  .glyph .pen { fill: none; stroke: var(--brass); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+  .glyph .band { stroke: var(--paper-line); stroke-width: 2; }
+  .glyph-cap {
+    font-family: var(--mono); font-size: 0.68rem; line-height: 1.5;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--verdigris); margin: 0.7rem 0 0; max-width: 11rem;
+  }
+
+  /* ── sections ──────────────────────────────── */
+  section { padding: 3.2rem 0 0; }
+  .sec-head { display: flex; gap: 1rem; align-items: baseline; margin: 0 0 1.1rem; }
+  .sec-num {
+    font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
+    color: var(--brass); letter-spacing: 0.06em; flex: none; padding-top: 0.35em;
+  }
+  h2 {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2.05rem); line-height: 1.15;
+    margin: 0; text-wrap: balance;
+  }
+  h3 {
+    font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--verdigris);
+    margin: 2rem 0 0.5rem; font-weight: 500;
+  }
+  p { margin: 0 0 1.05rem; }
+  .col p:last-child { margin-bottom: 0; }
+
+  /* ── two voices ────────────────────────────── */
+  blockquote { margin: 1.5rem 0; padding-left: 1.2rem; border-left: 2px solid var(--paper-line); }
+  blockquote p { margin: 0; }
+  .q-ms { font-style: italic; font-size: 1.1rem; line-height: 1.55; }
+  .q-ts { font-family: var(--mono); font-size: 0.85rem; line-height: 1.7; color: var(--ink-dim); }
+  .q-src {
+    display: block; margin-top: 0.6rem; font-family: var(--mono);
+    font-size: 0.7rem; letter-spacing: 0.06em; color: var(--verdigris); font-style: normal;
+  }
+
+  /* ── ledger tables ─────────────────────────── */
+  .ledger { margin: 1.8rem 0 0.4rem; overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 40rem; font-size: 0.9rem; }
+  table.narrow { min-width: 0; }
+  caption {
+    caption-side: top; text-align: left; font-family: var(--mono);
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--verdigris); padding-bottom: 0.8rem;
+  }
+  th {
+    font-family: var(--mono); font-weight: 500; font-size: 0.66rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--verdigris);
+    text-align: left; padding: 0 0.9rem 0.6rem 0;
+    border-bottom: 1px solid var(--paper-line); vertical-align: bottom;
+  }
+  td { padding: 0.7rem 0.9rem 0.7rem 0; border-bottom: 1px solid var(--paper-dim); vertical-align: top; }
+  tr:last-child td { border-bottom: 1px solid var(--paper-line); }
+  td.n {
+    font-family: var(--mono); font-size: 0.75rem; color: var(--verdigris);
+    font-variant-numeric: tabular-nums; width: 1%; white-space: nowrap;
+  }
+  td.entry-cell { min-width: 17rem; }
+  td.key { font-family: var(--mono); font-size: 0.75rem; color: var(--brass); white-space: nowrap; width: 1%; }
+  .out { opacity: 0.55; }
+  .mark-cell { display: inline-flex; align-items: center; gap: 0.45rem; font-family: var(--mono); font-size: 0.75rem; white-space: nowrap; }
+  .mark-cell svg { flex: none; }
+  .mark-cell .pen { fill: none; stroke: currentColor; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+  .is-hatch { color: var(--brass); font-weight: 500; }
+  .is-tick  { color: var(--ink-dim); opacity: 0.8; }
+  .is-none  { color: var(--verdigris); opacity: 0.7; }
+  .ts-hit  { font-family: var(--mono); font-size: 0.75rem; color: var(--brass); font-weight: 500; }
+  .ts-miss { font-family: var(--mono); font-size: 0.75rem; color: var(--verdigris); opacity: 0.6; }
+  tr.subject td { background: rgba(168,118,62,0.10); }
+  tr.subject td:first-child { box-shadow: inset 3px 0 0 var(--brass); }
+  .tally {
+    font-family: var(--mono); font-size: 0.76rem; color: var(--ink-dim);
+    border-top: 1px solid var(--paper-line); padding-top: 0.9rem; margin: -1px 0 0;
+    display: flex; flex-wrap: wrap; gap: 0.4rem 1.8rem;
+  }
+  .tally b { color: var(--brass); font-weight: 500; }
+
+  /* ── callouts ──────────────────────────────── */
+  .finding {
+    margin: 2rem 0; padding: 1.5rem 1.7rem;
+    background: var(--bone); border: 1px solid var(--paper-line);
+  }
+  .finding .lbl {
+    font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--brass); margin: 0 0 0.7rem;
+  }
+  .finding p { margin: 0; font-size: 1.12rem; line-height: 1.5; }
+  .finding p + p { margin-top: 0.8rem; }
+  .caveat { margin: 1.6rem 0; padding: 1rem 1.3rem; border-left: 2px solid var(--rust); background: var(--bone); }
+  .caveat .lbl {
+    font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--rust); margin: 0 0 0.45rem;
+  }
+  .caveat p { margin: 0; font-size: 0.95rem; color: var(--ink-dim); }
+  .caveat.rule { border-left-color: var(--brass); }
+  .caveat.rule .lbl { color: var(--brass); }
+
+  /* ── open questions ────────────────────────── */
+  ol.open { list-style: none; counter-reset: oq; padding: 0; margin: 1.6rem 0 0;
+            display: flex; flex-direction: column; gap: 1.5rem; }
+  ol.open li { counter-increment: oq; padding-left: 2.8rem; position: relative; }
+  ol.open li::before {
+    content: counter(oq); position: absolute; left: 0; top: 0.1rem;
+    font-family: var(--mono); font-size: 0.72rem; color: var(--brass);
+    border: 1px solid var(--paper-line); border-radius: 50%;
+    width: 1.7rem; height: 1.7rem; display: grid; place-items: center;
+  }
+  ol.open h3 { margin: 0 0 0.3rem; }
+  ol.open p { margin: 0; font-size: 0.98rem; color: var(--ink-dim); }
+
+  /* ── sources ───────────────────────────────── */
+  .srcgrid { display: grid; gap: 1.8rem; margin-top: 1.6rem; }
+  @media (min-width: 760px) { .srcgrid { grid-template-columns: 1fr 1fr; gap: 1.8rem 2.6rem; } }
+  .srcgrid h3 { margin-top: 0; }
+  .srcgrid .lede { font-size: 0.95rem; color: var(--ink-dim); margin-bottom: 0.8rem; }
+  ul.src { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+  ul.src li {
+    font-family: var(--mono); font-size: 0.76rem; line-height: 1.55;
+    color: var(--ink-dim); padding-left: 0.9rem; position: relative;
+  }
+  ul.src li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 1px; background: var(--paper-line); }
+  ul.src b { color: var(--charcoal); font-weight: 500; }
+  .state-out { color: var(--rust); font-weight: 500; }
+  .state-ok  { color: var(--verdigris); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html">Genealogy</a>
+    <a href="veterans.html">Those Who Served</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="kittery.html">Kittery Trip</a>
+    <a href="https://archive.schmidtistics.com">The Archive</a>
+  </div>
+</nav>
+
+<div class="shell">
+
+<header class="hero">
+  <div>
+    <svg class="glyph" viewBox="0 0 120 120" role="img" aria-label="A clerk's tick and double-hatch mark, drawn in a ruled band">
+      <line class="band" x1="4" y1="18" x2="116" y2="18"/>
+      <line class="band" x1="4" y1="102" x2="116" y2="102"/>
+      <path class="pen" d="M26 62 L41 80 L64 38"/>
+      <path class="pen" d="M78 44 L70 84"/>
+      <path class="pen" d="M96 44 L88 84"/>
+      <path class="pen" d="M66 58 L102 54"/>
+      <path class="pen" d="M64 72 L100 68"/>
+    </svg>
+    <p class="glyph-cap">The mark, in position — the blank band beneath an entry</p>
+  </div>
+  <div>
+    <p class="eyebrow">Research brief · 20 August 2026</p>
+    <h1>The York <em>Erasures</em></h1>
+    <p class="standfirst">For ninety years the standard finding aid for York, Maine has told researchers that marriage records were <strong>scraped out of the town book with a knife</strong>. They were not. The bracketed word <span class="ts">[ . . erasure . . ]</span> marks a place where the original carries a small pen mark — and that mark is the clerk's shorthand for <strong>a marriage that took place</strong>.</p>
+    <p class="filed">
+      <b>Original manuscript</b> &nbsp;FamilySearch film 007596957<br>
+      <b>DAR typescript, 1934</b> &nbsp;FamilySearch film 008218634<br>
+      <b>Method</b> &nbsp;two openings, thirty-nine years apart, compared entry by entry
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§1</span><h2>What was believed</h2></div>
+    <p>York's original <em>Book of Intentions of Marriage</em> was transcribed in 1934 by the DAR's York Committee on Genealogical Research. In that typescript, certain intentions are followed not by a marriage date but by a bracketed phrase. The compilers' preface adds an observation:</p>
+    <blockquote><p class="q-ts">so far as can be determined, the erasures were made only in cases where the marriage was performed by Rev. Isaac Lyman</p><span class="q-src">DAR York Committee, preface · film 008218634 img 686</span></blockquote>
+    <p>This research file read that as physical destruction, and said so without qualification:</p>
+    <blockquote><p class="q-ts">That bracketed phrase is the typescript's notation for a place where the original book has been physically scraped with a knife. The marriage date was not omitted. It was deliberately destroyed.</p><span class="q-src">source row B-27</span></blockquote>
+    <p>Five entries touching this family were affected — including <strong>Aaron Booker × Anne Ellingwood, 9 October 1778</strong>, the Revolutionary ancestor and the line's anchor. A second row was written up as <em>“the proof case for the whole erasure story.”</em> A third put a Voudy woman on a chase list on the strength of it.</p>
+    <p>The story shaped five source rows, a research list, and a request to be made in person at the archive. It was also the tidiest available explanation for an awkward absence — which, in hindsight, was the problem.</p>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§2</span><h2>How the question opened</h2></div>
+    <p>Not by suspicion. By a different job.</p>
+    <p>While sweeping the original manuscript film for Booker entries, the <strong>full-resolution master</strong> of image 180 — the leaf carrying Aaron Booker's intention — was pulled for an unrelated reason: to read the entry text at magnification. With the master in hand, the thing to look at turned out to be <strong>the paper</strong>, not the words.</p>
+    <p>There was no scrape. The band beneath the entry is clean and evenly toned; the ruled lines above and below run continuous and crisp across it; there is no roughened patch, no thinning, no ghost of lifted ink. What sits in the band is a <strong>tick and a small double-hatch</strong>.</p>
+    <p>That contradicted the claim above — but a row written eighteen hours earlier, from the same image at lower magnification, had already said so:</p>
+    <blockquote><p class="q-ms">the entry carries the book's completion marks beneath it, the same paired tick-and-hash the clerk applied to intentions that went through</p><span class="q-src">source row V-215, 19 August 2026</span></blockquote>
+    <p>That clause had since been “corrected” on the typescript's authority. <strong>The correction had gone the wrong way, and nobody noticed, because the typescript was assumed to be reporting the page.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§3</span><h2>Test one — does the notation track the mark?</h2></div>
+    <p>If the bracketed word describes something real, it should correspond to something visible. The typescript of the <em>same opening</em> was read against the original entry by entry — not the entry of interest, the whole page.</p>
+  </div>
+
+  <div class="ledger">
+    <table>
+      <caption>Original film 007596957 img 180 · typescript film 008218634 img 766, page [91] · July–November 1778</caption>
+      <thead><tr><th></th><th>Entry</th><th>Mark on the original</th><th>1934 typescript</th></tr></thead>
+      <tbody>
+        <tr><td class="n">1</td><td class="entry-cell">Peletiah Simpson × Mary Donnell, both of York · 3 Jul</td><td><span class="mark-cell is-hatch"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/><path class="pen" d="M32 8 L29 24"/><path class="pen" d="M43 8 L40 24"/><path class="pen" d="M27 13 L47 11"/><path class="pen" d="M26 19 L46 17"/></svg>tick + hatch</span></td><td><span class="ts-hit">“erasure”</span></td></tr>
+        <tr><td class="n">2</td><td class="entry-cell">James Bane × Tabitha Banks, both of York · 4 Jul</td><td><span class="mark-cell is-hatch"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/><path class="pen" d="M32 8 L29 24"/><path class="pen" d="M43 8 L40 24"/><path class="pen" d="M27 13 L47 11"/><path class="pen" d="M26 19 L46 17"/></svg>tick + hatch</span></td><td><span class="ts-hit">“erasure”</span></td></tr>
+        <tr><td class="n">3</td><td class="entry-cell">Daniel Bane × Abigail Beedle, both of York · 4 Jul</td><td><span class="mark-cell is-hatch"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/><path class="pen" d="M32 8 L29 24"/><path class="pen" d="M43 8 L40 24"/><path class="pen" d="M27 13 L47 11"/><path class="pen" d="M26 19 L46 17"/></svg>tick + hatch</span></td><td><span class="ts-hit">“erasure”</span></td></tr>
+        <tr><td class="n">4</td><td class="entry-cell">Solomon Bragdon × Susanna Bragdon <span class="out">of Berwick</span> · 24 Jul</td><td><span class="mark-cell is-tick"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/></svg>tick only</span></td><td><span class="ts-miss">—</span></td></tr>
+        <tr><td class="n">5</td><td class="entry-cell"><strong>Thomas Abbot × Ellis Baker, both of York</strong> · 1 Aug</td><td><span class="mark-cell is-tick"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/></svg>tick only</span></td><td><span class="ts-miss">—</span></td></tr>
+        <tr><td class="n">6</td><td class="entry-cell">Thomas Shuker <span class="out">of Boston</span> × Martha Moore · 8 Oct</td><td><span class="mark-cell is-none">no mark</span></td><td><span class="ts-miss">—</span></td></tr>
+        <tr class="subject"><td class="n">7</td><td class="entry-cell"><strong>Aaron Booker × Anne Ellingwood, both of York</strong> · 9 Oct</td><td><span class="mark-cell is-hatch"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/><path class="pen" d="M32 8 L29 24"/><path class="pen" d="M43 8 L40 24"/><path class="pen" d="M27 13 L47 11"/><path class="pen" d="M26 19 L46 17"/></svg>tick + hatch</span></td><td><span class="ts-hit">“erasure”</span></td></tr>
+        <tr><td class="n">8</td><td class="entry-cell">Isaac Morton <span class="out">of Boston</span> × Hannah Sayward · 9 Oct</td><td><span class="mark-cell is-tick"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/></svg>tick only</span></td><td><span class="ts-miss">—</span></td></tr>
+        <tr><td class="n">9</td><td class="entry-cell">Peletiah Gunnison <span class="out">of Kittery</span> × Jane McIntire · 31 Oct</td><td><span class="mark-cell is-none">no mark</span></td><td><span class="ts-miss">—</span></td></tr>
+        <tr><td class="n">10</td><td class="entry-cell">Richard Keating × Sally Sayward Barrell, both of York · 5 Nov</td><td><span class="mark-cell is-hatch"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/><path class="pen" d="M32 8 L29 24"/><path class="pen" d="M43 8 L40 24"/><path class="pen" d="M27 13 L47 11"/><path class="pen" d="M26 19 L46 17"/></svg>tick + hatch</span></td><td><span class="ts-hit">“erasure”</span></td></tr>
+        <tr><td class="n">11</td><td class="entry-cell">Amaziah Goodwin × Sarah Butler, resident in York · 21 Nov</td><td><span class="mark-cell is-hatch"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/><path class="pen" d="M32 8 L29 24"/><path class="pen" d="M43 8 L40 24"/><path class="pen" d="M27 13 L47 11"/><path class="pen" d="M26 19 L46 17"/></svg>tick + hatch</span></td><td><span class="ts-hit">“erasure”</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tally"><span><b>6</b> hatches → <b>6</b> “erasures”</span><span><b>5</b> without the hatch → <b>0</b> notations</span><span>eleven consecutive entries, no exceptions</span></p>
+
+  <div class="col">
+    <div class="finding">
+      <p class="lbl">What that means</p>
+      <p>The compilers met a small pen mark standing where they expected a marriage date, could not set it in type, and wrote down what they took it to mean.</p>
+    </div>
+    <p>One thing fell out unlooked-for. Read the residence column: <strong>every hatched couple is both-of-York.</strong> The un-hatched ones bring in Berwick, Boston, Kittery — couples who would marry elsewhere, whose returns would never reach the York clerk.</p>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§4</span><h2>Test two — a control page, thirty-nine years earlier</h2></div>
+    <p>Correlation on one page is a coincidence waiting to happen. The comparison was repeated on the <strong>1739 opening</strong>.</p>
+  </div>
+
+  <div class="ledger">
+    <table>
+      <caption>The same two books, two openings apart in practice</caption>
+      <thead><tr><th>Opening</th><th>Marks on the original</th><th>Marriages written out</th><th>Typescript “erasure”</th></tr></thead>
+      <tbody>
+        <tr><td class="entry-cell"><strong>1739</strong> · orig img 147 / ts img 707</td><td><span class="mark-cell is-tick"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/></svg>tick only — no hatch anywhere</span></td><td><span class="ts-hit">8</span></td><td><span class="ts-miss">0</span></td></tr>
+        <tr><td class="entry-cell"><strong>1778</strong> · orig img 180 / ts img 766</td><td><span class="mark-cell is-hatch"><svg width="26" height="14" viewBox="0 0 52 28" aria-hidden="true"><path class="pen" d="M4 15 L11 23 L22 5"/><path class="pen" d="M32 8 L29 24"/><path class="pen" d="M43 8 L40 24"/><path class="pen" d="M27 13 L47 11"/><path class="pen" d="M26 19 L46 17"/></svg>tick, tick + hatch, none</span></td><td><span class="ts-miss">0</span></td><td><span class="ts-hit">6</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding">
+      <p class="lbl">The conclusion</p>
+      <p>Where the clerk wrote the marriage out in words, there is no hatch and no “erasure.” Where he did not, there is a hatch and an “erasure.”</p>
+      <p>The hatch stands in place of a written-out marriage. It <em>is</em> the marriage record, in shorthand.</p>
+    </div>
+
+    <p>The 1739 page also supplied the control the test needed — two marriages we know beyond doubt took place, because their children are entered in the family birth registers:</p>
+    <blockquote><p class="q-ms">140. Amos Gowdy and Mercy Booker both of York intend Marriage Entred Dec.<sup>r</sup> 8. 1739 &amp; Married by the Rev.<sup>d</sup> M.<sup>r</sup> Sam.<sup>l</sup> Moody Dec.<sup>r</sup> 27. 1739.</p><span class="q-src">film 007596957 img 147 · read at the image</span></blockquote>
+    <p>Both written out. Neither hatched. <strong>On a page where he records marriages in words, he does not use the mark.</strong></p>
+
+    <h3>And this is what explains the compilers' own observation</h3>
+    <p>They said the “erasures” fall <em>only</em> where Rev. Isaac Lyman married the couple. Look at the officiants either side of the boundary, using only readings taken from the images themselves:</p>
+  </div>
+
+  <div class="ledger">
+    <table class="narrow">
+      <caption>Officiant named in the entry</caption>
+      <tbody>
+        <tr><td class="key">1739</td><td><strong>Rev. Samuel Moody</strong> — marriages written out</td></tr>
+        <tr><td class="key">1747</td><td>Rev. Samuel Chandler</td></tr>
+        <tr><td class="key">1753</td><td><strong>Rev. Isaac Lyman</strong></td></tr>
+        <tr><td class="key">1767</td><td>Rev. Isaac Lyman</td></tr>
+        <tr><td class="key">1792</td><td>Rev. Isaac Lyman — marriages marked</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>The clerk's practice changed somewhere between 1739 and 1778, and the ministry changed in the same window. So the marks — and therefore the “erasures” — fall entirely in the Lyman years. <strong>The compilers observed the pattern correctly. They inferred the wrong cause.</strong></p>
+    <div class="caveat">
+      <p class="lbl">Not sourced here</p>
+      <p>The conventional settlement dates — Moody to 1747, Lyman 1749–1810 — are not documented in this brief. The table above rests only on what the entries themselves say.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§5</span><h2>Test three — trying to break it</h2></div>
+    <p>A reading that only ever confirms itself is worth nothing. The 1778 page offered one case that could break this one: <strong>Thomas Abbot × Ellis Baker, both of York, 1 August 1778 — tick only, no hatch</strong>, when every other both-of-York couple on that page is hatched.</p>
+    <p><strong>The prediction:</strong> if the hatch marks a marriage, this couple either did not marry or married outside York — and should leave no further trace in the town's records.</p>
+  </div>
+
+  <div class="ledger">
+    <table class="narrow">
+      <caption>Full-text search · exact strings</caption>
+      <tbody>
+        <tr><td class="key">“Thomas Abbot”</td><td>Original town book, all 731 images — <strong>one hit.</strong> That intention.</td></tr>
+        <tr><td class="key">“Ellis Baker”</td><td>Original town book, all 731 images — <strong>one hit.</strong> The same entry.</td></tr>
+        <tr><td class="key">“Ellis Baker”</td><td>DAR typescript, all 1,056 images — <strong>one hit.</strong> The same entry.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>No marriage. No children in the family birth registers. No death. <strong>The one both-of-York couple lacking the clerk's mark is the one couple who leave no history at York at all.</strong> A prediction was made from a pen mark, and the records agreed with it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§6</span><h2>What follows</h2></div>
+    <h3>For the direct line</h3>
+    <p>Aaron Booker and Anne Ellingwood's entry carries the hatch. It is not a destroyed record and never was — on this evidence the clerk recorded that they married. <strong>What is missing is the date, not the fact.</strong></p>
+    <h3>For the book as a whole</h3>
+    <p>The York <em>Book of Intentions</em> has been read as a list of intentions, with eleven catalogued “failure formulas” invented to explain its silences. If the hatch holds, <strong>a large number of those silences are not silences. They are marriages.</strong></p>
+    <h3>For anyone else using the DAR typescripts</h3>
+    <p>They are the standard finding aid for York. The bracketed notation should be read as <em>“the original carries the clerk's completion mark here”</em> — not as <em>“a record was destroyed here.”</em></p>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§7</span><h2>What is still open</h2></div>
+    <ol class="open">
+      <li>
+        <h3>The converse test has not been run</h3>
+        <p>Take a hatched couple <em>other than</em> the Bookers and show independently that they married. A candidate sits on the same typescript page: <em>“Richard Keating son of Keating died July 10, 1783”</em> — and Richard Keating × Sally Sayward Barrell is hatched, intention 5 Nov 1778. A son dead in 1783 fits a 1778–9 marriage. Not yet read at the image.</p>
+      </li>
+      <li>
+        <h3>The Abbot negative is an argument from silence</h3>
+        <p>This volume's machine transcript is demonstrably poor — it has already turned <em>“Aug.<sup>t</sup> 19”</em> into <em>“Augt 27”</em> and <em>“1742”</em> into <em>“1842”</em>. Repeat with Abbott, Abbet, and Alice Baker before leaning on it.</p>
+      </li>
+      <li>
+        <h3>The boundary year is unknown</h3>
+        <p>Somewhere between 1740 and 1778 the clerk stopped writing marriages out. Finding it tells us which entries must be read by their marks and which by their text — a handful of page-opens.</p>
+      </li>
+      <li>
+        <h3>The later hand</h3>
+        <p>One row shows somebody went through this book afterwards writing dates in — <em>“Dec 14 by Rev Isaac Lyman.”</em> <strong>They had a source.</strong> If it survives, it would supply a date for every hatched marriage in the book, Aaron Booker's included. A question for the Old York Historical Society and the First Parish: whose hand, and what was he copying from?</p>
+      </li>
+      <li>
+        <h3>Raking light on the object</h3>
+        <p>Original page 24, DAR page [91] — if there is spare time at the counter. It would now only confirm what the correlation already shows, so it is no longer a priority.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-head"><span class="sec-num">§8</span><h2>Sources</h2></div>
+  </div>
+  <div class="srcgrid">
+    <div>
+      <h3>Original manuscript</h3>
+      <p class="lede">York, Maine — Town and vital records 1717–1889<br>FamilySearch film <strong>007596957</strong></p>
+      <ul class="src">
+        <li><b>img 180</b> — 1778 opening, Aaron Booker · ark 3QS7-89N8-9C2D · master downloaded and filed</li>
+        <li><b>img 147</b> — 1739 opening, William Booker &amp; Amos Gowdy · ark 3QS7-99N8-9CXF</li>
+        <li><b>img 189</b> — 1786, John Farr × Mary Vowdy · ark 3QS7-89N8-9C21</li>
+      </ul>
+    </div>
+    <div>
+      <h3>DAR typescript, 1934</h3>
+      <p class="lede">York Committee on Genealogical Research<br>FamilySearch film <strong>008218634</strong></p>
+      <ul class="src">
+        <li><b>img 766</b> — page [91], the 1778 opening · ark 3Q9M-CSG6-D937-3</li>
+        <li><b>img 707</b> — the 1739 opening · ark 3Q9M-CSG6-D99P-7</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ledger" style="margin-top:2rem">
+    <table class="narrow">
+      <caption>Rows in the research file</caption>
+      <tbody>
+        <tr><td class="key">V-284</td><td>The master read of image 180 — the physical examination <span class="state-ok">· holds</span></td></tr>
+        <tr><td class="key">V-285</td><td>The eleven-entry correlation, 1778 <span class="state-ok">· holds</span></td></tr>
+        <tr><td class="key">V-286</td><td>The 1739 control opening, and the falsification test <span class="state-ok">· holds</span></td></tr>
+        <tr><td class="key">V-215</td><td>Read the marks correctly on sight, 19 Aug <span class="state-ok">· vindicated</span></td></tr>
+        <tr><td class="key">V-212</td><td>Found the same thing independently in another book — <em>“the missing solemnisation note turns out to be the book's normal practice”</em></td></tr>
+        <tr><td class="key">B-27, V-240</td><td>The erasure claim <span class="state-out">· withdrawn</span></td></tr>
+        <tr><td class="key">V-137, V-146</td><td>Premises superseded; V-137 now carries the “later hand” question</td></tr>
+        <tr><td class="key">V-218, V-219<br>B-26, V-272</td><td>The 1739 control marriages and the children who prove them</td></tr>
+        <tr><td class="key">conflict 144</td><td>Opened, ruled provisionally, then <span class="state-ok">closed</span></td></tr>
+        <tr><td class="key">lead 377</td><td>The remaining tests</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col" style="margin-top:2.2rem">
+    <h3>Method rules this produced</h3>
+    <div class="caveat rule">
+      <p class="lbl">Rule 113</p>
+      <p><strong>A transcript's editorial notation is a statement about the transcriber, not about the page. Go and look.</strong> An explanation that arrives too neatly is the one to check first.</p>
+    </div>
+    <div class="caveat rule">
+      <p class="lbl">Rule 115</p>
+      <p><strong>“Every”, “all”, “none”, “always” are claims about a whole page — crop the whole page before you write one.</strong> Written after a generalisation from three entries to twenty-three had to be corrected within the hour. A mark that varies is a mark that means something; a claim of uniformity throws the signal away.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer class="site-footer">
+  Schmidtistics · Research brief · 20 August 2026 — all readings taken from the images cited
+</footer>
+
+</body>
+</html>
