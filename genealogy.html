@@ -144,56 +144,58 @@
      page has no build step, so update them the same
      way any other figure on this page gets updated.
      ============================================ */
-  .ticker-wrap { max-width: 68rem; margin: 0 auto 1rem; padding: 0 2rem; }
+  .ticker-wrap { max-width: 40rem; margin: 0 auto 0.5rem; padding: 0 2rem; }
   .ticker-eyebrow {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.64rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--verdigris);
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
   }
   .ticker {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     background: var(--paper-line);
     border: 1px solid var(--paper-line);
   }
   .tick {
     background: var(--paper-dim);
-    padding: 1.5rem 1rem 1.3rem;
+    padding: 0.85rem 0.6rem 0.75rem;
     text-align: center;
   }
   .tick-num {
     display: block;
     font-family: var(--display);
     font-weight: 700;
-    font-size: clamp(1.7rem, 3.6vw, 2.5rem);
+    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
     color: var(--brass);
     line-height: 1;
     font-variant-numeric: tabular-nums;
   }
   .tick-label {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     font-family: var(--mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.06em;
+    font-size: 0.58rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--verdigris);
-    line-height: 1.4;
+    line-height: 1.3;
   }
   .ticker-asof {
     text-align: center;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     font-family: var(--mono);
-    font-size: 0.66rem;
+    font-size: 0.6rem;
     color: var(--verdigris);
     opacity: 0.75;
   }
-  @media (max-width: 640px) {
-    .ticker { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 480px) {
+    .ticker { grid-template-columns: repeat(3, 1fr); }
+    .tick { padding: 0.7rem 0.3rem 0.6rem; }
   }
 </style>
 </head>
@@ -235,10 +237,6 @@
     <div class="tick">
       <span class="tick-num" data-count="7">0</span>
       <span class="tick-label">Family&nbsp;Lines</span>
-    </div>
-    <div class="tick">
-      <span class="tick-num" data-count="78">0</span>
-      <span class="tick-label">False&nbsp;Leads&nbsp;Closed</span>
     </div>
   </div>
   <div class="ticker-asof">As of 15 September 2026 — from the working research archive, updated as the project grows</div>
