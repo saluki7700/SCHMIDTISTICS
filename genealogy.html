@@ -133,6 +133,68 @@
     color: var(--brass); transition: color 0.2s ease;
   }
   .archive-badge:hover span { color: var(--rust); }
+
+  /* ============================================
+     RESEARCH TICKER — quick-glance project stats
+     Added 15 Sept 2026 at Blaine's request: a short,
+     readable snapshot of the project's scale, meant
+     to catch the family's eye without demanding a
+     research background to appreciate. Numbers are
+     hand-refreshed from the working database — this
+     page has no build step, so update them the same
+     way any other figure on this page gets updated.
+     ============================================ */
+  .ticker-wrap { max-width: 68rem; margin: 0 auto 1rem; padding: 0 2rem; }
+  .ticker-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin-bottom: 0.7rem;
+  }
+  .ticker {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--paper-line);
+    border: 1px solid var(--paper-line);
+  }
+  .tick {
+    background: var(--paper-dim);
+    padding: 1.5rem 1rem 1.3rem;
+    text-align: center;
+  }
+  .tick-num {
+    display: block;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(1.7rem, 3.6vw, 2.5rem);
+    color: var(--brass);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .tick-label {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    line-height: 1.4;
+  }
+  .ticker-asof {
+    text-align: center;
+    margin-top: 0.7rem;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    color: var(--verdigris);
+    opacity: 0.75;
+  }
+  @media (max-width: 640px) {
+    .ticker { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>
 </head>
 <body>
@@ -158,6 +220,29 @@
   each branch has its own page below, and the family's military service is gathered separately on
   <a href="veterans.html">Those Who Served</a>.</p>
 </header>
+
+<section class="ticker-wrap">
+  <div class="ticker-eyebrow">The Research, By the Numbers</div>
+  <div class="ticker">
+    <div class="tick">
+      <span class="tick-num" data-count="102">0</span>
+      <span class="tick-label">Ancestors&nbsp;Traced</span>
+    </div>
+    <div class="tick">
+      <span class="tick-num" data-count="1382">0</span>
+      <span class="tick-label">Records&nbsp;Filed</span>
+    </div>
+    <div class="tick">
+      <span class="tick-num" data-count="13">0</span>
+      <span class="tick-label">Family&nbsp;Lines</span>
+    </div>
+    <div class="tick">
+      <span class="tick-num" data-count="7">0</span>
+      <span class="tick-label">False&nbsp;Leads&nbsp;Closed</span>
+    </div>
+  </div>
+  <div class="ticker-asof">As of 15 September 2026 — from the working research archive, updated as the project grows</div>
+</section>
 
 <section>
   <div class="section-title">Family Tree</div>
@@ -397,6 +482,46 @@
 </section>
 
 <footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+<script>
+(function(){
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nums = document.querySelectorAll('.tick-num');
+  if (!nums.length) return;
+  if (reduced) {
+    nums.forEach(function(el){ el.textContent = Number(el.getAttribute('data-count')).toLocaleString(); });
+    return;
+  }
+  var animated = false;
+  function animate(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var duration = 1100;
+    var startTime = null;
+    function step(ts){
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target).toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  function trigger(){
+    if (animated) return;
+    animated = true;
+    nums.forEach(animate);
+  }
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { trigger(); obs.disconnect(); } });
+    }, {threshold: 0.4});
+    var wrap = document.querySelector('.ticker-wrap');
+    if (wrap) obs.observe(wrap);
+  } else {
+    trigger();
+  }
+})();
+</script>
 
 </body>
 </html>
