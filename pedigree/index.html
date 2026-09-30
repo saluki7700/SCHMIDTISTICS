@@ -90,7 +90,21 @@
         .sch-site-nav .sch-crumbs { gap: 0.8rem 0.9rem; font-size: 0.66rem; width: 100%; }
         .sch-line-switch { padding: 0.5rem 1rem; font-size: 0.64rem; }
       }
+      /* genealogy.html embeds this same page in an iframe with its own real
+         site nav right above it — showing this chrome again in there would
+         be a duplicate, cramped-looking bar. Hide it whenever this page is
+         framed (any iframe, not just genealogy.html's), and let #root take
+         the full height back. */
+      html.sch-embedded .sch-site-nav,
+      html.sch-embedded .sch-line-switch { display: none; }
     </style>
+    <script>
+      // Runs synchronously before the nav bar below is even parsed, so
+      // there's no flash of it when this page is loaded inside an iframe.
+      if (window.self !== window.top) {
+        document.documentElement.classList.add('sch-embedded');
+      }
+    </script>
   </head>
   <body>
     <nav class="sch-site-nav">
