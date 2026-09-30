@@ -12,8 +12,114 @@
     <title>Schmidtistics — Pedigree Chart</title>
     <script type="module" crossorigin src="./assets/index-s2lCpt9f.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BIgdtvEt.css">
+    <!-- Schmidtistics site chrome (static HTML/CSS only — the app below is
+         untouched). Added 30 Sept 2026 so this page reads as part of the
+         site instead of a bare pop-out. See PATCHES.md. -->
+    <style>
+      :root {
+        --sch-paper: #EDE6D6;
+        --sch-paper-line: #CFC3A6;
+        --sch-brass: #A8763E;
+        --sch-verdigris: #5C6B5D;
+        --sch-charcoal: #2B2622;
+        --sch-display: "Fraunces", Georgia, serif;
+        --sch-mono: "IBM Plex Mono", monospace;
+      }
+      html, body {
+        height: 100vh !important;
+        margin: 0;
+        overflow: hidden;
+      }
+      body {
+        display: flex !important;
+        flex-direction: column !important;
+        background: var(--sch-paper);
+      }
+      /* The app's own CSS sets #root{height:100%;display:flex;flex-direction:
+         column}. We leave display/flex-direction alone (the app's internal
+         toolbar+content layout depends on it) and only override height, so
+         #root fills whatever space is left below the two bars below,
+         however tall they render (they wrap on narrow screens). */
+      #root {
+        height: auto !important;
+        flex: 1 1 auto !important;
+        min-height: 0;
+      }
+
+      .sch-site-nav {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 1rem 1.5rem; font-family: var(--sch-mono); font-size: 0.72rem;
+        letter-spacing: 0.08em; text-transform: uppercase; flex-wrap: wrap;
+        row-gap: 0.6rem; background: var(--sch-paper); color: var(--sch-charcoal);
+        flex: 0 0 auto; border-bottom: 1px solid var(--sch-paper-line);
+      }
+      .sch-site-nav a { text-decoration: none; color: inherit; }
+      .sch-site-nav .sch-mark {
+        font-family: var(--sch-display); font-size: 0.95rem;
+        letter-spacing: 0.02em; text-transform: none;
+      }
+      .sch-site-nav .sch-crumbs { display: flex; gap: 1.3rem; flex-wrap: wrap; row-gap: 0.4rem; }
+      .sch-site-nav .sch-crumbs a { opacity: 0.65; transition: opacity 0.2s; white-space: nowrap; }
+      .sch-site-nav .sch-crumbs a:hover,
+      .sch-site-nav .sch-crumbs a.sch-current { opacity: 1; }
+      .sch-site-nav .sch-crumbs a[href*="archive.schmidtistics.com"] {
+        margin-left: 0.2rem; padding-left: 0.9rem;
+        border-left: 1px solid var(--sch-paper-line);
+        color: var(--sch-brass); opacity: 0.9;
+      }
+      .sch-site-nav .sch-crumbs a[href*="archive.schmidtistics.com"]::before {
+        content: "\1F512"; font-size: 0.72em; margin-right: 0.25rem; opacity: 0.85;
+      }
+
+      .sch-line-switch {
+        display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: center;
+        font-family: var(--sch-mono); font-size: 0.68rem; letter-spacing: 0.03em;
+        text-transform: uppercase; padding: 0.55rem 1.5rem; background: var(--sch-paper);
+        color: var(--sch-charcoal); flex: 0 0 auto; border-bottom: 1px solid var(--sch-paper-line);
+      }
+      .sch-line-switch a {
+        text-decoration: none; opacity: 0.55; transition: opacity 0.2s; color: inherit;
+        border-bottom: 1px solid transparent; padding-bottom: 1px;
+      }
+      .sch-line-switch a:hover { opacity: 0.85; }
+      .sch-line-switch .sch-current { opacity: 1; border-bottom-color: currentColor; }
+      .sch-line-switch .sch-sep { opacity: 0.35; }
+
+      @media (max-width: 560px) {
+        .sch-site-nav { padding: 0.8rem 1rem; }
+        .sch-site-nav .sch-crumbs { gap: 0.8rem 0.9rem; font-size: 0.66rem; width: 100%; }
+        .sch-line-switch { padding: 0.5rem 1rem; font-size: 0.64rem; }
+      }
+    </style>
   </head>
   <body>
+    <nav class="sch-site-nav">
+      <a href="../index.html" class="sch-mark">Schmidtistics</a>
+      <div class="sch-crumbs">
+        <a href="../genealogy.html" class="sch-current">Genealogy</a>
+        <a href="../veterans.html">Those Who Served</a>
+        <a href="../shipbuilding.html">Shipbuilding</a>
+        <a href="/kittery-reunion">Kittery Reunion</a>
+        <a href="https://archive.schmidtistics.com">The Archive</a>
+      </div>
+    </nav>
+    <div class="sch-line-switch">
+      <a href="../genealogy.html">↑ All Genealogy</a>
+      <span class="sch-sep">/</span>
+      <a href="../schmidt-line.html">Schmidt Line</a>
+      <span class="sch-sep">/</span>
+      <a href="../dudley-line.html">Dudley Line</a>
+      <span class="sch-sep">/</span>
+      <a href="../booker-line.html">Booker Line</a>
+      <span class="sch-sep">/</span>
+      <a href="../oswald-line.html">Oswald Line</a>
+      <span class="sch-sep">/</span>
+      <a href="../bowland-line.html">Bowland Line</a>
+      <span class="sch-sep">/</span>
+      <a href="../seitzberg-line.html">Seitzberg Line</a>
+      <span class="sch-sep">/</span>
+      <span class="sch-current">⊙ Interactive Tree</span>
+    </div>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
