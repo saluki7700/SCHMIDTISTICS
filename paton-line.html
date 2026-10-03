@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — The Paton Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  body { background: var(--paper); color: var(--charcoal); }
+  .site-nav { border-bottom: 1px solid var(--paper-line); }
+
+  .hero {
+    padding: 3rem 2rem 4rem;
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+  .hero .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin: 0 0 1.2rem;
+    max-width: 18ch;
+  }
+  .hero p { max-width: 58ch; font-size: 1.08rem; }
+  .hero p a { color: var(--brass); }
+
+  .status-banner {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--brass);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: -0.6rem 0 0;
+  }
+
+  section { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+  .section-title {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin: 4rem 0 0.5rem;
+  }
+
+  .entry { border-color: var(--paper-line); }
+  .entry .frame { border-color: var(--paper-line); }
+  .frame-inner { background: var(--paper-dim); color: var(--verdigris); }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid var(--brass);
+    color: var(--brass);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+  }
+  .tag.open { border-color: var(--rust); color: var(--rust); }
+
+  .subtitle {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--verdigris);
+    margin: -0.2rem 0 0.9rem;
+  }
+
+  .ships-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 1.2rem 0 0.6rem;
+  }
+  .entry ul.ships {
+    margin: 0 0 1rem;
+    padding-left: 1.1rem;
+    max-width: 62ch;
+  }
+  .entry ul.ships li {
+    margin-bottom: 0.45rem;
+    line-height: 1.55;
+  }
+  .entry ul.ships li strong { font-family: var(--display); font-weight: 600; }
+
+  /* Discrepancy / open-question callout */
+  .discrepancy {
+    border-left: 3px solid var(--rust);
+    background: var(--paper-dim);
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+  }
+  .discrepancy .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  .discrepancy p { margin: 0; max-width: 62ch; }
+
+  .site-footer { border-top: 1px solid var(--paper-line); }
+
+  .tree-figure{margin:2.5rem auto 0;max-width:60rem;background:var(--bone);border:1px solid var(--paper-line);border-radius:6px;padding:1.4rem 1.4rem 1rem;}
+  .tree-figure svg{display:block;width:100%;height:auto;}
+  .tree-cap{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.05em;color:var(--verdigris);text-align:center;margin-top:0.8rem;}
+  .sibling-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:0.8rem;margin:0.8rem 0 0;}
+  .sibling-card{border:1px solid var(--paper-line);background:var(--paper-dim);border-radius:4px;padding:0.7rem 0.9rem;}
+  .sibling-card .name{font-family:var(--display);font-weight:600;font-size:1.02rem;margin-bottom:0.3rem;}
+  .sibling-card .meta{font-family:var(--mono);font-size:0.72rem;color:var(--verdigris);line-height:1.5;}
+  .sibling-card.placeholder{opacity:0.6;font-style:italic;}
+  .caveat{font-family:var(--body);font-style:italic;font-size:0.92rem;color:var(--rust);margin:1rem 0 0;max-width:62ch;}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html" class="current">Genealogy</a>
+    <a href="veterans.html">Those Who Served</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="/kittery-reunion">Kittery Reunion</a>
+    <a href="https://archive.schmidtistics.com">The Archive</a>
+  </div>
+</nav>
+
+<div class="line-switch">
+  <a href="genealogy.html">↑ All Genealogy</a>
+  <span class="sep">/</span>
+  <a href="schmidt-line.html">Schmidt Line</a>
+  <span class="sep">/</span>
+  <a href="dudley-line.html">Dudley Line</a>
+  <span class="sep">/</span>
+  <a href="booker-line.html">Booker Line</a>
+  <span class="sep">/</span>
+  <a href="oswald-line.html">Oswald Line</a>
+  <span class="sep">/</span>
+  <a href="bowland-line.html">Bowland Line</a>
+  <span class="sep">/</span>
+  <a href="seitzberg-line.html">Seitzberg Line</a>
+  <span class="sep">/</span>
+  <a href="paton-line.html" class="current">Paton Line</a>
+</div>
+
+<header class="hero">
+  <div class="eyebrow">Bloodline — Paton</div>
+  <h1>The Paton Line</h1>
+  <p class="status-banner">Placeholder — vital records confirmed (Find a Grave, Cook County marriage index); the line beyond Frank Paton's own parents is not yet researched</p>
+  <p>Marjorie Irene Schmidt — Kenneth and Nellie's youngest child — married Frank William Paton in
+  Cook County, Illinois, in 1949. Her parents and siblings are covered on the
+  <a href="schmidt-line.html">Schmidt Line</a> and the <a href="bowland-line.html">Bowland Line</a>;
+  this page will hold the Patons' own ancestry as that research develops.</p>
+</header>
+<section>
+  <div class="tree-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 436" font-family="Fraunces, Georgia, serif"><defs><style>
+.nm{font-size:17px;fill:#182430}.nmk{font-size:17px;fill:#F1ECDF}.nmi{font-size:17px;fill:#2B3A2E}
+.amp{font-size:13px;fill:#A8763E;font-style:italic}
+.mt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:#5C6B5D;letter-spacing:.2px}
+.mtk{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:#C3924F;letter-spacing:.2px}
+.sp{stroke:#A8763E;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mr{stroke:#5C6B5D;stroke-width:2;fill:none;stroke-dasharray:5 4;stroke-linecap:round}
+.un{stroke:#8C4A32;stroke-width:1.8;fill:none;stroke-dasharray:2 5;stroke-linecap:round}
+.cin{fill:#E7E9E2;stroke:#5C6B5D;stroke-width:1.5}.cc{fill:#F1ECDF;stroke:#CFC3A6;stroke-width:1.5}
+.ck{fill:#182430;stroke:#A8763E;stroke-width:2}
+.lbl{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:#5C6B5D;letter-spacing:1.2px}
+.ml{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:#8C7A5C}
+.fnt{font-family:"IBM Plex Mono",monospace;font-size:9.5px;fill:#A8763E;letter-spacing:1px;opacity:.75}
+.unl{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:#8C4A32;letter-spacing:1px}
+</style></defs><rect class="ck" x="40" y="330" width="300" height="64" rx="6"/><text class="nmk" x="58" y="357">Kenneth Oswald Schmidt</text><text class="mtk" x="58" y="379">b. 1905 &#183; ANCHOR</text><path class="sp" d="M190.0 330 L190.0 300" opacity="0.4"/><text class="fnt" x="190.0" y="292" text-anchor="middle">Schmidt &#38; Bowland lines</text><path class="sp" d="M340 362 L460.0 362"/><text class="ml" x="400.0" y="355" text-anchor="middle">dau.</text><rect class="cin" x="460" y="330" width="280" height="64" rx="6"/><text class="nmi" x="478" y="357">Marjorie Irene Schmidt</text><text class="mt" x="478" y="379">1928&#8211;2022</text><path class="sp" d="M740 362 L860.0 362"/><text class="ml" x="800.0" y="355" text-anchor="middle">m. 1949</text><rect class="cin" x="860" y="330" width="280" height="64" rx="6"/><text class="nmi" x="878" y="357">Frank William Paton</text><text class="mt" x="878" y="379">1924&#8211;2019 &#183; CHICAGO, IL</text><rect x="860" y="170" width="280" height="64" rx="6" style="fill:#F1ECDF;stroke:#8C4A32;stroke-width:1.5;stroke-dasharray:4 4"/><text class="nmi" x="878" y="197">Parents of Frank Paton</text><text class="unl" x="878" y="219">OPEN &#8212; NOT YET RESEARCHED</text><path class="un" d="M1000.0 234 L1000.0 330"/><text class="fnt" x="610" y="426" text-anchor="middle">The Paton line joins through Kenneth and Nellie&#8217;s daughter, Marjorie.</text></svg>
+    <div class="tree-cap">From Kenneth Oswald Schmidt down through his daughter Marjorie to the Paton line.</div>
+  </div>
+</section>
+
+
+<section>
+  <div class="section-title">Ancestor Records</div>
+
+  <div class="entry" id="rec-001">
+    <div class="no">001</div>
+    <div>
+      <span class="tag">Schmidt &amp; Bowland Daughter</span>
+      <h3>Marjorie Irene (Schmidt) Paton</h3>
+      <div class="subtitle">Youngest Child of Kenneth and Nellie</div>
+      <div class="meta">
+        <span>b. Nov 26, 1928</span>
+        <span>d. Jun 8, 2022, Elgin, IL</span>
+        <span>m. Frank William Paton, Feb 1, 1949, Cook County, IL</span>
+      </div>
+      <p>Marjorie was the youngest of Kenneth Oswald Schmidt and Nellie Florence Bowland's three
+      children, after Richard Dean and Ronald Ray (see the <a href="schmidt-line.html">Schmidt Line</a>
+      and the <a href="bowland-line.html">Bowland Line</a>). She married Frank William Paton on
+      Feb 1, 1949, in Cook County, Illinois — a date confirmed independently by the Cook County
+      marriage index and Frank's own memorial record. She died in 2022, near Elgin, Illinois, at 93.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-002">
+    <div class="no">002</div>
+    <div>
+      <span class="tag">Married into Schmidt Line</span>
+      <h3>Frank William Paton</h3>
+      <div class="meta">
+        <span>b. Sep 20, 1924, Chicago, Cook Co., IL</span>
+        <span>d. Dec 17, 2019, Oak Lawn, Cook Co., IL</span>
+        <span>buried Chapel Hill Gardens South, Oak Lawn, IL</span>
+      </div>
+      <p>Frank was born in Chicago in 1924 and died in Oak Lawn, Illinois, in 2019, where he is
+      buried at Chapel Hill Gardens South. His marriage to Marjorie and his vital dates are
+      confirmed by his Find a Grave memorial and the Cook County marriage index; his own parents
+      and ancestry have not yet been researched.</p>
+    </div>
+  </div>
+
+  <div class="entry" id="rec-003">
+    <div class="no">003</div>
+    <div>
+      <span class="tag open">Open — Not Yet Researched</span>
+      <h3>Frank William Paton's Parents</h3>
+      <div class="meta"><span>Parents of Frank William Paton</span></div>
+      <p>No research has begun on Frank's own family. A relative named Richard Paton has
+      separately contributed research leads on the Dudley and Voudy lines — including a Voudy
+      pedigree chart and testimony on the John H. Dudley parentage question — but his relationship,
+      if any, to Frank William Paton has not been documented here and should not be assumed.</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="section-title">Marjorie's Siblings</div>
+  <div class="entry">
+    <div class="no"></div>
+    <div>
+      <div class="subtitle">Kenneth and Nellie's Three Children</div>
+      <p>Marjorie was the youngest of three. Her brothers Richard and Ronald are both covered in
+      full on the <a href="schmidt-line.html">Schmidt Line</a>.</p>
+      <div class="ships-label">From family records</div>
+      <div class="sibling-grid">
+        <div class="sibling-card"><div class="name">Richard Dean Schmidt</div><div class="meta">1925&ndash;2005 &middot; m. Marylyn J. Seitzberg, 1950, Peoria</div></div>
+        <div class="sibling-card"><div class="name">Ronald Ray Schmidt</div><div class="meta">1927&ndash;2019</div></div>
+        <div class="sibling-card"><div class="name">Marjorie Irene Schmidt</div><div class="meta">1928&ndash;2022 &middot; this line</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Open Questions &amp; Discrepancies</div>
+  <div class="discrepancy">
+    <span class="label">Frank Paton's Ancestry</span>
+    <p>No parents, siblings, or birthplace detail beyond "Chicago" are recorded for Frank William
+    Paton. This is the current edge of the known line on this side — entirely open.</p>
+  </div>
+  <div class="discrepancy">
+    <span class="label">Richard Paton's Relationship to This Line</span>
+    <p>Richard Paton has supplied a Voudy-line pedigree chart and testimony bearing on the John H.
+    Dudley parentage question (sources X-PATONTREE, X-GILMANTEST, X-UNCLERICH-2 and others). Whether
+    he is related to Frank William Paton — and if so, how — has not been established and is flagged
+    for future research rather than assumed from the shared surname.</p>
+  </div>
+  <div class="discrepancy">
+    <span class="label">Children of Frank and Marjorie</span>
+    <p>No children are currently recorded for Frank and Marjorie in the database. This may reflect
+    the actual family, an incomplete record, or the deliberate exclusion of any living descendants —
+    not yet determined.</p>
+  </div>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+
+</body>
+</html>
