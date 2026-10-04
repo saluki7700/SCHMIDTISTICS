@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schmidtistics — Pedigree</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  body { background: var(--paper); color: var(--charcoal); }
+  .site-nav { border-bottom: 1px solid var(--paper-line); }
+
+  .hero {
+    padding: 5rem 2rem 2rem;
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+  .hero .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--verdigris);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin: 0 0 1.2rem;
+    max-width: 16ch;
+  }
+  .hero p { max-width: 58ch; font-size: 1.08rem; }
+  .hero p a { color: var(--brass); }
+
+  section { max-width: 68rem; margin: 0 auto; padding: 0 2rem 4rem; }
+
+  .legend{display:flex;gap:1.4rem;flex-wrap:wrap;font-family:var(--mono);font-size:0.78rem;color:var(--verdigris);margin:0.6rem 0 0}
+  .legend b{font-weight:500}
+  .sw{display:inline-block;width:22px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:.4rem}
+  .posterlink{display:block;margin:1.6rem 0 0;border:1px solid var(--paper-line);border-radius:8px;overflow:hidden;background:var(--bone);text-decoration:none;position:relative;cursor:pointer}
+  .posterlink img{display:block;width:100%;height:auto}
+  .posterlink .cta{position:absolute;left:0;right:0;bottom:0;padding:.9rem 1.2rem;background:linear-gradient(transparent,rgba(24,36,48,.85));color:#F1ECDF;font-family:var(--mono);font-size:.82rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+  .posterlink .cta b{color:#F1ECDF}
+  .posterlink:hover .cta{background:linear-gradient(transparent,rgba(24,36,48,.94))}
+  .pedhint{font-family:var(--mono);font-size:.74rem;color:var(--verdigris);margin:.7rem 0 0;opacity:.85}
+  .dl-row{margin:1rem 0 0;display:flex;gap:.6rem;flex-wrap:wrap}
+  .dl-row a{display:inline-block;font-family:var(--mono);font-size:.76rem;text-decoration:none;background:var(--paper);border:1px solid var(--paper-line);border-radius:5px;padding:.42rem .85rem;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="mark">Schmidtistics</a>
+  <div class="crumbs">
+    <a href="genealogy.html">Genealogy</a>
+    <a href="veterans.html">Those Who Served</a>
+    <a href="shipbuilding.html">Shipbuilding</a>
+    <a href="/kittery-reunion">Kittery Reunion</a>
+    <a href="pedigree.html" class="current">Pedigree</a>
+    <a href="https://archive.schmidtistics.com">The Archive</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Record One &#8212; Bloodline &#183; The Ancestry</div>
+  <h1>Pedigree</h1>
+  <p><b>K.O. Schmidt</b> (Kenneth Oswald Schmidt, 1905&#8211;1996) stands at the foot; his ancestry climbs
+  upward, every link graded by what the records prove. 16 generations, 111 people.</p>
+  <div class="legend">
+    <span><span class="sw" style="background:#F1ECDF;border:1.5px solid #182430"></span><b>Proven by records</b> &#8212; 35</span>
+    <span><span class="sw" style="background:#F4EEDF;border:1.5px dashed #8C4A32"></span><b>Assumed / strong theory</b> &#8212; 72</span>
+    <span><span class="sw" style="background:#F7E9E6;border:1.5px dashed #B23A2E"></span><b>Not yet confirmed</b> &#8212; 4</span>
+  </div>
+</header>
+
+<section>
+  <a class="posterlink" href="pedigree-interactive/#/view?indi=I12220127919" target="_blank" rel="noopener">
+    <img src="images/pedigree-full.png" alt="Whole-tree pedigree map — click to open the interactive chart">
+    <div class="cta"><span>Click to open the <b>interactive chart</b> &#8212; pan, zoom, expand and collapse any branch</span><span>&#8599; opens in a new tab</span></div>
+  </a>
+  <p class="pedhint">This is a map of the whole tree at a glance &#8212; individual names aren't meant to be readable here. Open the interactive chart to explore, drag, zoom, and drill into any branch.</p>
+  <div class="dl-row">
+    <a href="images/pedigree-full.png" download>&#10515; Download image (PNG)</a>
+    <a href="images/pedigree-full.pdf" download>&#10515; Download PDF (poster)</a>
+  </div>
+</section>
+
+<footer class="site-footer">Schmidtistics — Family &amp; Ships</footer>
+</body>
+</html>
