@@ -135,9 +135,8 @@ img, .frame-img { max-width: 100%; display: block; }
    ============================================ */
 .line-switch {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
   font-family: var(--mono);
   font-size: 0.74rem;
   letter-spacing: 0.04em;
@@ -145,6 +144,12 @@ img, .frame-img { max-width: 100%; display: block; }
   max-width: 68rem;
   margin: 0 auto;
   padding: 1.6rem 2rem 0;
+}
+.line-switch-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .line-switch a {
   text-decoration: none;
