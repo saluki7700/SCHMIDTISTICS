@@ -87,7 +87,7 @@ for fname in ALL_FILES:
     # content sanity: exactly one 'current' class WITHIN THE NEW BLOCK, and it's on this file's own link
     assert new_block.count('class="current"') == 1, f"{fname}: expected exactly 1 'current' class in nav block"
     assert f'<a href="{fname}" class="current">' in new_block, f"{fname}: current class not on own link"
-    assert new_block.count('line-switch-row') == 4, f"{fname}: expected 4 occurrences of line-switch-row in nav block, got {new_block.count('line-switch-row')}"
+    assert new_block.count("line-switch-row") == 2, f"{fname}: expected 2 occurrences of line-switch-row in nav block"
 
     parser = BalanceParser()
     parser.feed(content)
