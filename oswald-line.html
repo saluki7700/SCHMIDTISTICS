@@ -100,6 +100,12 @@
     text-align: center;
     margin-top: 0.8rem;
   }
+  .pedigree-legend{display:flex;flex-wrap:wrap;gap:0.3rem 1.4rem;align-items:center;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.03em;color:var(--verdigris);margin-bottom:1rem;}
+  .pedigree-legend .swatch{display:inline-block;width:0.85rem;height:0.85rem;margin-right:0.4rem;vertical-align:-0.12rem;border-radius:2px;}
+  .pedigree-legend .swatch.proven{background:var(--paper-dim);border:1.5px solid var(--charcoal);}
+  .pedigree-legend .swatch.theory{background:transparent;border:1.5px dashed var(--verdigris);}
+  .pedigree-legend .swatch.open{background:#F7E6DF;border:1.5px dashed var(--rust);}
+  .tree-cap a{text-decoration:none;}
 
   /* Sibling grid */
   .sibling-grid {
@@ -205,57 +211,20 @@
 
 <section>
   <div class="tree-figure">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 430" font-family="Fraunces, Georgia, serif">
-      <defs><style>
-        .nm{font-size:19px;fill:#182430}
-        .nmk{font-size:19px;fill:#F1ECDF}
-        .nmi{font-size:19px;fill:#2B3A2E}
-        .amp{font-size:15px;fill:#A8763E;font-style:italic}
-        .mt{font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#5C6B5D;letter-spacing:.3px}
-        .mtk{font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#C3924F;letter-spacing:.3px}
-        .sp{stroke:#A8763E;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
-        .mr{stroke:#5C6B5D;stroke-width:2;fill:none;stroke-dasharray:5 4;stroke-linecap:round}
-        .cin{fill:#E7E9E2;stroke:#5C6B5D;stroke-width:1.5}
-        .cc{fill:#F1ECDF;stroke:#CFC3A6;stroke-width:1.5}
-        .ck{fill:#182430;stroke:#A8763E;stroke-width:2}
-        .lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#5C6B5D;letter-spacing:1.5px}
-        .fnt{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#A8763E;letter-spacing:1px;opacity:.7}
-        .ml{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#8C7A5C}
-      </style></defs>
-
-      <!-- connectors -->
-      <path class="sp" d="M210 178 L210 142" opacity="0.4"/>
-      <path class="sp" d="M360 210 L440 210"/>
-      <path class="mr" d="M440 210 L520 210"/>
-      <path class="sp" d="M440 210 L440 330"/>
-      <path class="mr" d="M700 178 L700 92"/>
-
-      <!-- Oswald parents (married-in) -->
-      <rect class="cin" x="520" y="28" width="360" height="64" rx="6"/>
-      <text class="nmi" x="538" y="56">Mathias Oswald <tspan class="amp">&#38;</tspan> Elmira C. Lillibridge</text>
-      <text class="mt" x="538" y="78">1836&#8211;1905 &#160;·&#160; 1846&#8211;1928 &#160;·&#160; HANOVER, KS</text>
-
-      <!-- William Edward (Schmidt spine) -->
-      <rect class="cc" x="60" y="178" width="300" height="64" rx="6"/>
-      <text class="nm" x="78" y="206">William Edward Schmidt</text>
-      <text class="mt" x="78" y="228">1871&#8211;1959 &#160;·&#160; SCHMIDT LINE</text>
-      <text class="fnt" x="210" y="134" text-anchor="middle">&#8593; Schmidt line</text>
-
-      <!-- Margaret (married-in) -->
-      
-      <rect class="cin" x="520" y="178" width="360" height="64" rx="6"/>
-      <text class="nmi" x="538" y="206">Margaret &#8220;Madge&#8221; Oswald</text>
-      <text class="mt" x="538" y="228">b. 28 OCT 1883, HANOVER, KS</text>
-
-      <text class="ml" x="440" y="203" text-anchor="middle">m.</text>
-
-      <!-- Kenneth (key) -->
-      <rect class="ck" x="260" y="330" width="360" height="72" rx="6"/>
-      <text class="nmk" x="280" y="362">Kenneth Oswald Schmidt</text>
-      <text class="mtk" x="280" y="385">b. 4 OCT 1905, WASHINGTON CO., KANSAS</text>
-    </svg>
-    <div class="tree-cap">From Kenneth Oswald Schmidt, the Oswald line joins at his parents' generation.</div>
+    <div class="pedigree-legend">
+      <span class="swatch proven"></span> Proven by records &#8212; 3
+      <span class="swatch theory"></span> Assumed / strong theory &#8212; 6
+      <span class="swatch open"></span> Not yet confirmed &#8212; 0
+    </div>
+    <a href="images/oswald-line-pedigree.png"><img src="images/oswald-line-pedigree.png" alt="Oswald line pedigree chart: Kenneth Oswald Schmidt at the foot, climbing through his mother Margaret Oswald to her parents Mathias Oswald and Elmira C. Lillibridge, and the German Ochsenwadel ancestry above" style="width:100%;height:auto;display:block;border:1px solid var(--paper-line);"></a>
+    <div class="tree-cap">K.O. Schmidt stands at the foot; the line climbs to his mother Margaret &#8220;Madge&#8221; Oswald, then to her parents Mathias Oswald and Elmira C. Lillibridge, and up into the German Ochsenwadel ancestry &#8212; a branch that rests largely on trees rather than primary records, so most of it reads as assumed (shown dashed). A static snapshot, regenerated from the research database whenever it changes. <a href="images/oswald-line-pedigree.png" style="color:var(--brass);">View full size &#8595;</a></div>
   </div>
+</section>
+
+<section>
+<div class="section-title">Name Spellings in This Line</div>
+<h3 style="margin:0 0 0.6rem;">Oswald <span style="font-family:var(--mono);font-weight:400;font-size:0.82rem;letter-spacing:0.03em;color:var(--verdigris);">&#183; Ochsenwadel &#183; Oxenwald</span></h3>
+<p>The German &#8220;Ochsenwadel&#8221; was Americanized to &#8220;Oswald&#8221; within a generation of arrival &#8212; the line runs Samuel Friedrich Ochsenwadel &#8594; Mathias Oswald. This branch rests on trees, not records currently held in the archive.</p>
 </section>
 
 <section>
