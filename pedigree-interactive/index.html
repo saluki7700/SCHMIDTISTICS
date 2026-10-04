@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- GOOGLE_ANALYTICS_START -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32GXR2WF6S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-32GXR2WF6S');
+    </script>
+    <!-- GOOGLE_ANALYTICS_END -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no">
+    <meta name="topola-static-url" content="{{ env `STATIC_URL` | html }}">
+    <link rel="icon" href="favicon.png" type="image/png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>Pedigree — Interactive — Schmidtistics Archive</title>
+    <!-- Schmidtistics ARCHIVE site chrome (static HTML/CSS only — the app below
+         is untouched). Added 30 Sept 2026, replacing the old JS-rendered
+         pedigree-interactive.html — see PATCHES.md and ped.py's [a-TOPOLA] note.
+         Colors/markup match archive/album/style.css and ped.py's navstr(),
+         NOT the public site's palette (this page never ships there). No
+         iframe-detection needed here (unlike the public-site build this was
+         forked from) — this page is only ever opened directly or via
+         target="_blank", never framed. Hand-applied to dist/index.html too —
+         if you rebuild, re-check it landed (Vite regenerates index.html from
+         this file). -->
+    <style>
+      :root {
+        --arc-paper: #E4E6DC;
+        --arc-paper-line: #C2C4B0;
+        --arc-ink: #182430;
+        --arc-brass: #A8763E;
+        --arc-verdigris: #5C6B5D;
+        --arc-charcoal: #2B2622;
+        --arc-display: "Fraunces", Georgia, serif;
+        --arc-mono: "IBM Plex Mono", monospace;
+      }
+      html, body {
+        height: 100vh !important;
+        margin: 0;
+        overflow: hidden;
+      }
+      body {
+        display: flex !important;
+        flex-direction: column !important;
+        background: var(--arc-paper);
+      }
+      #root {
+        height: auto !important;
+        flex: 1 1 auto !important;
+        min-height: 0;
+      }
+
+      .arc-site-nav {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 1rem 1.5rem; font-family: var(--arc-mono); font-size: 0.72rem;
+        letter-spacing: 0.08em; text-transform: uppercase; flex-wrap: wrap;
+        row-gap: 0.6rem; background: var(--arc-paper); color: var(--arc-charcoal);
+        flex: 0 0 auto; border-bottom: 1px solid var(--arc-paper-line);
+      }
+      .arc-site-nav a { text-decoration: none; color: inherit; }
+      .arc-site-nav .arc-mark {
+        font-family: var(--arc-display); font-size: 0.95rem;
+        letter-spacing: 0.02em; text-transform: none;
+      }
+      .arc-site-nav .arc-back {
+        opacity: 0.75; margin-right: 1rem; white-space: nowrap;
+      }
+      .arc-site-nav .arc-back:hover { opacity: 1; }
+      .arc-site-nav .arc-crumbs { display: flex; gap: 1.1rem; flex-wrap: wrap; row-gap: 0.4rem; }
+      .arc-site-nav .arc-crumbs a { opacity: 0.65; transition: opacity 0.2s; white-space: nowrap; }
+      .arc-site-nav .arc-crumbs a:hover,
+      .arc-site-nav .arc-crumbs a.arc-current { opacity: 1; }
+      .arc-site-nav .arc-crumbs a.arc-current { color: var(--arc-brass); }
+      .arc-site-nav .arc-crumbs a.arc-ext { color: var(--arc-brass); opacity: 0.9; }
+
+      @media (max-width: 700px) {
+        .arc-site-nav { padding: 0.8rem 1rem; }
+        .arc-site-nav .arc-crumbs { gap: 0.7rem 0.85rem; font-size: 0.66rem; width: 100%; }
+        .arc-site-nav .arc-back { width: 100%; margin-right: 0; }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-CjdoVIMv.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-ZHZkpLlh.css">
+  </head>
+  <body>
+    <nav class="arc-site-nav">
+      <div style="display:flex;align-items:center;flex-wrap:wrap;row-gap:.5rem">
+        <a href="../index.html" class="arc-mark" style="margin-right:1.3rem">Schmidtistics Archive</a>
+        <a href="../pedigree.html" class="arc-back">← Pedigree overview</a>
+      </div>
+      <div class="arc-crumbs">
+        <a href="../index.html">The Archive</a>
+        <a href="../records.html">Records</a>
+        <a href="../people.html">People</a>
+        <a href="../lines.html">How We Know</a>
+        <a href="../pedigree.html" class="arc-current">Pedigree</a>
+        <a href="../maps.html">Maps</a>
+        <a href="../library.html">Library</a>
+        <a href="../ruledout.html">Ruled Out</a>
+        <a href="../stories.html">Stories</a>
+        <a href="../outreach.html">Outreach Log</a>
+        <a href="https://schmidtistics.com/genealogy.html" class="arc-ext">Genealogy ↗</a>
+      </div>
+    </nav>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+  </body>
+</html>
