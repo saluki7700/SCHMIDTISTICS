@@ -82,7 +82,7 @@ for fname in ALL_FILES:
     content = content[:start] + new_block + content[end:]
 
     new_div = div_balance(content)
-    assert new_div == orig_div + 2, f"{fname}: expected div balance +2 (two new row divs), got {orig_div} -> {new_div}"
+    assert new_div == orig_div, f"{fname}: div balance changed {orig_div} -> {new_div}"
 
     # content sanity: exactly one 'current' class, and it's on this file's own link
     assert content.count('class="current"') == 1, f"{fname}: expected exactly 1 'current' class, found a mismatch"
