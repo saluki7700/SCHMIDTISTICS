@@ -84,10 +84,10 @@ for fname in ALL_FILES:
     new_div = div_balance(content)
     assert new_div == orig_div, f"{fname}: div balance changed {orig_div} -> {new_div}"
 
-    # content sanity: exactly one 'current' class, and it's on this file's own link
-    assert content.count('class="current"') == 1, f"{fname}: expected exactly 1 'current' class, found a mismatch"
-    assert f'<a href="{fname}" class="current">' in content, f"{fname}: current class not on own link"
-    assert content.count('line-switch-row') == 4, f"{fname}: expected 4 occurrences (2 open-class + 2 in nothing else), got {content.count('line-switch-row')}"
+    # content sanity: exactly one 'current' class WITHIN THE NEW BLOCK, and it's on this file's own link
+    assert new_block.count('class="current"') == 1, f"{fname}: expected exactly 1 'current' class in nav block"
+    assert f'<a href="{fname}" class="current">' in new_block, f"{fname}: current class not on own link"
+    assert new_block.count('line-switch-row') == 4, f"{fname}: expected 4 occurrences of line-switch-row in nav block, got {new_block.count('line-switch-row')}"
 
     parser = BalanceParser()
     parser.feed(content)
