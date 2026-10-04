@@ -86,7 +86,7 @@ new_div = content3.count("<div") - content3.count("</div")
 assert new_div == orig_div, f"div balance changed: {orig_div} -> {new_div}"
 assert "<svg" not in content3, "old svg still present"
 assert content3.count("Name Spellings in This Line") == 1
-assert content3.count("schmidt-line-pedigree.png") == 2  # href + src
+assert content3.count("schmidt-line-pedigree.png") == 3  # wrap href + img src + view-full-size href
 
 class StrictValidator(HTMLParser):
     def error(self, message):
