@@ -117,6 +117,13 @@
   .sibling-card .meta{font-family:var(--mono);font-size:0.72rem;color:var(--verdigris);line-height:1.5;}
   .sibling-card.placeholder{opacity:0.6;font-style:italic;}
   .caveat{font-family:var(--body);font-style:italic;font-size:0.92rem;color:var(--rust);margin:1rem 0 0;max-width:62ch;}
+
+  .pedigree-legend{display:flex;flex-wrap:wrap;gap:0.3rem 1.4rem;align-items:center;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.03em;color:var(--verdigris);margin-bottom:1rem;}
+  .pedigree-legend .swatch{display:inline-block;width:0.85rem;height:0.85rem;margin-right:0.4rem;vertical-align:-0.12rem;border-radius:2px;}
+  .pedigree-legend .swatch.proven{background:var(--paper-dim);border:1.5px solid var(--charcoal);}
+  .pedigree-legend .swatch.theory{background:transparent;border:1.5px dashed var(--verdigris);}
+  .pedigree-legend .swatch.open{background:#F7E6DF;border:1.5px dashed var(--rust);}
+  .tree-cap a{text-decoration:none;}
 </style>
 </head>
 <body>
@@ -168,23 +175,20 @@
 </header>
 <section>
   <div class="tree-figure">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 780" font-family="Fraunces, Georgia, serif"><defs><style>
-.nm{font-size:17px;fill:#182430}.nmk{font-size:17px;fill:#F1ECDF}.nmi{font-size:17px;fill:#2B3A2E}
-.amp{font-size:13px;fill:#A8763E;font-style:italic}
-.mt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:#5C6B5D;letter-spacing:.2px}
-.mtk{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:#C3924F;letter-spacing:.2px}
-.sp{stroke:#A8763E;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.mr{stroke:#5C6B5D;stroke-width:2;fill:none;stroke-dasharray:5 4;stroke-linecap:round}
-.un{stroke:#8C4A32;stroke-width:1.8;fill:none;stroke-dasharray:2 5;stroke-linecap:round}
-.cin{fill:#E7E9E2;stroke:#5C6B5D;stroke-width:1.5}.cc{fill:#F1ECDF;stroke:#CFC3A6;stroke-width:1.5}
-.ck{fill:#182430;stroke:#A8763E;stroke-width:2}
-.lbl{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:#5C6B5D;letter-spacing:1.2px}
-.ml{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:#8C7A5C}
-.fnt{font-family:"IBM Plex Mono",monospace;font-size:9.5px;fill:#A8763E;letter-spacing:1px;opacity:.75}
-.unl{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:#8C4A32;letter-spacing:1px}
-</style></defs><rect class="cin" x="140" y="30" width="460" height="64" rx="6"/><text class="nmi" x="158" y="57">John Overall Varrel Jr <tspan class="amp">&#38;</tspan> Rachel Sadler</text><text class="mt" x="158" y="79">abt 1715&#8211;1763 &#183; 1718&#8211;1806</text><path class="sp" d="M370.0 94 L370.0 180"/><rect class="cin" x="140" y="180" width="460" height="64" rx="6"/><text class="nmi" x="158" y="207">Edward Voudy <tspan class="amp">&#38;</tspan> Sarah Varrell</text><text class="mt" x="158" y="229">1738&#8211;1819 &#183; 1740&#8211;1811</text><path class="un" d="M370.0 244 L370.0 330"/><text class="unl" x="382.0" y="292">TIER: OPEN</text><rect class="cin" x="140" y="330" width="460" height="64" rx="6"/><text class="nmi" x="158" y="357">William Voudy <tspan class="amp">&#38;</tspan> Dorcas Booker</text><text class="mt" x="158" y="379">b. abt 1778 &#183; m. 1803, YORK, ME</text><path class="sp" d="M370.0 394 L370.0 480"/><rect class="cin" x="140" y="480" width="460" height="64" rx="6"/><text class="nmi" x="158" y="507">Lydia Jane Voudy</text><text class="mt" x="158" y="529">1819&#8211;1894 &#183; m. John H. Dudley</text><path class="sp" d="M370.0 544 L370.0 660" opacity="0.5"/><text class="fnt" x="382.0" y="610">SCHMIDT &#38; DUDLEY LINES</text><rect class="ck" x="140" y="660" width="460" height="64" rx="6"/><text class="nmk" x="158" y="687">Kenneth Oswald Schmidt</text><text class="mtk" x="158" y="709">b. 1905 &#183; ANCHOR</text><text class="fnt" x="370.0" y="754" text-anchor="middle">Sarah Varrell marries into the Voudy line (above), which reaches the Dudleys and then Kenneth.</text></svg>
-    <div class="tree-cap">The full confirmed path: John Overall Varrel Jr &amp; Rachel Sadler &#8594; Sarah Varrell&#8217;s marriage into the Voudy family &#8594; the Voudy and Dudley generations &#8594; Kenneth Oswald Schmidt.</div>
+    <div class="pedigree-legend">
+      <span class="swatch proven"></span> Proven by records &#8212; 12
+      <span class="swatch theory"></span> Assumed / strong theory &#8212; 1
+      <span class="swatch open"></span> Not yet confirmed &#8212; 2
+    </div>
+    <a href="images/varrell-line-pedigree.png"><img src="images/varrell-line-pedigree.png" alt="Varrell line pedigree chart: Kenneth Oswald Schmidt at the foot, climbing through Sarah Varrell's marriage into the Voudy line to her parents John Overall Varrel Jr and Rachel Sadler off the Isles of Shoals" style="width:100%;height:auto;display:block;border:1px solid var(--paper-line);"></a>
+    <div class="tree-cap">K.O. Schmidt stands at the foot; the line climbs to Sarah Varrell, whose marriage to Edward Voudy joins the Voudy line above, then to her own parents John Overall Varrel Jr and Rachel Sadler off the Isles of Shoals. A static snapshot, regenerated from the research database whenever it changes. <a href="images/varrell-line-pedigree.png" style="color:var(--brass);">View full size &#8595;</a></div>
   </div>
+</section>
+
+<section>
+<div class="section-title">Name Spellings in This Line</div>
+<h3 style="margin:0 0 0.6rem;">Varrell <span style="font-family:var(--mono);font-weight:400;font-size:0.82rem;letter-spacing:0.03em;color:var(--verdigris);">&#183; Varrel &#183; Varrill &#183; Verrill &#183; Verrell &#183; Varel</span></h3>
+<p>One man is recorded as &#8220;John Overall Verrill Varrel.&#8221; The Verrill and Varrell forms interchange freely across York and Isles of Shoals records &#8212; search both.</p>
 </section>
 
 
